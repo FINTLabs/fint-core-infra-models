@@ -1,15 +1,18 @@
 package no.fintlabs.adapter.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Represent the contract between the adapter and FINT.
  */
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class AdapterContract {
     /**
@@ -50,74 +53,17 @@ public class AdapterContract {
     /**
      * Interval the adapter should ping FINT in minutes.
      */
-    private long pingIntervalInMinutes;
+    private int pingIntervalInMinutes;
     /**
      * <p>
      * List of capablilities for the adapter.
      * </p>
+     *
      * @see AdapterCapability
      */
-    private List<AdapterCapability> capabilities;
+    private Set<AdapterCapability> capabilities;
     /**
      * The registration time for the contract in Unix timestamp.
      */
     private long time;
-
-    /**
-     * Represents the adapters capabilities
-     */
-    @Data
-    @Builder
-    public static class AdapterCapability {
-        /**
-         * Name of the FINT domain. E.g. utdanning.
-         */
-        private String domain;
-        /**
-         * Name of the FINT package. E.g. vurdering.
-         */
-        @JsonProperty("package")
-        private String packageName;
-        /**
-         * Name of the FINT class/entity. E.g. fravar
-         */
-        @JsonProperty("class")
-        private String clazz;
-        /**
-         * Number of days between each full sync
-         */
-        private int fullSyncIntervalInDays;
-        /**
-         * Delta sync strategy.
-         * @see DeltaSyncInterval
-         */
-        private DeltaSyncInterval deltaSyncInterval;
-
-        /**
-         * Helper method to generate the entity uri.
-         * @return Returns the entity uri. E.g. /utdanning/elev/elev
-         */
-        public String getEntityUri() {
-            return String.format("/%s/%s/%s", domain, packageName, clazz);
-        }
-
-        /**
-         * Helper method to generate the component name.
-         * @return Returns the component name. E.g. utdanning-elev
-         */
-        public String getComponent() {
-            return String.format("%s-%s", domain, packageName);
-        }
-
-        public enum DeltaSyncInterval {
-            /**
-             * This indicates that the adapter will send updates as soon as they are availiable in the application.
-             */
-            IMMEDIATE,
-            /**
-             * This indicates that the adapter will send updates every <=15 minutes.
-             */
-            LEGACY
-        }
-    }
 }
