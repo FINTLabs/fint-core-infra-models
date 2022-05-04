@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class FullSyncEntity<T> {
+public class DeltaSyncPage<T> {
 
     private Metadata metadata;
     private List<HashMap<String, T>> resources;
@@ -22,10 +22,7 @@ public class FullSyncEntity<T> {
     @AllArgsConstructor
     @Builder
     public static class Metadata {
-        private String corrId;
         private String orgId;
         private long totalSize;
-        private long page;
-        private long totalPages;
     }
 }
