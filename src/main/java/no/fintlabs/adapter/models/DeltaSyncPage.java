@@ -1,28 +1,5 @@
 package no.fintlabs.adapter.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+public class DeltaSyncPage<T> extends SyncPage<T> {
 
-import java.util.HashMap;
-import java.util.List;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class DeltaSyncPage<T> {
-
-    private Metadata metadata;
-    private List<HashMap<String, T>> resources;
-
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    @Builder
-    public static class Metadata {
-        private String orgId;
-        private long totalSize;
-    }
 }
