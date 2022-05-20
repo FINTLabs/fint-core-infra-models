@@ -10,10 +10,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class SyncPageMetadata {
+    private String adapterId;
     private String corrId;
     private String orgId;
     private long totalSize;
     private long page;
+    private long pageSize;
     private long totalPages;
     private String uriRef;
+    private long time;
 }
