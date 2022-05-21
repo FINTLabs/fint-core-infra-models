@@ -17,7 +17,7 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Generate Javadoc
-        run: ./gradlew aggregateJavadocs
+        run: ./gradlew javadoc
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.9
         with:

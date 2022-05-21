@@ -64,7 +64,7 @@ public class AdapterCapability {
          */
         IMMEDIATE,
         /**
-         * This indicates that the adapter will send updates every <code><=15</code> minutes.
+         * This indicates that the adapter will send updates every <code>&lt;=15</code> minutes.
          */
         LEGACY
     }

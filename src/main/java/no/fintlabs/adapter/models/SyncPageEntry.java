@@ -57,7 +57,7 @@ public class SyncPageEntry<T> {
     /**
      * Helper method to create an SyncPageEntry with identifierName as the identifier.
      * @param identifierName Name of a self link in a FINT resource. This is any attribute
-     *                       of the type {@link no.fint.model.felles.kompleksedatatyper.Identifikator Identifikator}.
+     *                       of the type <code>Identifikator</code>.
      *                       For the FINT resource <code>Elev</code> it could be:
      *                       <ul>
      *                       <li><code>elevnummer</code></li>
