@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"no.fintlabs.adapter.models"},{"l":"no.fintlabs.adapter.models.utils"}];updateSearchResults();
