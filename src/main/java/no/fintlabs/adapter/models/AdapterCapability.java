@@ -1,6 +1,5 @@
 package no.fintlabs.adapter.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 

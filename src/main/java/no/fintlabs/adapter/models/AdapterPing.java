@@ -2,6 +2,10 @@ package no.fintlabs.adapter.models;
 
 import lombok.*;
 
+/**
+ * Represents a adapter heartbeat.
+ * @see <a href="https://en.wikipedia.org/wiki/Heartbeat_(computing)">Hearbeat</a>
+ */
 @Getter
 @Setter
 @AllArgsConstructor
