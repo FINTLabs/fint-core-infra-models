@@ -49,9 +49,9 @@ public class AdapterContract {
      */
     private String username;
     /**
-     * Interval the adapter should ping FINT in minutes.
+     * Interval the adapter should send heartbeats to FINT in minutes.
      */
-    private int pingIntervalInMinutes;
+    private int heartbeatIntervalInMinutes;
     /**
      * <p>
      * List of capablilities for the adapter.
