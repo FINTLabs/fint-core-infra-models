@@ -1,6 +1,5 @@
 package no.fintlabs.adapter.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 /**
@@ -15,17 +14,15 @@ public class AdapterCapability {
     /**
      * Name of the FINT domain. E.g. utdanning.
      */
-    private String domain;
+    private String domainName;
     /**
      * Name of the FINT package. E.g. vurdering.
      */
-    @JsonProperty("package")
     private String packageName;
     /**
      * Name of the FINT class/entity. E.g. fravar
      */
-    @JsonProperty("class")
-    private String clazz;
+    private String resourceName;
     /**
      * Number of days between each full sync
      */
@@ -43,7 +40,7 @@ public class AdapterCapability {
      * @return Returns the entity uri. E.g. /utdanning/elev/elev
      */
     public String getEntityUri() {
-        return String.format("/%s/%s/%s", domain, packageName, clazz);
+        return String.format("/%s/%s/%s", domainName, packageName, resourceName);
     }
 
     /**
@@ -52,7 +49,7 @@ public class AdapterCapability {
      * @return Returns the component name. E.g. utdanning-elev
      */
     public String getComponent() {
-        return String.format("%s-%s", domain, packageName);
+        return String.format("%s-%s", domainName, packageName);
     }
 
     /**

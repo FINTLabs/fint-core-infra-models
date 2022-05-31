@@ -8,9 +8,9 @@ class AdapterContractSpec extends Specification {
 
         given:
         def adapterCapability = AdapterCapability.builder()
-                .domain("utdanning")
+                .domainName("utdanning")
                 .packageName("elev")
-                .clazz("skoleressurs")
+                .resourceName("skoleressurs")
                 .build()
 
         when:
@@ -23,9 +23,9 @@ class AdapterContractSpec extends Specification {
     def "Get component should return domain and package in the format domain-package"() {
         given:
         def adapterCapability = AdapterCapability.builder()
-                .domain("utdanning")
+                .domainName("utdanning")
                 .packageName("elev")
-                .clazz("skoleressurs")
+                .resourceName("skoleressurs")
                 .build()
         when:
         def component = adapterCapability.getComponent()
