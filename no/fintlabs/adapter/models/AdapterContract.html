@@ -109,7 +109,7 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,int,java.util.Set,long)" class="member-name-link">AdapterContract</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;adapterId,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orgId,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;username,
- int&nbsp;pingIntervalInMinutes,
+ int&nbsp;heartbeatIntervalInMinutes,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
  long&nbsp;time)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
@@ -142,16 +142,16 @@ loadScripts(document, 'script');</script>
 <div class="block">
  List of capablilities for the adapter.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrgId()" class="member-name-link">getOrgId</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHeartbeatIntervalInMinutes()" class="member-name-link">getHeartbeatIntervalInMinutes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Interval the adapter should send heartbeats to FINT in minutes.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrgId()" class="member-name-link">getOrgId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  OrgId for the customer this contract represent.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPingIntervalInMinutes()" class="member-name-link">getPingIntervalInMinutes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Interval the adapter should ping FINT in minutes.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTime()" class="member-name-link">getTime</a>()</code></div>
@@ -177,15 +177,15 @@ loadScripts(document, 'script');</script>
  List of capablilities for the adapter.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrgId(java.lang.String)" class="member-name-link">setOrgId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orgId)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHeartbeatIntervalInMinutes(int)" class="member-name-link">setHeartbeatIntervalInMinutes</a><wbr>(int&nbsp;heartbeatIntervalInMinutes)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- OrgId for the customer this contract represent.</div>
+<div class="block">Interval the adapter should send heartbeats to FINT in minutes.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPingIntervalInMinutes(int)" class="member-name-link">setPingIntervalInMinutes</a><wbr>(int&nbsp;pingIntervalInMinutes)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrgId(java.lang.String)" class="member-name-link">setOrgId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orgId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Interval the adapter should ping FINT in minutes.</div>
+<div class="block">
+ OrgId for the customer this contract represent.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTime(long)" class="member-name-link">setTime</a><wbr>(long&nbsp;time)</code></div>
@@ -221,7 +221,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AdapterContract</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;adapterId,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orgId,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;username,
- int&nbsp;pingIntervalInMinutes,
+ int&nbsp;heartbeatIntervalInMinutes,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
  long&nbsp;time)</span></div>
 </section>
@@ -291,10 +291,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getPingIntervalInMinutes()">
-<h3>getPingIntervalInMinutes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPingIntervalInMinutes</span>()</div>
-<div class="block">Interval the adapter should ping FINT in minutes.</div>
+<section class="detail" id="getHeartbeatIntervalInMinutes()">
+<h3>getHeartbeatIntervalInMinutes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getHeartbeatIntervalInMinutes</span>()</div>
+<div class="block">Interval the adapter should send heartbeats to FINT in minutes.</div>
 </section>
 </li>
 <li>
@@ -366,10 +366,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setPingIntervalInMinutes(int)">
-<h3>setPingIntervalInMinutes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPingIntervalInMinutes</span><wbr><span class="parameters">(int&nbsp;pingIntervalInMinutes)</span></div>
-<div class="block">Interval the adapter should ping FINT in minutes.</div>
+<section class="detail" id="setHeartbeatIntervalInMinutes(int)">
+<h3>setHeartbeatIntervalInMinutes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHeartbeatIntervalInMinutes</span><wbr><span class="parameters">(int&nbsp;heartbeatIntervalInMinutes)</span></div>
+<div class="block">Interval the adapter should send heartbeats to FINT in minutes.</div>
 </section>
 </li>
 <li>

@@ -111,15 +111,15 @@ loadScripts(document, 'script');</script>
  List of capablilities for the adapter.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AdapterContract.AdapterContractBuilder.html" title="class in no.fintlabs.adapter.models">AdapterContract.AdapterContractBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#orgId(java.lang.String)" class="member-name-link">orgId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orgId)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#heartbeatIntervalInMinutes(int)" class="member-name-link">heartbeatIntervalInMinutes</a><wbr>(int&nbsp;heartbeatIntervalInMinutes)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- OrgId for the customer this contract represent.</div>
+<div class="block">Interval the adapter should send heartbeats to FINT in minutes.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AdapterContract.AdapterContractBuilder.html" title="class in no.fintlabs.adapter.models">AdapterContract.AdapterContractBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pingIntervalInMinutes(int)" class="member-name-link">pingIntervalInMinutes</a><wbr>(int&nbsp;pingIntervalInMinutes)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#orgId(java.lang.String)" class="member-name-link">orgId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orgId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Interval the adapter should ping FINT in minutes.</div>
+<div class="block">
+ OrgId for the customer this contract represent.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AdapterContract.AdapterContractBuilder.html" title="class in no.fintlabs.adapter.models">AdapterContract.AdapterContractBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#time(long)" class="member-name-link">time</a><wbr>(long&nbsp;time)</code></div>
@@ -209,10 +209,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="pingIntervalInMinutes(int)">
-<h3>pingIntervalInMinutes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AdapterContract.AdapterContractBuilder.html" title="class in no.fintlabs.adapter.models">AdapterContract.AdapterContractBuilder</a></span>&nbsp;<span class="element-name">pingIntervalInMinutes</span><wbr><span class="parameters">(int&nbsp;pingIntervalInMinutes)</span></div>
-<div class="block">Interval the adapter should ping FINT in minutes.</div>
+<section class="detail" id="heartbeatIntervalInMinutes(int)">
+<h3>heartbeatIntervalInMinutes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AdapterContract.AdapterContractBuilder.html" title="class in no.fintlabs.adapter.models">AdapterContract.AdapterContractBuilder</a></span>&nbsp;<span class="element-name">heartbeatIntervalInMinutes</span><wbr><span class="parameters">(int&nbsp;heartbeatIntervalInMinutes)</span></div>
+<div class="block">Interval the adapter should send heartbeats to FINT in minutes.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>this</code>.</dd>
