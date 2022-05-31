@@ -11,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AdapterPing {
+public class AdapterHeartbeat {
     /**
      * <p>
      * A <strong>persistent uniq id</strong> for the adapter. It should be in the format:
@@ -48,7 +48,7 @@ public class AdapterPing {
      */
     private String orgId;
     /**
-     * The ping time for the adapter in Unix timestamp.
+     * The heartbeat time for the adapter in Unix timestamp.
      */
     private long time;
 }
