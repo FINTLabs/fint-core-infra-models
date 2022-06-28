@@ -14,7 +14,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class FintEventDownstream {
+public class RequestFintEvent {
     /**
      * GUID for correlation ID. The same ID should follow the request both upstream and downstream.
      */
