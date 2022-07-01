@@ -4,17 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import no.fint.model.resource.FintLinks;
 
 import java.io.Serializable;
 
 /**
- *
+ * Represents a request to the adapter
+ * @param <T> The FINT resource type.
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RequestFintEvent {
+public class RequestFintEvent<T> {
     /**
      * GUID for correlation ID. The same ID should follow the request both upstream and downstream.
      */
@@ -41,9 +43,9 @@ public class RequestFintEvent {
     private String resourceName;
 
     /**
-     * The current action, CREATE or UPDATE
+     * The type of operation to be performed (CREATE, UPDATE)
      */
-    private String action;
+    private OperationType operation;
 
     /**
      * When the event was created.
@@ -51,17 +53,20 @@ public class RequestFintEvent {
     private long created;
 
     /**
-     * When the event should be considered expired.
+     * How long the request is valid in milliseconds
      */
-    private long deadline;
-
-    /**
-     * When the event was solved by the adapter
-     */
-    private long solvedAt;
+    private long timeToLive;
 
     /**
      * The object to which the event applies
      */
-    private Serializable value;
+    private T value;
+
+    /**
+     * The type of operation to be performed by the adapter
+     */
+    public enum OperationType {
+        CREATE,
+        UPDATE
+    }
 }
