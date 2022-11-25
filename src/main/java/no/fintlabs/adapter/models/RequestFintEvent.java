@@ -4,19 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import no.fint.model.resource.FintLinks;
-
-import java.io.Serializable;
 
 /**
  * Represents a request to the adapter
- * @param <T> The FINT resource type.
  */
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class RequestFintEvent<T> {
+public class RequestFintEvent {
     /**
      * GUID for correlation ID. The same ID should follow the request both upstream and downstream.
      */
@@ -60,7 +56,7 @@ public class RequestFintEvent<T> {
     /**
      * The object to which the event applies
      */
-    private T value;
+    private String value;
 
     /**
      * The type of operation to be performed by the adapter
