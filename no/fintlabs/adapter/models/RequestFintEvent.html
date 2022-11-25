@@ -6,15 +6,16 @@
 <title>RequestFintEvent (FINT Core Infrastructure Models)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
-<link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.min.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 <script type="text/javascript" src="../../../../jquery/jszip/dist/jszip.min.js"></script>
 <script type="text/javascript" src="../../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
 <!--[if IE]>
 <script type="text/javascript" src="../../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
 <![endif]-->
-<script type="text/javascript" src="../../../../jquery/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="../../../../jquery/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../../../jquery/jquery-ui.min.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -115,26 +116,22 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <main role="main">
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">no.fintlabs.adapter.models</a></div>
-<h2 title="Class RequestFintEvent" class="title">Class RequestFintEvent&lt;T&gt;</h2>
+<h2 title="Class RequestFintEvent" class="title">Class RequestFintEvent</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>no.fintlabs.adapter.models.RequestFintEvent&lt;T&gt;</li>
+<li>no.fintlabs.adapter.models.RequestFintEvent</li>
 </ul>
 </li>
 </ul>
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
-<dl>
-<dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>T</code> - The FINT resource type.</dd>
-</dl>
 <hr>
-<pre>public class <span class="typeNameLabel">RequestFintEvent&lt;T&gt;</span>
+<pre>public class <span class="typeNameLabel">RequestFintEvent</span>
 extends java.lang.Object</pre>
 <div class="block">Represents a request to the adapter</div>
 </li>
@@ -144,7 +141,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <!-- ======== NESTED CLASS SUMMARY ======== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="nested.class.summary">
 <!--   -->
@@ -166,7 +163,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a>&lt;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="type parameter in RequestFintEvent.RequestFintEventBuilder">T</a>&gt;</span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -174,7 +171,7 @@ extends java.lang.Object</pre>
 </ul>
 </section>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="constructor.summary">
 <!--   -->
@@ -191,7 +188,7 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.RequestFintEvent.OperationType,long,long,T)">RequestFintEvent</a></span>&#8203;(java.lang.String&nbsp;corrId,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.RequestFintEvent.OperationType,long,long,java.lang.String)">RequestFintEvent</a></span>&#8203;(java.lang.String&nbsp;corrId,
                 java.lang.String&nbsp;orgId,
                 java.lang.String&nbsp;domainName,
                 java.lang.String&nbsp;packageName,
@@ -199,7 +196,7 @@ extends java.lang.Object</pre>
                 <a href="RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models">RequestFintEvent.OperationType</a>&nbsp;operation,
                 long&nbsp;created,
                 long&nbsp;timeToLive,
-                <a href="RequestFintEvent.html" title="type parameter in RequestFintEvent">T</a>&nbsp;value)</code></th>
+                java.lang.String&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -207,7 +204,7 @@ extends java.lang.Object</pre>
 </ul>
 </section>
 <!-- ========== METHOD SUMMARY =========== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="method.summary">
 <!--   -->
@@ -221,7 +218,7 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a>&lt;T&gt;</code></td>
+<td class="colFirst"><code>static <a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#builder()">builder</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -292,7 +289,7 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code><a href="RequestFintEvent.html" title="type parameter in RequestFintEvent">T</a></code></td>
+<td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getValue()">getValue</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The object to which the event applies</div>
@@ -361,7 +358,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setValue(T)">setValue</a></span>&#8203;(<a href="RequestFintEvent.html" title="type parameter in RequestFintEvent">T</a>&nbsp;value)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setValue(java.lang.String)">setValue</a></span>&#8203;(java.lang.String&nbsp;value)</code></th>
 <td class="colLast">
 <div class="block">The object to which the event applies</div>
 </td>
@@ -389,7 +386,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="constructor.detail">
 <!--   -->
@@ -404,9 +401,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;RequestFintEvent()</pre>
 </li>
 </ul>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.RequestFintEvent.OperationType,long,long,java.lang.Object)">
-<!--   -->
-</a><a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.RequestFintEvent.OperationType,long,long,T)">
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.RequestFintEvent.OperationType,long,long,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -420,14 +415,14 @@ extends java.lang.Object</pre>
                         <a href="RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models">RequestFintEvent.OperationType</a>&nbsp;operation,
                         long&nbsp;created,
                         long&nbsp;timeToLive,
-                        <a href="RequestFintEvent.html" title="type parameter in RequestFintEvent">T</a>&nbsp;value)</pre>
+                        java.lang.String&nbsp;value)</pre>
 </li>
 </ul>
 </li>
 </ul>
 </section>
 <!-- ============ METHOD DETAIL ========== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="method.detail">
 <!--   -->
@@ -439,7 +434,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>builder</h4>
-<pre class="methodSignature">public static&nbsp;&lt;T&gt;&nbsp;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a>&lt;T&gt;&nbsp;builder()</pre>
+<pre class="methodSignature">public static&nbsp;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a>&nbsp;builder()</pre>
 </li>
 </ul>
 <a id="getCorrId()">
@@ -528,7 +523,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getValue</h4>
-<pre class="methodSignature">public&nbsp;<a href="RequestFintEvent.html" title="type parameter in RequestFintEvent">T</a>&nbsp;getValue()</pre>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getValue()</pre>
 <div class="block">The object to which the event applies</div>
 </li>
 </ul>
@@ -612,15 +607,13 @@ extends java.lang.Object</pre>
 <div class="block">How long the request is valid in milliseconds</div>
 </li>
 </ul>
-<a id="setValue(java.lang.Object)">
-<!--   -->
-</a><a id="setValue(T)">
+<a id="setValue(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setValue</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setValue&#8203;(<a href="RequestFintEvent.html" title="type parameter in RequestFintEvent">T</a>&nbsp;value)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;setValue&#8203;(java.lang.String&nbsp;value)</pre>
 <div class="block">The object to which the event applies</div>
 </li>
 </ul>

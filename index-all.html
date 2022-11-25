@@ -6,15 +6,16 @@
 <title>Index (FINT Core Infrastructure Models)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
-<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css" title="Style">
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.min.css" title="Style">
+<link rel="stylesheet" type="text/css" href="jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="jquery/jszip/dist/jszip.min.js"></script>
 <script type="text/javascript" src="jquery/jszip-utils/dist/jszip-utils.min.js"></script>
 <!--[if IE]>
 <script type="text/javascript" src="jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
 <![endif]-->
-<script type="text/javascript" src="jquery/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -647,19 +648,19 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">R</h2>
 <dl>
-<dt><a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">RequestFintEvent</span></a>&lt;<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="type parameter in RequestFintEvent">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
+<dt><a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">RequestFintEvent</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>
 <div class="block">Represents a request to the adapter</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#%3Cinit%3E()">RequestFintEvent()</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.RequestFintEvent.OperationType,long,long,T)">RequestFintEvent(String, String, String, String, String, RequestFintEvent.OperationType, long, long, T)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.RequestFintEvent.OperationType,long,long,java.lang.String)">RequestFintEvent(String, String, String, String, String, RequestFintEvent.OperationType, long, long, String)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="no/fintlabs/adapter/models/RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models"><span class="typeNameLink">RequestFintEvent.OperationType</span></a> - Enum in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>
 <div class="block">The type of operation to be performed by the adapter</div>
 </dd>
-<dt><a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">RequestFintEvent.RequestFintEventBuilder</span></a>&lt;<a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html" title="type parameter in RequestFintEvent.RequestFintEventBuilder">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
+<dt><a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">RequestFintEvent.RequestFintEventBuilder</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.AdapterCapabilityBuilder.html#resourceName(java.lang.String)">resourceName(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.AdapterCapabilityBuilder.html" title="class in no.fintlabs.adapter.models">AdapterCapability.AdapterCapabilityBuilder</a></dt>
 <dd>
@@ -867,7 +868,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">
  Username used for authentication to FINT.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#setValue(T)">setValue(T)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#setValue(java.lang.String)">setValue(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
 <dd>
 <div class="block">The object to which the event applies</div>
 </dd>
@@ -979,7 +980,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">V</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html#value(T)">value(T)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html#value(java.lang.String)">value(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a></dt>
 <dd>
 <div class="block">The object to which the event applies</div>
 </dd>
