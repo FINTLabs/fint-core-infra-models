@@ -97,10 +97,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">A</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#acceptedAt(long)">acceptedAt(long)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
-<dd>
-<div class="block">When the event was received.</div>
-</dd>
 <dt><a href="no/fintlabs/adapter/models/AdapterCapability.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">AdapterCapability</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>
 <div class="block">Represents the adapters capabilities</div>
@@ -272,7 +268,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageMetadata.html#equals(java.lang.Object)">equals(Object)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageMetadata.html" title="class in no.fintlabs.adapter.models">SyncPageMetadata</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#errorMessage(boolean)">errorMessage(boolean)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#errorMessage(java.lang.String)">errorMessage(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
 <dd>
 <div class="block">A sensible explanation that says something about why the incident has failed.</div>
 </dd>
@@ -308,10 +304,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">G</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#getAcceptedAt()">getAcceptedAt()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
-<dd>
-<div class="block">When the event was received.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterContract.html#getAdapterId()">getAdapterId()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterContract.html" title="class in no.fintlabs.adapter.models">AdapterContract</a></dt>
 <dd>
 <div class="block">
@@ -370,6 +362,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.html#getEntityUri()">getEntityUri()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a></dt>
 <dd>
 <div class="block">Helper method to generate the entity uri.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#getErrorMessage()">getErrorMessage()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dd>
+<div class="block">A sensible explanation that says something about why the incident has failed.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.html#getFullSyncIntervalInDays()">getFullSyncIntervalInDays()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a></dt>
 <dd>
@@ -498,6 +494,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">The object to which the event applies</div>
 </dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#getValue()">getValue()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dd>
+<div class="block">The SyncPageEntry of the object that the event produced.</div>
+</dd>
 </dl>
 <a id="I:H">
 <!--   -->
@@ -531,10 +531,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html#IMMEDIATE">IMMEDIATE</a></span> - no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html" title="enum in no.fintlabs.adapter.models">AdapterCapability.DeltaSyncInterval</a></dt>
 <dd>
 <div class="block">This indicates that the adapter will send updates as soon as they are available in the application.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#isErrorMessage()">isErrorMessage()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
-<dd>
-<div class="block">A sensible explanation that says something about why the incident has failed.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#isFailed()">isFailed()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>
@@ -674,13 +670,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Data in the page.</div>
 </dd>
-<dt><a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">ResponseFintEvent</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
+<dt><a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">ResponseFintEvent</span></a>&lt;<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="type parameter in ResponseFintEvent">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#%3Cinit%3E()">ResponseFintEvent()</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,long,boolean,boolean)">ResponseFintEvent(String, String, String, long, long, boolean, boolean)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.SyncPageEntry,boolean,java.lang.String)">ResponseFintEvent(String, String, String, long, SyncPageEntry&lt;T&gt;, boolean, String)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">ResponseFintEvent.ResponseFintEventBuilder</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
+<dt><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">ResponseFintEvent.ResponseFintEventBuilder</span></a>&lt;<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="type parameter in ResponseFintEvent.ResponseFintEventBuilder">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a id="I:S">
@@ -688,10 +684,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">S</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setAcceptedAt(long)">setAcceptedAt(long)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
-<dd>
-<div class="block">When the event was received.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterContract.html#setAdapterId(java.lang.String)">setAdapterId(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterContract.html" title="class in no.fintlabs.adapter.models">AdapterContract</a></dt>
 <dd>
 <div class="block">
@@ -743,7 +735,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Name of the FINT domain.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setErrorMessage(boolean)">setErrorMessage(boolean)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setErrorMessage(java.lang.String)">setErrorMessage(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>
 <div class="block">A sensible explanation that says something about why the incident has failed.</div>
 </dd>
@@ -872,6 +864,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">The object to which the event applies</div>
 </dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setValue(no.fintlabs.adapter.models.SyncPageEntry)">setValue(SyncPageEntry&lt;T&gt;)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dd>
+<div class="block">The SyncPageEntry of the object that the event produced.</div>
+</dd>
 <dt><a href="no/fintlabs/adapter/models/SyncPage.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">SyncPage</span></a>&lt;<a href="no/fintlabs/adapter/models/SyncPage.html" title="type parameter in SyncPage">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>
 <div class="block">Represents a page sent from the adapter to the provider.</div>
@@ -983,6 +979,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html#value(java.lang.String)">value(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a></dt>
 <dd>
 <div class="block">The object to which the event applies</div>
+</dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#value(no.fintlabs.adapter.models.SyncPageEntry)">value(SyncPageEntry&lt;T&gt;)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
+<dd>
+<div class="block">The SyncPageEntry of the object that the event produced.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html#valueOf(java.lang.String)">valueOf(String)</a></span> - Static method in enum no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html" title="enum in no.fintlabs.adapter.models">AdapterCapability.DeltaSyncInterval</a></dt>
 <dd>
