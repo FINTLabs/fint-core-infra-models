@@ -36,12 +36,22 @@ public class ResponseFintEvent<T> {
     private SyncPageEntry<T> value;
 
     /**
-     * If the event has failed.
+     * Indicates whether the event has failed.
      */
     private boolean failed;
 
     /**
-     * A sensible explanation that says something about why the incident has failed.
+     * A message that explains the reason for the failure of the event.
      */
     private String errorMessage;
+
+    /**
+     * Indicates whether the event has been rejected.
+     */
+    private boolean rejected;
+
+    /**
+     * A message that explains the reason for the rejection of the event.
+     */
+    private String rejectReason;
 }
