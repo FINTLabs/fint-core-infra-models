@@ -270,7 +270,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#errorMessage(java.lang.String)">errorMessage(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
 <dd>
-<div class="block">A sensible explanation that says something about why the incident has failed.</div>
+<div class="block">A message that explains the reason for the failure of the event.</div>
 </dd>
 </dl>
 <a id="I:F">
@@ -280,7 +280,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#failed(boolean)">failed(boolean)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
 <dd>
-<div class="block">If the event has failed.</div>
+<div class="block">Indicates whether the event has failed.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.AdapterCapabilityBuilder.html#fullSyncIntervalInDays(int)">fullSyncIntervalInDays(int)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.AdapterCapabilityBuilder.html" title="class in no.fintlabs.adapter.models">AdapterCapability.AdapterCapabilityBuilder</a></dt>
 <dd>
@@ -365,7 +365,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#getErrorMessage()">getErrorMessage()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">A sensible explanation that says something about why the incident has failed.</div>
+<div class="block">A message that explains the reason for the failure of the event.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.html#getFullSyncIntervalInDays()">getFullSyncIntervalInDays()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a></dt>
 <dd>
@@ -429,6 +429,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageMetadata.html#getPageSize()">getPageSize()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageMetadata.html" title="class in no.fintlabs.adapter.models">SyncPageMetadata</a></dt>
 <dd>
 <div class="block">Size of current page.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#getRejectReason()">getRejectReason()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dd>
+<div class="block">A message that explains the reason for the rejection of the event.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#getResource()">getResource()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
 <dd>
@@ -534,7 +538,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#isFailed()">isFailed()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">If the event has failed.</div>
+<div class="block">Indicates whether the event has failed.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#isRejected()">isRejected()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dd>
+<div class="block">Indicates whether the event has been rejected.</div>
 </dd>
 </dl>
 <a id="I:L">
@@ -644,6 +652,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">R</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#rejected(boolean)">rejected(boolean)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
+<dd>
+<div class="block">Indicates whether the event has been rejected.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#rejectReason(java.lang.String)">rejectReason(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
+<dd>
+<div class="block">A message that explains the reason for the rejection of the event.</div>
+</dd>
 <dt><a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">RequestFintEvent</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>
 <div class="block">Represents a request to the adapter</div>
@@ -674,7 +690,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#%3Cinit%3E()">ResponseFintEvent()</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.SyncPageEntry,boolean,java.lang.String)">ResponseFintEvent(String, String, String, long, SyncPageEntry&lt;T&gt;, boolean, String)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.SyncPageEntry,boolean,java.lang.String,boolean,java.lang.String)">ResponseFintEvent(String, String, String, long, SyncPageEntry&lt;T&gt;, boolean, String, boolean, String)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">ResponseFintEvent.ResponseFintEventBuilder</span></a>&lt;<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="type parameter in ResponseFintEvent.ResponseFintEventBuilder">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>&nbsp;</dd>
@@ -737,11 +753,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setErrorMessage(java.lang.String)">setErrorMessage(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">A sensible explanation that says something about why the incident has failed.</div>
+<div class="block">A message that explains the reason for the failure of the event.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setFailed(boolean)">setFailed(boolean)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">If the event has failed.</div>
+<div class="block">Indicates whether the event has failed.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.html#setFullSyncIntervalInDays(int)">setFullSyncIntervalInDays(int)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a></dt>
 <dd>
@@ -805,6 +821,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageMetadata.html#setPageSize(long)">setPageSize(long)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageMetadata.html" title="class in no.fintlabs.adapter.models">SyncPageMetadata</a></dt>
 <dd>
 <div class="block">Size of current page.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setRejected(boolean)">setRejected(boolean)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dd>
+<div class="block">Indicates whether the event has been rejected.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setRejectReason(java.lang.String)">setRejectReason(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dd>
+<div class="block">A message that explains the reason for the rejection of the event.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#setResource(T)">setResource(T)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
 <dd>

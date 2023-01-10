@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
+var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -180,13 +180,15 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.SyncPageEntry,boolean,java.lang.String)">ResponseFintEvent</a></span>&#8203;(java.lang.String&nbsp;corrId,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.SyncPageEntry,boolean,java.lang.String,boolean,java.lang.String)">ResponseFintEvent</a></span>&#8203;(java.lang.String&nbsp;corrId,
                  java.lang.String&nbsp;orgId,
                  java.lang.String&nbsp;adapterId,
                  long&nbsp;handledAt,
                  <a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;<a href="ResponseFintEvent.html" title="type parameter in ResponseFintEvent">T</a>&gt;&nbsp;value,
                  boolean&nbsp;failed,
-                 java.lang.String&nbsp;errorMessage)</code></th>
+                 java.lang.String&nbsp;errorMessage,
+                 boolean&nbsp;rejected,
+                 java.lang.String&nbsp;rejectReason)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -240,7 +242,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getErrorMessage()">getErrorMessage</a></span>()</code></th>
 <td class="colLast">
-<div class="block">A sensible explanation that says something about why the incident has failed.</div>
+<div class="block">A message that explains the reason for the failure of the event.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -258,74 +260,102 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRejectReason()">getRejectReason</a></span>()</code></th>
+<td class="colLast">
+<div class="block">A message that explains the reason for the rejection of the event.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;<a href="ResponseFintEvent.html" title="type parameter in ResponseFintEvent">T</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getValue()">getValue</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The SyncPageEntry of the object that the event produced.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hashCode()">hashCode</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFailed()">isFailed</a></span>()</code></th>
 <td class="colLast">
-<div class="block">If the event has failed.</div>
+<div class="block">Indicates whether the event has failed.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRejected()">isRejected</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Indicates whether the event has been rejected.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAdapterId(java.lang.String)">setAdapterId</a></span>&#8203;(java.lang.String&nbsp;adapterId)</code></th>
 <td class="colLast">
 <div class="block">See <a href="AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a></div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCorrId(java.lang.String)">setCorrId</a></span>&#8203;(java.lang.String&nbsp;corrId)</code></th>
 <td class="colLast">
 <div class="block">GUID for correlation ID.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setErrorMessage(java.lang.String)">setErrorMessage</a></span>&#8203;(java.lang.String&nbsp;errorMessage)</code></th>
 <td class="colLast">
-<div class="block">A sensible explanation that says something about why the incident has failed.</div>
+<div class="block">A message that explains the reason for the failure of the event.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFailed(boolean)">setFailed</a></span>&#8203;(boolean&nbsp;failed)</code></th>
 <td class="colLast">
-<div class="block">If the event has failed.</div>
+<div class="block">Indicates whether the event has failed.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHandledAt(long)">setHandledAt</a></span>&#8203;(long&nbsp;handledAt)</code></th>
 <td class="colLast">
 <div class="block">When the event was handled.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOrgId(java.lang.String)">setOrgId</a></span>&#8203;(java.lang.String&nbsp;orgId)</code></th>
 <td class="colLast">
 <div class="block">OrgId for the current customer.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRejected(boolean)">setRejected</a></span>&#8203;(boolean&nbsp;rejected)</code></th>
+<td class="colLast">
+<div class="block">Indicates whether the event has been rejected.</div>
+</td>
+</tr>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRejectReason(java.lang.String)">setRejectReason</a></span>&#8203;(java.lang.String&nbsp;rejectReason)</code></th>
+<td class="colLast">
+<div class="block">A message that explains the reason for the rejection of the event.</div>
+</td>
+</tr>
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setValue(no.fintlabs.adapter.models.SyncPageEntry)">setValue</a></span>&#8203;(<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;<a href="ResponseFintEvent.html" title="type parameter in ResponseFintEvent">T</a>&gt;&nbsp;value)</code></th>
 <td class="colLast">
 <div class="block">The SyncPageEntry of the object that the event produced.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -363,7 +393,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;ResponseFintEvent()</pre>
 </li>
 </ul>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.SyncPageEntry,boolean,java.lang.String)">
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.SyncPageEntry,boolean,java.lang.String,boolean,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -375,7 +405,9 @@ extends java.lang.Object</pre>
                          long&nbsp;handledAt,
                          <a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;<a href="ResponseFintEvent.html" title="type parameter in ResponseFintEvent">T</a>&gt;&nbsp;value,
                          boolean&nbsp;failed,
-                         java.lang.String&nbsp;errorMessage)</pre>
+                         java.lang.String&nbsp;errorMessage,
+                         boolean&nbsp;rejected,
+                         java.lang.String&nbsp;rejectReason)</pre>
 </li>
 </ul>
 </li>
@@ -454,7 +486,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>isFailed</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isFailed()</pre>
-<div class="block">If the event has failed.</div>
+<div class="block">Indicates whether the event has failed.</div>
 </li>
 </ul>
 <a id="getErrorMessage()">
@@ -464,7 +496,27 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getErrorMessage</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getErrorMessage()</pre>
-<div class="block">A sensible explanation that says something about why the incident has failed.</div>
+<div class="block">A message that explains the reason for the failure of the event.</div>
+</li>
+</ul>
+<a id="isRejected()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRejected</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isRejected()</pre>
+<div class="block">Indicates whether the event has been rejected.</div>
+</li>
+</ul>
+<a id="getRejectReason()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRejectReason</h4>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getRejectReason()</pre>
+<div class="block">A message that explains the reason for the rejection of the event.</div>
 </li>
 </ul>
 <a id="setCorrId(java.lang.String)">
@@ -524,7 +576,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>setFailed</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setFailed&#8203;(boolean&nbsp;failed)</pre>
-<div class="block">If the event has failed.</div>
+<div class="block">Indicates whether the event has failed.</div>
 </li>
 </ul>
 <a id="setErrorMessage(java.lang.String)">
@@ -534,7 +586,27 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>setErrorMessage</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setErrorMessage&#8203;(java.lang.String&nbsp;errorMessage)</pre>
-<div class="block">A sensible explanation that says something about why the incident has failed.</div>
+<div class="block">A message that explains the reason for the failure of the event.</div>
+</li>
+</ul>
+<a id="setRejected(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRejected</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setRejected&#8203;(boolean&nbsp;rejected)</pre>
+<div class="block">Indicates whether the event has been rejected.</div>
+</li>
+</ul>
+<a id="setRejectReason(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRejectReason</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setRejectReason&#8203;(java.lang.String&nbsp;rejectReason)</pre>
+<div class="block">A message that explains the reason for the rejection of the event.</div>
 </li>
 </ul>
 <a id="equals(java.lang.Object)">
