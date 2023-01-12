@@ -8,7 +8,6 @@ name: Publish to Reposilite
 on:
   release:
     types: [published]
-  workflow_dispatch:
 
 jobs:
   publish:
