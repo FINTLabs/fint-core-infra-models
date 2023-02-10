@@ -156,13 +156,6 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models">RequestFintEvent.OperationType</a></span></code></th>
-<td class="colLast">
-<div class="block">The type of operation to be performed by the adapter</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -188,12 +181,12 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.RequestFintEvent.OperationType,long,long,java.lang.String)">RequestFintEvent</a></span>&#8203;(java.lang.String&nbsp;corrId,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.OperationType,long,long,java.lang.String)">RequestFintEvent</a></span>&#8203;(java.lang.String&nbsp;corrId,
                 java.lang.String&nbsp;orgId,
                 java.lang.String&nbsp;domainName,
                 java.lang.String&nbsp;packageName,
                 java.lang.String&nbsp;resourceName,
-                <a href="RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models">RequestFintEvent.OperationType</a>&nbsp;operation,
+                <a href="OperationType.html" title="enum in no.fintlabs.adapter.models">OperationType</a>&nbsp;operationType,
                 long&nbsp;created,
                 long&nbsp;timeToLive,
                 java.lang.String&nbsp;value)</code></th>
@@ -254,8 +247,8 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models">RequestFintEvent.OperationType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOperation()">getOperation</a></span>()</code></th>
+<td class="colFirst"><code><a href="OperationType.html" title="enum in no.fintlabs.adapter.models">OperationType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOperationType()">getOperationType</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The type of operation to be performed (CREATE, UPDATE)</div>
 </td>
@@ -323,7 +316,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOperation(no.fintlabs.adapter.models.RequestFintEvent.OperationType)">setOperation</a></span>&#8203;(<a href="RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models">RequestFintEvent.OperationType</a>&nbsp;operation)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOperationType(no.fintlabs.adapter.models.OperationType)">setOperationType</a></span>&#8203;(<a href="OperationType.html" title="enum in no.fintlabs.adapter.models">OperationType</a>&nbsp;operationType)</code></th>
 <td class="colLast">
 <div class="block">The type of operation to be performed (CREATE, UPDATE)</div>
 </td>
@@ -401,7 +394,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;RequestFintEvent()</pre>
 </li>
 </ul>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.RequestFintEvent.OperationType,long,long,java.lang.String)">
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.OperationType,long,long,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -412,7 +405,7 @@ extends java.lang.Object</pre>
                         java.lang.String&nbsp;domainName,
                         java.lang.String&nbsp;packageName,
                         java.lang.String&nbsp;resourceName,
-                        <a href="RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models">RequestFintEvent.OperationType</a>&nbsp;operation,
+                        <a href="OperationType.html" title="enum in no.fintlabs.adapter.models">OperationType</a>&nbsp;operationType,
                         long&nbsp;created,
                         long&nbsp;timeToLive,
                         java.lang.String&nbsp;value)</pre>
@@ -487,13 +480,13 @@ extends java.lang.Object</pre>
 <div class="block">Name of the FINT class/entity. E.g. fravar</div>
 </li>
 </ul>
-<a id="getOperation()">
+<a id="getOperationType()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getOperation</h4>
-<pre class="methodSignature">public&nbsp;<a href="RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models">RequestFintEvent.OperationType</a>&nbsp;getOperation()</pre>
+<h4>getOperationType</h4>
+<pre class="methodSignature">public&nbsp;<a href="OperationType.html" title="enum in no.fintlabs.adapter.models">OperationType</a>&nbsp;getOperationType()</pre>
 <div class="block">The type of operation to be performed (CREATE, UPDATE)</div>
 </li>
 </ul>
@@ -577,13 +570,13 @@ extends java.lang.Object</pre>
 <div class="block">Name of the FINT class/entity. E.g. fravar</div>
 </li>
 </ul>
-<a id="setOperation(no.fintlabs.adapter.models.RequestFintEvent.OperationType)">
+<a id="setOperationType(no.fintlabs.adapter.models.OperationType)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setOperation</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setOperation&#8203;(<a href="RequestFintEvent.OperationType.html" title="enum in no.fintlabs.adapter.models">RequestFintEvent.OperationType</a>&nbsp;operation)</pre>
+<h4>setOperationType</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setOperationType&#8203;(<a href="OperationType.html" title="enum in no.fintlabs.adapter.models">OperationType</a>&nbsp;operationType)</pre>
 <div class="block">The type of operation to be performed (CREATE, UPDATE)</div>
 </li>
 </ul>
