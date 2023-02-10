@@ -36,6 +36,11 @@ public class ResponseFintEvent<T> {
     private SyncPageEntry<T> value;
 
     /**
+     * The type of operation to be performed (CREATE, UPDATE)
+     */
+    private OperationType operationType;
+
+    /**
      * Indicates whether the event has failed.
      */
     private boolean failed;

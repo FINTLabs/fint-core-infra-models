@@ -41,7 +41,7 @@ public class RequestFintEvent {
     /**
      * The type of operation to be performed (CREATE, UPDATE)
      */
-    private OperationType operation;
+    private OperationType operationType;
 
     /**
      * When the event was created.
@@ -57,12 +57,4 @@ public class RequestFintEvent {
      * The object to which the event applies
      */
     private String value;
-
-    /**
-     * The type of operation to be performed by the adapter
-     */
-    public enum OperationType {
-        CREATE,
-        UPDATE
-    }
 }
