@@ -13,16 +13,25 @@ import java.util.List;
  * @param <T> The FINT resource type for the page.
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class SyncPage<T> {
     /**
      * Metadata describing the page.
      */
-    SyncPageMetadata metadata;
+    private SyncPageMetadata metadata;
     /**
      * Data in the page.
      */
-    List<SyncPageEntry<T>> resources;
+    private List<SyncPageEntry<T>> resources;
+
+    /**
+     * Type of sync.
+     */
+    private final SyncType syncType;
+
+    public SyncPage(SyncType syncType) {
+        this.syncType = syncType;
+    }
+
 }

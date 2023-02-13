@@ -5,6 +5,5 @@ package no.fintlabs.adapter.models;
  */
 public enum OperationType {
     CREATE,
-    UPDATE,
-    DELETE
+    UPDATE
 }

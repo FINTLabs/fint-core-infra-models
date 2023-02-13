@@ -5,5 +5,7 @@ package no.fintlabs.adapter.models;
  * @param <T> The FINT resource type for the page.
  */
 public class DeleteSyncPage<T> extends SyncPage<T> {
-
+    public DeleteSyncPage() {
+        super(SyncType.DELETE);
+    }
 }
