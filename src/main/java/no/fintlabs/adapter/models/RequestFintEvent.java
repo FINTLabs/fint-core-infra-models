@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RequestFintEvent {
+public class RequestFintEvent implements FintEvent {
     /**
      * GUID for correlation ID. The same ID should follow the request both upstream and downstream.
      */
