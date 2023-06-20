@@ -4,15 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import no.fint.model.resource.FintLinks;
-
-import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ResponseFintEvent<T extends FintLinks & Serializable> implements FintEvent {
+public class ResponseFintEvent<T> implements FintEvent {
     /**
      * GUID for correlation ID. The same ID should follow the request both upstream and downstream.
      */
