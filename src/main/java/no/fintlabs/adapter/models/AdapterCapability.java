@@ -57,12 +57,16 @@ public class AdapterCapability {
      */
     public enum DeltaSyncInterval {
         /**
-         * This indicates that the adapter will send updates as soon as they are available in the application.
+         * Updates are dispatched immediately as they become available.
          */
         IMMEDIATE,
         /**
-         * This indicates that the adapter will send updates every <code>&lt;=15</code> minutes.
+         * Updates are dispatched at intervals of up to <code>&lt;=15</code> minutes.
          */
-        LEGACY
+        LEGACY,
+        /**
+         * No incremental updates are dispatched, only full synchronizations.
+         */
+        NONE
     }
 }
