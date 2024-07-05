@@ -116,26 +116,22 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <main role="main">
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">no.fintlabs.adapter.models</a></div>
-<h2 title="Class SyncPageEntry" class="title">Class SyncPageEntry&lt;T&gt;</h2>
+<h2 title="Class SyncPageEntry" class="title">Class SyncPageEntry</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>no.fintlabs.adapter.models.SyncPageEntry&lt;T&gt;</li>
+<li>no.fintlabs.adapter.models.SyncPageEntry</li>
 </ul>
 </li>
 </ul>
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
-<dl>
-<dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>T</code> - The FINT resource type for the page.</dd>
-</dl>
 <hr>
-<pre>public class <span class="typeNameLabel">SyncPageEntry&lt;T&gt;</span>
+<pre>public class <span class="typeNameLabel">SyncPageEntry</span>
 extends java.lang.Object</pre>
 <div class="block">Represents an entry in the page data.</div>
 </li>
@@ -198,7 +194,7 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="SyncPageEntry.html" title="type parameter in SyncPageEntry">T</a></code></td>
+<td class="colFirst"><code>java.lang.Object</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getResource()">getResource</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The FINT resource.</div>
@@ -210,24 +206,24 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;T&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(java.lang.String,T)">of</a></span>&#8203;(java.lang.String&nbsp;identifier,
-  T&nbsp;resource)</code></th>
+<td class="colFirst"><code>static <a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(java.lang.String,java.lang.String)">of</a></span>&#8203;(java.lang.String&nbsp;identifier,
+  java.lang.String&nbsp;resource)</code></th>
 <td class="colLast">
 <div class="block">Helper method to create an SyncPageEntry.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>static &lt;R extends no.fint.model.resource.FintLinks&gt;<br><a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;R&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ofIdentifierName(java.lang.String,R)">ofIdentifierName</a></span>&#8203;(java.lang.String&nbsp;identifierName,
-                R&nbsp;resource)</code></th>
+<td class="colFirst"><code>static &lt;T extends no.fint.model.resource.FintLinks&gt;<br><a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ofIdentifierName(java.lang.String,T)">ofIdentifierName</a></span>&#8203;(java.lang.String&nbsp;identifierName,
+                T&nbsp;resource)</code></th>
 <td class="colLast">
 <div class="block">Helper method to create an SyncPageEntry with identifierName as the identifier.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>static &lt;R extends no.fint.model.resource.FintLinks&gt;<br><a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;R&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ofSystemId(R)">ofSystemId</a></span>&#8203;(R&nbsp;resource)</code></th>
+<td class="colFirst"><code>static &lt;T extends no.fint.model.resource.FintLinks&gt;<br><a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ofSystemId(T)">ofSystemId</a></span>&#8203;(T&nbsp;resource)</code></th>
 <td class="colLast">
 <div class="block">Helper method to create an SyncPageEntry with <code>systemId</code> as identifier.</div>
 </td>
@@ -242,7 +238,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setResource(T)">setResource</a></span>&#8203;(<a href="SyncPageEntry.html" title="type parameter in SyncPageEntry">T</a>&nbsp;resource)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setResource(java.lang.Object)">setResource</a></span>&#8203;(java.lang.Object&nbsp;resource)</code></th>
 <td class="colLast">
 <div class="block">The FINT resource.</div>
 </td>
@@ -295,23 +291,19 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="of(java.lang.String,java.lang.Object)">
-<!--   -->
-</a><a id="of(java.lang.String,T)">
+<a id="of(java.lang.String,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre class="methodSignature">public static&nbsp;&lt;T&gt;&nbsp;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;T&gt;&nbsp;of&#8203;(java.lang.String&nbsp;identifier,
-                                      T&nbsp;resource)</pre>
+<pre class="methodSignature">public static&nbsp;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&nbsp;of&#8203;(java.lang.String&nbsp;identifier,
+                               java.lang.String&nbsp;resource)</pre>
 <div class="block">Helper method to create an SyncPageEntry.</div>
 <dl>
-<dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>T</code> - The FINT resource type</dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>identifier</code> - <a href="#identifier"><code>identifier</code></a></dd>
-<dd><code>resource</code> - <a href="#resource"><code>resource</code></a></dd>
+<dd><code>identifier</code> - <code>identifier</code></dd>
+<dd><code>resource</code> - <code>resource</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A SyncPageEntry.</dd>
 </dl>
@@ -319,19 +311,19 @@ extends java.lang.Object</pre>
 </ul>
 <a id="ofSystemId(no.fint.model.resource.FintLinks)">
 <!--   -->
-</a><a id="ofSystemId(R)">
+</a><a id="ofSystemId(T)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>ofSystemId</h4>
-<pre class="methodSignature">public static&nbsp;&lt;R extends no.fint.model.resource.FintLinks&gt;&nbsp;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;R&gt;&nbsp;ofSystemId&#8203;(R&nbsp;resource)</pre>
+<pre class="methodSignature">public static&nbsp;&lt;T extends no.fint.model.resource.FintLinks&gt;&nbsp;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&nbsp;ofSystemId&#8203;(T&nbsp;resource)</pre>
 <div class="block">Helper method to create an SyncPageEntry with <code>systemId</code> as identifier.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>R</code> - The FINT resource type</dd>
+<dd><code>T</code> - The FINT resource type</dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>resource</code> - <a href="#resource"><code>resource</code></a></dd>
+<dd><code>resource</code> - <code>resource</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A SyncPageEntry</dd>
 </dl>
@@ -339,18 +331,18 @@ extends java.lang.Object</pre>
 </ul>
 <a id="ofIdentifierName(java.lang.String,no.fint.model.resource.FintLinks)">
 <!--   -->
-</a><a id="ofIdentifierName(java.lang.String,R)">
+</a><a id="ofIdentifierName(java.lang.String,T)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>ofIdentifierName</h4>
-<pre class="methodSignature">public static&nbsp;&lt;R extends no.fint.model.resource.FintLinks&gt;&nbsp;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&lt;R&gt;&nbsp;ofIdentifierName&#8203;(java.lang.String&nbsp;identifierName,
-                                                                                             R&nbsp;resource)</pre>
+<pre class="methodSignature">public static&nbsp;&lt;T extends no.fint.model.resource.FintLinks&gt;&nbsp;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a>&nbsp;ofIdentifierName&#8203;(java.lang.String&nbsp;identifierName,
+                                                                                          T&nbsp;resource)</pre>
 <div class="block">Helper method to create an SyncPageEntry with identifierName as the identifier.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>R</code> - The FINT resource type</dd>
+<dd><code>T</code> - The FINT resource type</dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>identifierName</code> - Name of a self link in a FINT resource. This is any attribute
                        of the type <code>Identifikator</code>.
@@ -360,7 +352,7 @@ extends java.lang.Object</pre>
                        <li><code>brukernavn</code></li>
                        <li><code>feidenavn</code></li>
                        </ul></dd>
-<dd><code>resource</code> - <a href="#resource"><code>resource</code></a></dd>
+<dd><code>resource</code> - <code>resource</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A SyncPageEntry</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -389,7 +381,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getResource</h4>
-<pre class="methodSignature">public&nbsp;<a href="SyncPageEntry.html" title="type parameter in SyncPageEntry">T</a>&nbsp;getResource()</pre>
+<pre class="methodSignature">public&nbsp;java.lang.Object&nbsp;getResource()</pre>
 <div class="block">The FINT resource.</div>
 </li>
 </ul>
@@ -410,13 +402,11 @@ extends java.lang.Object</pre>
 </ul>
 <a id="setResource(java.lang.Object)">
 <!--   -->
-</a><a id="setResource(T)">
-<!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setResource</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setResource&#8203;(<a href="SyncPageEntry.html" title="type parameter in SyncPageEntry">T</a>&nbsp;resource)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;setResource&#8203;(java.lang.Object&nbsp;resource)</pre>
 <div class="block">The FINT resource.</div>
 </li>
 </ul>

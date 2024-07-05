@@ -568,7 +568,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html#IMMEDIATE">IMMEDIATE</a></span> - no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html" title="enum in no.fintlabs.adapter.models">AdapterCapability.DeltaSyncInterval</a></dt>
 <dd>
-<div class="block">This indicates that the adapter will send updates as soon as they are available in the application.</div>
+<div class="block">Updates are dispatched immediately as they become available.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#isFailed()">isFailed()</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>
@@ -586,7 +586,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html#LEGACY">LEGACY</a></span> - no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html" title="enum in no.fintlabs.adapter.models">AdapterCapability.DeltaSyncInterval</a></dt>
 <dd>
-<div class="block">This indicates that the adapter will send updates every <code>&lt;=15</code> minutes.</div>
+<div class="block">Updates are dispatched at intervals of up to <code>&lt;=15</code> minutes.</div>
 </dd>
 <dt><a href="no/fintlabs/adapter/models/utils/LinkUtilities.html" title="class in no.fintlabs.adapter.models.utils"><span class="typeNameLink">LinkUtilities</span></a> - Class in <a href="no/fintlabs/adapter/models/utils/package-summary.html">no.fintlabs.adapter.models.utils</a></dt>
 <dd>
@@ -614,21 +614,25 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><a href="no/fintlabs/adapter/models/utils/package-summary.html">no.fintlabs.adapter.models.utils</a> - package no.fintlabs.adapter.models.utils</dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html#NONE">NONE</a></span> - no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterCapability.DeltaSyncInterval.html" title="enum in no.fintlabs.adapter.models">AdapterCapability.DeltaSyncInterval</a></dt>
+<dd>
+<div class="block">No incremental updates are dispatched, only full synchronizations.</div>
+</dd>
 </dl>
 <a id="I:O">
 <!--   -->
 </a>
 <h2 class="title">O</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#of(java.lang.String,T)">of(String, T)</a></span> - Static method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#of(java.lang.String,java.lang.String)">of(String, String)</a></span> - Static method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
 <dd>
 <div class="block">Helper method to create an SyncPageEntry.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#ofIdentifierName(java.lang.String,R)">ofIdentifierName(String, R)</a></span> - Static method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#ofIdentifierName(java.lang.String,T)">ofIdentifierName(String, T)</a></span> - Static method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
 <dd>
 <div class="block">Helper method to create an SyncPageEntry with identifierName as the identifier.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#ofSystemId(R)">ofSystemId(R)</a></span> - Static method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#ofSystemId(T)">ofSystemId(T)</a></span> - Static method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
 <dd>
 <div class="block">Helper method to create an SyncPageEntry with <code>systemId</code> as identifier.</div>
 </dd>
@@ -708,7 +712,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#%3Cinit%3E()">RequestFintEvent()</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.OperationType,long,long,java.lang.String)">RequestFintEvent(String, String, String, String, String, OperationType, long, long, String)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.models.OperationType,long,long,java.lang.Object)">RequestFintEvent(String, String, String, String, String, OperationType, long, long, Object)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">RequestFintEvent.RequestFintEventBuilder</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>&nbsp;</dd>
@@ -720,17 +724,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Name of the FINT class/entity.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPage.SyncPageBuilder.html#resources(java.util.List)">resources(List&lt;SyncPageEntry&lt;T&gt;&gt;)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPage.SyncPageBuilder.html" title="class in no.fintlabs.adapter.models">SyncPage.SyncPageBuilder</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPage.SyncPageBuilder.html#resources(java.util.List)">resources(List&lt;SyncPageEntry&gt;)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPage.SyncPageBuilder.html" title="class in no.fintlabs.adapter.models">SyncPage.SyncPageBuilder</a></dt>
 <dd>
 <div class="block">Data in the page.</div>
 </dd>
-<dt><a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">ResponseFintEvent</span></a>&lt;<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="type parameter in ResponseFintEvent">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
+<dt><a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">ResponseFintEvent</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#%3Cinit%3E()">ResponseFintEvent()</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.SyncPageEntry,no.fintlabs.adapter.models.OperationType,boolean,java.lang.String,boolean,java.lang.String)">ResponseFintEvent(String, String, String, long, SyncPageEntry&lt;T&gt;, OperationType, boolean, String, boolean, String)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.SyncPageEntry,no.fintlabs.adapter.models.OperationType,boolean,java.lang.String,boolean,java.lang.String)">ResponseFintEvent(String, String, String, long, SyncPageEntry, OperationType, boolean, String, boolean, String)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">ResponseFintEvent.ResponseFintEventBuilder</span></a>&lt;<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="type parameter in ResponseFintEvent.ResponseFintEventBuilder">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
+<dt><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">ResponseFintEvent.ResponseFintEventBuilder</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a id="I:S">
@@ -872,7 +876,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">A message that explains the reason for the rejection of the event.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#setResource(T)">setResource(T)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPageEntry.html#setResource(java.lang.Object)">setResource(Object)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models">SyncPageEntry</a></dt>
 <dd>
 <div class="block">The FINT resource.</div>
 </dd>
@@ -884,7 +888,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Name of the FINT class/entity.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPage.html#setResources(java.util.List)">setResources(List&lt;SyncPageEntry&lt;T&gt;&gt;)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPage.html" title="class in no.fintlabs.adapter.models">SyncPage</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPage.html#setResources(java.util.List)">setResources(List&lt;SyncPageEntry&gt;)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPage.html" title="class in no.fintlabs.adapter.models">SyncPage</a></dt>
 <dd>
 <div class="block">Data in the page.</div>
 </dd>
@@ -926,11 +930,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">
  Username used for authentication to FINT.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#setValue(java.lang.String)">setValue(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.html#setValue(java.lang.Object)">setValue(Object)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.html" title="class in no.fintlabs.adapter.models">RequestFintEvent</a></dt>
 <dd>
 <div class="block">The object to which the event applies</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setValue(no.fintlabs.adapter.models.SyncPageEntry)">setValue(SyncPageEntry&lt;T&gt;)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.html#setValue(no.fintlabs.adapter.models.SyncPageEntry)">setValue(SyncPageEntry)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent</a></dt>
 <dd>
 <div class="block">The SyncPageEntry of the object that the event produced.</div>
 </dd>
@@ -938,13 +942,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Represents a page sent from the adapter to the provider.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPage.html#%3Cinit%3E(no.fintlabs.adapter.models.SyncPageMetadata,java.util.List,no.fintlabs.adapter.models.SyncType)">SyncPage(SyncPageMetadata, List&lt;SyncPageEntry&lt;T&gt;&gt;, SyncType)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPage.html" title="class in no.fintlabs.adapter.models">SyncPage</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPage.html#%3Cinit%3E(no.fintlabs.adapter.models.SyncPageMetadata,java.util.List,no.fintlabs.adapter.models.SyncType)">SyncPage(SyncPageMetadata, List&lt;SyncPageEntry&gt;, SyncType)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPage.html" title="class in no.fintlabs.adapter.models">SyncPage</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/SyncPage.html#%3Cinit%3E(no.fintlabs.adapter.models.SyncType)">SyncPage(SyncType)</a></span> - Constructor for class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/SyncPage.html" title="class in no.fintlabs.adapter.models">SyncPage</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="no/fintlabs/adapter/models/SyncPage.SyncPageBuilder.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">SyncPage.SyncPageBuilder</span></a>&lt;<a href="no/fintlabs/adapter/models/SyncPage.SyncPageBuilder.html" title="type parameter in SyncPage.SyncPageBuilder">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">SyncPageEntry</span></a>&lt;<a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="type parameter in SyncPageEntry">T</a>&gt; - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
+<dt><a href="no/fintlabs/adapter/models/SyncPageEntry.html" title="class in no.fintlabs.adapter.models"><span class="typeNameLink">SyncPageEntry</span></a> - Class in <a href="no/fintlabs/adapter/models/package-summary.html">no.fintlabs.adapter.models</a></dt>
 <dd>
 <div class="block">Represents an entry in the page data.</div>
 </dd>
@@ -1048,11 +1052,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">V</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html#value(java.lang.String)">value(String)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html#value(java.lang.Object)">value(Object)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models">RequestFintEvent.RequestFintEventBuilder</a></dt>
 <dd>
 <div class="block">The object to which the event applies</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#value(no.fintlabs.adapter.models.SyncPageEntry)">value(SyncPageEntry&lt;T&gt;)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html#value(no.fintlabs.adapter.models.SyncPageEntry)">value(SyncPageEntry)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
 <dd>
 <div class="block">The SyncPageEntry of the object that the event produced.</div>
 </dd>

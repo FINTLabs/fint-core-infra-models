@@ -169,13 +169,19 @@ extends java.lang.Enum&lt;<a href="AdapterCapability.DeltaSyncInterval.html" tit
 <tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#IMMEDIATE">IMMEDIATE</a></span></code></th>
 <td class="colLast">
-<div class="block">This indicates that the adapter will send updates as soon as they are available in the application.</div>
+<div class="block">Updates are dispatched immediately as they become available.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#LEGACY">LEGACY</a></span></code></th>
 <td class="colLast">
-<div class="block">This indicates that the adapter will send updates every <code>&lt;=15</code> minutes.</div>
+<div class="block">Updates are dispatched at intervals of up to <code>&lt;=15</code> minutes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#NONE">NONE</a></span></code></th>
+<td class="colLast">
+<div class="block">No incremental updates are dispatched, only full synchronizations.</div>
 </td>
 </tr>
 </table>
@@ -249,17 +255,27 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>IMMEDIATE</h4>
 <pre>public static final&nbsp;<a href="AdapterCapability.DeltaSyncInterval.html" title="enum in no.fintlabs.adapter.models">AdapterCapability.DeltaSyncInterval</a> IMMEDIATE</pre>
-<div class="block">This indicates that the adapter will send updates as soon as they are available in the application.</div>
+<div class="block">Updates are dispatched immediately as they become available.</div>
 </li>
 </ul>
 <a id="LEGACY">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>LEGACY</h4>
 <pre>public static final&nbsp;<a href="AdapterCapability.DeltaSyncInterval.html" title="enum in no.fintlabs.adapter.models">AdapterCapability.DeltaSyncInterval</a> LEGACY</pre>
-<div class="block">This indicates that the adapter will send updates every <code>&lt;=15</code> minutes.</div>
+<div class="block">Updates are dispatched at intervals of up to <code>&lt;=15</code> minutes.</div>
+</li>
+</ul>
+<a id="NONE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>NONE</h4>
+<pre>public static final&nbsp;<a href="AdapterCapability.DeltaSyncInterval.html" title="enum in no.fintlabs.adapter.models">AdapterCapability.DeltaSyncInterval</a> NONE</pre>
+<div class="block">No incremental updates are dispatched, only full synchronizations.</div>
 </li>
 </ul>
 </li>
