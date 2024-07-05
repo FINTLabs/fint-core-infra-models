@@ -30,7 +30,7 @@ public class SyncPageEntry {
      * @param resource   {@link #resource}
      * @return A SyncPageEntry.
      */
-    public static SyncPageEntry of(String identifier, String resource) {
+    public static SyncPageEntry of(String identifier, Object resource) {
         SyncPageEntry entry = new SyncPageEntry();
         entry.setIdentifier(identifier);
         entry.setResource(resource);
