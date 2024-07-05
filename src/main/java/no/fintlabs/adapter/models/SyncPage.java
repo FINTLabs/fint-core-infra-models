@@ -4,7 +4,6 @@ package no.fintlabs.adapter.models;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -23,7 +22,7 @@ public class SyncPage<T> {
     /**
      * Data in the page.
      */
-    private List<SyncPageEntry<T>> resources;
+    private List<SyncPageEntry> resources;
 
     /**
      * Type of sync.

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ResponseFintEvent<T> implements FintEvent {
+public class ResponseFintEvent implements FintEvent {
     /**
      * GUID for correlation ID. The same ID should follow the request both upstream and downstream.
      */
@@ -33,7 +33,7 @@ public class ResponseFintEvent<T> implements FintEvent {
     /**
      * The SyncPageEntry of the object that the event produced. The object should be a FINT resource.
      */
-    private SyncPageEntry<T> value;
+    private SyncPageEntry value;
 
     /**
      * The type of operation to be performed (CREATE, UPDATE)
