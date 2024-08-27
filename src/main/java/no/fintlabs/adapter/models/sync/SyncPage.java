@@ -1,4 +1,4 @@
-package no.fintlabs.adapter.models;
+package no.fintlabs.adapter.models.sync;
 
 
 import lombok.AllArgsConstructor;
@@ -9,12 +9,11 @@ import java.util.List;
 
 /**
  * Represents a page sent from the adapter to the provider.
- * @param <T> The FINT resource type for the page.
  */
 @Data
 @AllArgsConstructor
 @Builder
-public class SyncPage<T> {
+public class SyncPage {
     /**
      * Metadata describing the page.
      */

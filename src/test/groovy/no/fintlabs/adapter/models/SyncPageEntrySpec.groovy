@@ -2,6 +2,7 @@ package no.fintlabs.adapter.models
 
 
 import no.fint.model.resource.Link
+import no.fintlabs.adapter.models.sync.SyncPageEntry
 import spock.lang.Specification
 
 class SyncPageEntrySpec extends Specification {

@@ -1,9 +1,12 @@
-package no.fintlabs.adapter.models;
+package no.fintlabs.adapter.models.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import no.fintlabs.adapter.models.AdapterContract;
+import no.fintlabs.adapter.operation.OperationType;
+import no.fintlabs.adapter.models.sync.SyncPageEntry;
 
 @Data
 @NoArgsConstructor

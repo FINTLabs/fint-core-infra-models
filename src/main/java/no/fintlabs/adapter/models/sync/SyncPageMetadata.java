@@ -1,9 +1,11 @@
-package no.fintlabs.adapter.models;
+package no.fintlabs.adapter.models.sync;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import no.fintlabs.adapter.models.AdapterCapability;
+import no.fintlabs.adapter.models.AdapterContract;
 
 import java.util.UUID;
 
