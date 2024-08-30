@@ -14,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class SyncPage {
+
     /**
      * Metadata describing the page.
      */
@@ -22,14 +23,5 @@ public class SyncPage {
      * Data in the page.
      */
     private List<SyncPageEntry> resources;
-
-    /**
-     * Type of sync.
-     */
-    private final SyncType syncType;
-
-    public SyncPage(SyncType syncType) {
-        this.syncType = syncType;
-    }
 
 }
