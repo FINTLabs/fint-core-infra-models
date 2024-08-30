@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
+var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -181,7 +181,7 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,long,long,long,java.lang.String,long)">SyncPageMetadata</a></span>&#8203;(java.lang.String&nbsp;adapterId,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,long,long,long,java.lang.String,long,no.fintlabs.adapter.models.sync.SyncType)">SyncPageMetadata</a></span>&#8203;(java.lang.String&nbsp;adapterId,
                 java.lang.String&nbsp;corrId,
                 java.lang.String&nbsp;orgId,
                 long&nbsp;totalSize,
@@ -189,7 +189,8 @@ extends java.lang.Object</pre>
                 long&nbsp;pageSize,
                 long&nbsp;totalPages,
                 java.lang.String&nbsp;uriRef,
-                long&nbsp;time)</code></th>
+                long&nbsp;time,
+                <a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;syncType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -261,102 +262,116 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSyncType()">getSyncType</a></span>()</code></th>
+<td class="colLast">
+<div class="block">SyncType for the Syncpage.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTime()">getTime</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Unix timestamp for the current page in a sync.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTotalPages()">getTotalPages</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Total pages in a sync.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTotalSize()">getTotalSize</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The total amount of resources for all pages in a sync.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUriRef()">getUriRef</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The path for the FINT resource in a sync.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hashCode()">hashCode</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAdapterId(java.lang.String)">setAdapterId</a></span>&#8203;(java.lang.String&nbsp;adapterId)</code></th>
 <td class="colLast">
 <div class="block">See <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a></div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCorrId(java.lang.String)">setCorrId</a></span>&#8203;(java.lang.String&nbsp;corrId)</code></th>
 <td class="colLast">
 <div class="block">An uniq id for a sync.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOrgId(java.lang.String)">setOrgId</a></span>&#8203;(java.lang.String&nbsp;orgId)</code></th>
 <td class="colLast">
 <div class="block">See <a href="../AdapterContract.html#getOrgId()"><code>AdapterContract.getOrgId()</code></a></div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPage(long)">setPage</a></span>&#8203;(long&nbsp;page)</code></th>
 <td class="colLast">
 <div class="block">Current page in a sync.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPageSize(long)">setPageSize</a></span>&#8203;(long&nbsp;pageSize)</code></th>
 <td class="colLast">
 <div class="block">Size of current page.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSyncType(no.fintlabs.adapter.models.sync.SyncType)">setSyncType</a></span>&#8203;(<a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;syncType)</code></th>
+<td class="colLast">
+<div class="block">SyncType for the Syncpage.</div>
+</td>
+</tr>
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTime(long)">setTime</a></span>&#8203;(long&nbsp;time)</code></th>
 <td class="colLast">
 <div class="block">Unix timestamp for the current page in a sync.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTotalPages(long)">setTotalPages</a></span>&#8203;(long&nbsp;totalPages)</code></th>
 <td class="colLast">
 <div class="block">Total pages in a sync.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTotalSize(long)">setTotalSize</a></span>&#8203;(long&nbsp;totalSize)</code></th>
 <td class="colLast">
 <div class="block">The total amount of resources for all pages in a sync.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setUriRef(java.lang.String)">setUriRef</a></span>&#8203;(java.lang.String&nbsp;uriRef)</code></th>
 <td class="colLast">
 <div class="block">The path for the FINT resource in a sync.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -394,7 +409,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;SyncPageMetadata()</pre>
 </li>
 </ul>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,long,long,long,long,java.lang.String,long)">
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,long,long,long,long,java.lang.String,long,no.fintlabs.adapter.models.sync.SyncType)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -408,7 +423,8 @@ extends java.lang.Object</pre>
                         long&nbsp;pageSize,
                         long&nbsp;totalPages,
                         java.lang.String&nbsp;uriRef,
-                        long&nbsp;time)</pre>
+                        long&nbsp;time,
+                        <a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;syncType)</pre>
 </li>
 </ul>
 </li>
@@ -529,6 +545,26 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
+<a id="getSyncType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSyncType</h4>
+<pre class="methodSignature">public&nbsp;<a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;getSyncType()</pre>
+<div class="block">SyncType for the Syncpage.
+
+ <p>This enum represents the different types of synchronization operations that can be performed.
+ Each type is associated with a specific <code>HttpMethod</code> to indicate
+ the type of HTTP request used for that operation.</p>
+
+ <ul>
+     <li><a href="SyncType.html#FULL"><code>FULL</code></a>: Used for sending full datasets. This will send the entire set of data to the server using <code>POST</code>.</li>
+     <li><a href="SyncType.html#DELTA"><code>DELTA</code></a>: Used for sending only updated or modified entries. This will send only the changes using <code>PATCH</code>.</li>
+     <li><a href="SyncType.html#DELETE"><code>DELETE</code></a>: Used for deleting entities. This will remove the specified entities using <code>DELETE</code>.</li>
+ </ul></div>
+</li>
+</ul>
 <a id="setAdapterId(java.lang.String)">
 <!--   -->
 </a>
@@ -626,6 +662,26 @@ extends java.lang.Object</pre>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><code>System.currentTimeMillis()</code></dd>
 </dl>
+</li>
+</ul>
+<a id="setSyncType(no.fintlabs.adapter.models.sync.SyncType)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSyncType</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setSyncType&#8203;(<a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;syncType)</pre>
+<div class="block">SyncType for the Syncpage.
+
+ <p>This enum represents the different types of synchronization operations that can be performed.
+ Each type is associated with a specific <code>HttpMethod</code> to indicate
+ the type of HTTP request used for that operation.</p>
+
+ <ul>
+     <li><a href="SyncType.html#FULL"><code>FULL</code></a>: Used for sending full datasets. This will send the entire set of data to the server using <code>POST</code>.</li>
+     <li><a href="SyncType.html#DELTA"><code>DELTA</code></a>: Used for sending only updated or modified entries. This will send only the changes using <code>PATCH</code>.</li>
+     <li><a href="SyncType.html#DELETE"><code>DELETE</code></a>: Used for deleting entities. This will remove the specified entities using <code>DELETE</code>.</li>
+ </ul></div>
 </li>
 </ul>
 <a id="equals(java.lang.Object)">

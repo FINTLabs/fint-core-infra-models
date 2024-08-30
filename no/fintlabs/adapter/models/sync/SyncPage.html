@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
+var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -130,10 +130,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
-<dl>
-<dt>Direct Known Subclasses:</dt>
-<dd><code><a href="DeleteSyncPage.html" title="class in no.fintlabs.adapter.models.sync">DeleteSyncPage</a></code>, <code><a href="DeltaSyncPage.html" title="class in no.fintlabs.adapter.models.sync">DeltaSyncPage</a></code>, <code><a href="FullSyncPage.html" title="class in no.fintlabs.adapter.models.sync">FullSyncPage</a></code></dd>
-</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">SyncPage</span>
 extends java.lang.Object</pre>
@@ -181,13 +177,8 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(no.fintlabs.adapter.models.sync.SyncPageMetadata,java.util.List,no.fintlabs.adapter.models.sync.SyncType)">SyncPage</a></span>&#8203;(<a href="SyncPageMetadata.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata</a>&nbsp;metadata,
-        java.util.List&lt;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&gt;&nbsp;resources,
-        <a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;syncType)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(no.fintlabs.adapter.models.sync.SyncType)">SyncPage</a></span>&#8203;(<a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;syncType)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(no.fintlabs.adapter.models.sync.SyncPageMetadata,java.util.List)">SyncPage</a></span>&#8203;(<a href="SyncPageMetadata.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata</a>&nbsp;metadata,
+        java.util.List&lt;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&gt;&nbsp;resources)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -238,32 +229,25 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSyncType()">getSyncType</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Type of sync.</div>
-</td>
-</tr>
-<tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hashCode()">hashCode</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMetadata(no.fintlabs.adapter.models.sync.SyncPageMetadata)">setMetadata</a></span>&#8203;(<a href="SyncPageMetadata.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata</a>&nbsp;metadata)</code></th>
 <td class="colLast">
 <div class="block">Metadata describing the page.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setResources(java.util.List)">setResources</a></span>&#8203;(java.util.List&lt;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&gt;&nbsp;resources)</code></th>
 <td class="colLast">
 <div class="block">Data in the page.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -292,24 +276,14 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(no.fintlabs.adapter.models.sync.SyncType)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>SyncPage</h4>
-<pre>public&nbsp;SyncPage&#8203;(<a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;syncType)</pre>
-</li>
-</ul>
-<a id="&lt;init&gt;(no.fintlabs.adapter.models.sync.SyncPageMetadata,java.util.List,no.fintlabs.adapter.models.sync.SyncType)">
+<a id="&lt;init&gt;(no.fintlabs.adapter.models.sync.SyncPageMetadata,java.util.List)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>SyncPage</h4>
 <pre>public&nbsp;SyncPage&#8203;(<a href="SyncPageMetadata.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata</a>&nbsp;metadata,
-                java.util.List&lt;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&gt;&nbsp;resources,
-                <a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;syncType)</pre>
+                java.util.List&lt;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&gt;&nbsp;resources)</pre>
 </li>
 </ul>
 </li>
@@ -349,16 +323,6 @@ extends java.lang.Object</pre>
 <h4>getResources</h4>
 <pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&gt;&nbsp;getResources()</pre>
 <div class="block">Data in the page.</div>
-</li>
-</ul>
-<a id="getSyncType()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSyncType</h4>
-<pre class="methodSignature">public&nbsp;<a href="SyncType.html" title="enum in no.fintlabs.adapter.models.sync">SyncType</a>&nbsp;getSyncType()</pre>
-<div class="block">Type of sync.</div>
 </li>
 </ul>
 <a id="setMetadata(no.fintlabs.adapter.models.sync.SyncPageMetadata)">
