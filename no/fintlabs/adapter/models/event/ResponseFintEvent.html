@@ -185,11 +185,11 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.sync.SyncPageEntry,no.fintlabs.adapter.operation.OperationType,boolean,java.lang.String,boolean,java.lang.String)">ResponseFintEvent</a></span>&#8203;(java.lang.String&nbsp;corrId,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,long,java.util.List,no.fintlabs.adapter.operation.OperationType,boolean,java.lang.String,boolean,java.lang.String)">ResponseFintEvent</a></span>&#8203;(java.lang.String&nbsp;corrId,
                  java.lang.String&nbsp;orgId,
                  java.lang.String&nbsp;adapterId,
                  long&nbsp;handledAt,
-                 <a href="../sync/SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&nbsp;value,
+                 java.util.List&lt;<a href="../ResourceIdentifikator.html" title="class in no.fintlabs.adapter.models">ResourceIdentifikator</a>&gt;&nbsp;identifikators,
                  <a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType,
                  boolean&nbsp;failed,
                  java.lang.String&nbsp;errorMessage,
@@ -259,31 +259,31 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 </td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>java.util.List&lt;<a href="../ResourceIdentifikator.html" title="class in no.fintlabs.adapter.models">ResourceIdentifikator</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getIdentifikators()">getIdentifikators</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The SyncPageEntry of the object that the event produced.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOperationType()">getOperationType</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The type of operation to be performed (CREATE, UPDATE)</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOrgId()">getOrgId</a></span>()</code></th>
 <td class="colLast">
 <div class="block">OrgId for the current customer.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRejectReason()">getRejectReason</a></span>()</code></th>
 <td class="colLast">
 <div class="block">A message that explains the reason for the rejection of the event.</div>
-</td>
-</tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code><a href="../sync/SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getValue()">getValue</a></span>()</code></th>
-<td class="colLast">
-<div class="block">The SyncPageEntry of the object that the event produced.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -342,37 +342,37 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setIdentifikators(java.util.List)">setIdentifikators</a></span>&#8203;(java.util.List&lt;<a href="../ResourceIdentifikator.html" title="class in no.fintlabs.adapter.models">ResourceIdentifikator</a>&gt;&nbsp;identifikators)</code></th>
+<td class="colLast">
+<div class="block">The SyncPageEntry of the object that the event produced.</div>
+</td>
+</tr>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOperationType(no.fintlabs.adapter.operation.OperationType)">setOperationType</a></span>&#8203;(<a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType)</code></th>
 <td class="colLast">
 <div class="block">The type of operation to be performed (CREATE, UPDATE)</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOrgId(java.lang.String)">setOrgId</a></span>&#8203;(java.lang.String&nbsp;orgId)</code></th>
 <td class="colLast">
 <div class="block">OrgId for the current customer.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRejected(boolean)">setRejected</a></span>&#8203;(boolean&nbsp;rejected)</code></th>
 <td class="colLast">
 <div class="block">Indicates whether the event has been rejected.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRejectReason(java.lang.String)">setRejectReason</a></span>&#8203;(java.lang.String&nbsp;rejectReason)</code></th>
 <td class="colLast">
 <div class="block">A message that explains the reason for the rejection of the event.</div>
-</td>
-</tr>
-<tr id="i23" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setValue(no.fintlabs.adapter.models.sync.SyncPageEntry)">setValue</a></span>&#8203;(<a href="../sync/SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&nbsp;value)</code></th>
-<td class="colLast">
-<div class="block">The SyncPageEntry of the object that the event produced.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
@@ -413,7 +413,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <pre>public&nbsp;ResponseFintEvent()</pre>
 </li>
 </ul>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,long,no.fintlabs.adapter.models.sync.SyncPageEntry,no.fintlabs.adapter.operation.OperationType,boolean,java.lang.String,boolean,java.lang.String)">
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,long,java.util.List,no.fintlabs.adapter.operation.OperationType,boolean,java.lang.String,boolean,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -423,7 +423,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
                          java.lang.String&nbsp;orgId,
                          java.lang.String&nbsp;adapterId,
                          long&nbsp;handledAt,
-                         <a href="../sync/SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&nbsp;value,
+                         java.util.List&lt;<a href="../ResourceIdentifikator.html" title="class in no.fintlabs.adapter.models">ResourceIdentifikator</a>&gt;&nbsp;identifikators,
                          <a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType,
                          boolean&nbsp;failed,
                          java.lang.String&nbsp;errorMessage,
@@ -498,13 +498,13 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <div class="block">When the event was handled.</div>
 </li>
 </ul>
-<a id="getValue()">
+<a id="getIdentifikators()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getValue</h4>
-<pre class="methodSignature">public&nbsp;<a href="../sync/SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&nbsp;getValue()</pre>
+<h4>getIdentifikators</h4>
+<pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="../ResourceIdentifikator.html" title="class in no.fintlabs.adapter.models">ResourceIdentifikator</a>&gt;&nbsp;getIdentifikators()</pre>
 <div class="block">The SyncPageEntry of the object that the event produced. The object should be a FINT resource.</div>
 </li>
 </ul>
@@ -602,13 +602,13 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <div class="block">When the event was handled.</div>
 </li>
 </ul>
-<a id="setValue(no.fintlabs.adapter.models.sync.SyncPageEntry)">
+<a id="setIdentifikators(java.util.List)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setValue</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setValue&#8203;(<a href="../sync/SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&nbsp;value)</pre>
+<h4>setIdentifikators</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setIdentifikators&#8203;(java.util.List&lt;<a href="../ResourceIdentifikator.html" title="class in no.fintlabs.adapter.models">ResourceIdentifikator</a>&gt;&nbsp;identifikators)</pre>
 <div class="block">The SyncPageEntry of the object that the event produced. The object should be a FINT resource.</div>
 </li>
 </ul>
