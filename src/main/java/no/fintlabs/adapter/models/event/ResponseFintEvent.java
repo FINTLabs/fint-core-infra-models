@@ -5,8 +5,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import no.fintlabs.adapter.models.AdapterContract;
+import no.fintlabs.adapter.models.ResourceIdentifikator;
 import no.fintlabs.adapter.operation.OperationType;
-import no.fintlabs.adapter.models.sync.SyncPageEntry;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -36,7 +38,7 @@ public class ResponseFintEvent implements FintEvent {
     /**
      * The SyncPageEntry of the object that the event produced. The object should be a FINT resource.
      */
-    private SyncPageEntry value;
+    private List<ResourceIdentifikator> identifikators;
 
     /**
      * The type of operation to be performed (CREATE, UPDATE)
