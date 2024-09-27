@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-public class ResourceIdentifikator {
+public class EventIdentifikator {
 
     private final String idField;
     private final String idValue;

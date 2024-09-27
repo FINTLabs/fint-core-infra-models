@@ -43,7 +43,7 @@ public class ResponseFintEvent implements FintEvent {
     /**
      * The Identifikators of the resource that's being handled.
      */
-    private List<ResourceIdentifikator> identifikators;
+    private List<EventIdentifikator> identifikators;
 
     /**
      * The type of operation to be performed (CREATE, UPDATE)
