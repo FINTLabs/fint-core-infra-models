@@ -1,7 +1,7 @@
 package no.fintlabs.adapter.models.sync;
 
 import lombok.Data;
-import no.fint.model.resource.FintLinks;
+import no.fint.model.resource.FintResource;
 import no.fintlabs.adapter.models.utils.LinkUtilities;
 
 /**
@@ -21,7 +21,7 @@ public class SyncPageEntry {
     /**
      * The FINT resource.
      */
-    private Object resource;
+    private FintResource resource;
 
     /**
      * Helper method to create an SyncPageEntry.
@@ -30,7 +30,7 @@ public class SyncPageEntry {
      * @param resource   {@link #resource}
      * @return A SyncPageEntry.
      */
-    public static SyncPageEntry of(String identifier, Object resource) {
+    public static SyncPageEntry of(String identifier, FintResource resource) {
         SyncPageEntry entry = new SyncPageEntry();
         entry.setIdentifier(identifier);
         entry.setResource(resource);
@@ -40,11 +40,11 @@ public class SyncPageEntry {
 
     /**
      * Helper method to create an SyncPageEntry with <code>systemId</code> as identifier.
+     *
      * @param resource {@link #resource}
      * @return A SyncPageEntry
-     * @param <T> The FINT resource type
      */
-    public static <T extends FintLinks> SyncPageEntry ofSystemId(T resource) {
+    public static SyncPageEntry ofSystemId(FintResource resource) {
         SyncPageEntry entry = new SyncPageEntry();
 
         entry.setIdentifier(LinkUtilities.getSelfLinkBySystemId(resource));
@@ -55,6 +55,7 @@ public class SyncPageEntry {
 
     /**
      * Helper method to create an SyncPageEntry with identifierName as the identifier.
+     *
      * @param identifierName Name of a self link in a FINT resource. This is any attribute
      *                       of the type <code>Identifikator</code>.
      *                       For the FINT resource <code>Elev</code> it could be:
@@ -63,13 +64,11 @@ public class SyncPageEntry {
      *                       <li><code>brukernavn</code></li>
      *                       <li><code>feidenavn</code></li>
      *                       </ul>
-     * @param resource {@link #resource}
+     * @param resource       {@link #resource}
      * @return A SyncPageEntry
-     * @param <T> The FINT resource type
-     *
      * @see <a href="https://informasjonsmodell.felleskomponent.no/docs/elev_elev">FINT resource Elev</a>
      */
-    public static <T extends FintLinks> SyncPageEntry ofIdentifierName(String identifierName, T resource) {
+    public static SyncPageEntry ofIdentifierName(String identifierName, FintResource resource) {
         SyncPageEntry entry = new SyncPageEntry();
 
         entry.setIdentifier(LinkUtilities.getSelfLinkBy(identifierName, resource));

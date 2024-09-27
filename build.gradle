@@ -65,12 +65,13 @@ javadoc {
     title("FINT Core Infrastructure Models")
 }
 
-dependencies {
+dependencies {''
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
     implementation 'org.jetbrains:annotations:23.0.0'
 
-    implementation 'no.fint:fint-model-resource:0.4.1'
+    api 'no.fintlabs:fint-model-resource:0.5.0'
+    api 'no.fintlabs:fint-model-core:0.5.0-rc-2'
 
     //compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
