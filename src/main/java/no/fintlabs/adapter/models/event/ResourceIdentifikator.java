@@ -1,4 +1,4 @@
-package no.fintlabs.adapter.models;
+package no.fintlabs.adapter.models.event;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
