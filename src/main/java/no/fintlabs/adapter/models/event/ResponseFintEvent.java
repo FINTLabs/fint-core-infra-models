@@ -8,6 +8,8 @@ import no.fintlabs.adapter.models.AdapterContract;
 import no.fintlabs.adapter.operation.OperationType;
 import no.fintlabs.adapter.models.sync.SyncPageEntry;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Data
@@ -43,7 +45,7 @@ public class ResponseFintEvent implements FintEvent {
     /**
      * The Identifikators of the resource that's being handled.
      */
-    private List<EventIdentifikator> identifikators;
+    private List<EventIdentifikator> identifikators = new ArrayList<>();
 
     /**
      * The type of operation to be performed (CREATE, UPDATE)
