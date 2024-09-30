@@ -43,11 +43,6 @@ public class ResponseFintEvent implements FintEvent {
     private SyncPageEntry value;
 
     /**
-     * The Identifikators of the resource that's being handled.
-     */
-    private List<EventIdentifikator> identifikators = new ArrayList<>();
-
-    /**
      * The type of operation to be performed (CREATE, UPDATE)
      */
     private OperationType operationType;
