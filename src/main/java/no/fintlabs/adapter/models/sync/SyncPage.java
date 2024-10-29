@@ -37,6 +37,10 @@ public class SyncPage {
      * </ul>
      *
      */
-    private SyncType syncType;
+    private final SyncType syncType;
+
+    public SyncPage(SyncType syncType) {
+        this.syncType = syncType;
+    }
 
 }
