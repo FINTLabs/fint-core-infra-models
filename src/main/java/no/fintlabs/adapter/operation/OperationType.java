@@ -5,5 +5,6 @@ package no.fintlabs.adapter.operation;
  */
 public enum OperationType {
     CREATE,
-    UPDATE
+    UPDATE,
+    VALIDATE
 }
