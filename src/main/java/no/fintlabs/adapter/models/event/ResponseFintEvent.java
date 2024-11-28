@@ -43,7 +43,7 @@ public class ResponseFintEvent implements FintEvent {
     private SyncPageEntry value;
 
     /**
-     * The type of operation to be performed (CREATE, UPDATE)
+     * The type of operation to be performed (CREATE, UPDATE, VALIDATE)
      */
     private OperationType operationType;
 

@@ -40,7 +40,7 @@ public class RequestFintEvent implements FintEvent {
     private String resourceName;
 
     /**
-     * The type of operation to be performed (CREATE, UPDATE)
+     * The type of operation to be performed (CREATE, UPDATE, VALIDATE)
      */
     private OperationType operationType;
 
