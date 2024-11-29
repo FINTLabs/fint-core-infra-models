@@ -12,7 +12,7 @@ import java.util.function.Function;
 
 @Data
 @Builder
-public class ValidateResponse implements Serializable {
+public class EventBodyResponse implements Serializable {
 
     private static final long serialVersionUID = -1075199100920918308L;
     /**
@@ -37,8 +37,8 @@ public class ValidateResponse implements Serializable {
      */
     private List<Problem> problems;
 
-    public static ValidateResponse ofResponseEvent(ResponseFintEvent responseEvent) {
-        return ValidateResponse.builder()
+    public static EventBodyResponse ofResponseEvent(ResponseFintEvent responseEvent) {
+        return EventBodyResponse.builder()
                 .message(getMessage(responseEvent))
                 .statusCode(getStatusCode(responseEvent))
                 .responseStatus(ResponseStatus.byResponseEvent(responseEvent))
