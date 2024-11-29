@@ -59,7 +59,7 @@ public class ValidateResponse implements Serializable {
     }
 
     private static String getMessage(ResponseFintEvent responseEvent) {
-        Function<String, String> setMessage = (lol) -> ObjectUtils.isEmpty(lol) ? lol : "";
+        Function<String, String> setMessage = (message) -> ObjectUtils.isEmpty(message) ? message : "";
 
         if (responseEvent.isFailed()) {
             return setMessage.apply(responseEvent.getErrorMessage());
