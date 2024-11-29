@@ -67,4 +67,10 @@ public class ResponseFintEvent implements FintEvent {
      * Indicates whether the event had a conflict.
      */
     private boolean conflicted;
+
+    /**
+     * A message that explains the reason for the conflict of the event.
+     */
+    private String conflictReason;
+
 }
