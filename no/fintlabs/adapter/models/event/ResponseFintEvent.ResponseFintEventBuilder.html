@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -171,66 +171,80 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#conflicted(boolean)">conflicted</a></span>&#8203;(boolean&nbsp;conflicted)</code></th>
+<td class="colLast">
+<div class="block">Indicates whether the event had a conflict.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#conflictReason(java.lang.String)">conflictReason</a></span>&#8203;(java.lang.String&nbsp;conflictReason)</code></th>
+<td class="colLast">
+<div class="block">A message that explains the reason for the conflict of the event.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#corrId(java.lang.String)">corrId</a></span>&#8203;(java.lang.String&nbsp;corrId)</code></th>
 <td class="colLast">
 <div class="block">GUID for correlation ID.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#errorMessage(java.lang.String)">errorMessage</a></span>&#8203;(java.lang.String&nbsp;errorMessage)</code></th>
 <td class="colLast">
 <div class="block">A message that explains the reason for the failure of the event.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#failed(boolean)">failed</a></span>&#8203;(boolean&nbsp;failed)</code></th>
 <td class="colLast">
 <div class="block">Indicates whether the event has failed.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handledAt(long)">handledAt</a></span>&#8203;(long&nbsp;handledAt)</code></th>
 <td class="colLast">
 <div class="block">When the event was handled.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#operationType(no.fintlabs.adapter.operation.OperationType)">operationType</a></span>&#8203;(<a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType)</code></th>
 <td class="colLast">
 <div class="block">The type of operation to be performed (CREATE, UPDATE, VALIDATE)</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#orgId(java.lang.String)">orgId</a></span>&#8203;(java.lang.String&nbsp;orgId)</code></th>
 <td class="colLast">
 <div class="block">OrgId for the current customer.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rejected(boolean)">rejected</a></span>&#8203;(boolean&nbsp;rejected)</code></th>
 <td class="colLast">
 <div class="block">Indicates whether the event has been rejected.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rejectReason(java.lang.String)">rejectReason</a></span>&#8203;(java.lang.String&nbsp;rejectReason)</code></th>
 <td class="colLast">
 <div class="block">A message that explains the reason for the rejection of the event.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#value(no.fintlabs.adapter.models.sync.SyncPageEntry)">value</a></span>&#8203;(<a href="../sync/SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&nbsp;value)</code></th>
 <td class="colLast">
@@ -395,6 +409,34 @@ extends java.lang.Object</pre>
 <h4>rejectReason</h4>
 <pre class="methodSignature">public&nbsp;<a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a>&nbsp;rejectReason&#8203;(java.lang.String&nbsp;rejectReason)</pre>
 <div class="block">A message that explains the reason for the rejection of the event.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>this</code>.</dd>
+</dl>
+</li>
+</ul>
+<a id="conflicted(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conflicted</h4>
+<pre class="methodSignature">public&nbsp;<a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a>&nbsp;conflicted&#8203;(boolean&nbsp;conflicted)</pre>
+<div class="block">Indicates whether the event had a conflict.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>this</code>.</dd>
+</dl>
+</li>
+</ul>
+<a id="conflictReason(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conflictReason</h4>
+<pre class="methodSignature">public&nbsp;<a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a>&nbsp;conflictReason&#8203;(java.lang.String&nbsp;conflictReason)</pre>
+<div class="block">A message that explains the reason for the conflict of the event.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>
