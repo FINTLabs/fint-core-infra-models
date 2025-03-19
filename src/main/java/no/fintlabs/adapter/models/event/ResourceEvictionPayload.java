@@ -10,5 +10,5 @@ public class ResourceEvictionPayload {
     private final String pkg;
     private final String resource;
     private final String org;
-
+    private final Long unixTimestamp;
 }
