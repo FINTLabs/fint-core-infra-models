@@ -1,9 +1,10 @@
-package no.fintlabs.adapter.models;
+package no.fintlabs.adapter.models.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import no.fintlabs.adapter.operation.OperationType;
 
 /**
  * Represents a request to the adapter
@@ -16,7 +17,7 @@ public class RequestFintEvent implements FintEvent {
     /**
      * GUID for correlation ID. The same ID should follow the request both upstream and downstream.
      */
-    String corrId;
+    private String corrId;
 
     /**
      * OrgId for the current customer.
@@ -39,7 +40,7 @@ public class RequestFintEvent implements FintEvent {
     private String resourceName;
 
     /**
-     * The type of operation to be performed (CREATE, UPDATE)
+     * The type of operation to be performed (CREATE, UPDATE, VALIDATE)
      */
     private OperationType operationType;
 
@@ -57,4 +58,5 @@ public class RequestFintEvent implements FintEvent {
      * The object to which the event applies
      */
     private String value;
+
 }

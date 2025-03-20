@@ -1,6 +1,7 @@
 package no.fintlabs.adapter.models.utils;
 
 import no.fint.model.resource.FintLinks;
+import no.fintlabs.adapter.models.sync.SyncPageEntry;
 
 /**
  * Helper methods to obtain self links from a {@link no.fint.model.resource.FintLinks FintLinks } resource.
@@ -9,7 +10,7 @@ public class LinkUtilities {
 
     /**
      * Gets a self link from a {@link no.fint.model.resource.FintLinks FintLinks } resource. For more detalis
-     * see {@link no.fintlabs.adapter.models.SyncPageEntry#ofIdentifierName(String, FintLinks) SyncPageEntry.ofIdentifierName()}
+     * see {@link SyncPageEntry#ofIdentifierName(String, FintLinks) SyncPageEntry.ofIdentifierName()}
      * @param identifier The identifier.
      * @param resource {@link no.fint.model.resource.FintLinks FintLinks } resource.
      * @return The self link.

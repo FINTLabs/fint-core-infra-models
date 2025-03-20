@@ -1,15 +1,18 @@
-package no.fintlabs.adapter.models;
+package no.fintlabs.adapter.models.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import no.fintlabs.adapter.models.AdapterContract;
+import no.fintlabs.adapter.models.sync.SyncPageEntry;
+import no.fintlabs.adapter.operation.OperationType;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ResponseFintEvent<T> implements FintEvent {
+public class ResponseFintEvent implements FintEvent {
     /**
      * GUID for correlation ID. The same ID should follow the request both upstream and downstream.
      */
@@ -33,10 +36,10 @@ public class ResponseFintEvent<T> implements FintEvent {
     /**
      * The SyncPageEntry of the object that the event produced. The object should be a FINT resource.
      */
-    private SyncPageEntry<T> value;
+    private SyncPageEntry value;
 
     /**
-     * The type of operation to be performed (CREATE, UPDATE)
+     * The type of operation to be performed (CREATE, UPDATE, VALIDATE)
      */
     private OperationType operationType;
 
@@ -59,4 +62,15 @@ public class ResponseFintEvent<T> implements FintEvent {
      * A message that explains the reason for the rejection of the event.
      */
     private String rejectReason;
+
+    /**
+     * Indicates whether the event had a conflict.
+     */
+    private boolean conflicted;
+
+    /**
+     * A message that explains the reason for the conflict of the event.
+     */
+    private String conflictReason;
+
 }
