@@ -21,8 +21,11 @@ public class LinkUtilities {
                 .stream()
                 .filter(link -> link.getHref().contains("/" + identifier + "/"))
                 .findAny()
-                .orElseThrow(() -> new IllegalArgumentException("No selflink found for identifier " + identifier))
-                .getHref();
+                .map(link -> {
+                    String href = link.getHref();
+                    return href.substring(href.lastIndexOf('/') + 1);
+                })
+                .orElseThrow(() -> new IllegalArgumentException("No selflink found for identifier " + identifier));
     }
 
     /**
