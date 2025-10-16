@@ -11,11 +11,13 @@ import no.fintlabs.adapter.models.utils.LinkUtilities;
 @Data
 public class SyncPageEntry {
     /**
+     * The unique identifier for the resource.
      * <p>
-     * The uniq indentifier for the resource. Typically created with <code>{@link no.fint.model.resource.Link#with() Link.with()}</code>.
+     * This is now stored as a <strong>raw identifier value</strong> (e.g. <code>32a83959-2896-4882-94b2-9157cad009d2</code>),
+     * rather than a full self link URL.
      * </p>
      * <p>
-     * E.g. <code>${utdanning.vurdering.fravar}/systemid/32a83959-2896-4882-94b2-9157cad009d2</code>
+     * Typically obtained via {@link LinkUtilities#getSelfLinkBy(String, FintLinks)}.
      * </p>
      */
     private String identifier;
@@ -25,11 +27,11 @@ public class SyncPageEntry {
     private Object resource;
 
     /**
-     * Helper method to create an SyncPageEntry.
+     * Creates a new {@link SyncPageEntry} using a provided identifier and resource.
      *
-     * @param identifier {@link #identifier}
-     * @param resource   {@link #resource}
-     * @return A SyncPageEntry.
+     * @param identifier The identifier value.
+     * @param resource   The FINT resource object.
+     * @return A new {@link SyncPageEntry} instance.
      */
     public static SyncPageEntry of(String identifier, Object resource) {
         SyncPageEntry entry = new SyncPageEntry();
@@ -55,19 +57,16 @@ public class SyncPageEntry {
     }
 
     /**
-     * Helper method to create an SyncPageEntry with identifierName as the identifier.
-     * @param identifierName Name of a self link in a FINT resource. This is any attribute
-     *                       of the type <code>Identifikator</code>.
-     *                       For the FINT resource <code>Elev</code> it could be:
-     *                       <ul>
-     *                       <li><code>elevnummer</code></li>
-     *                       <li><code>brukernavn</code></li>
-     *                       <li><code>feidenavn</code></li>
-     *                       </ul>
-     * @param resource {@link #resource}
-     * @return A SyncPageEntry
-     * @param <T> The FINT resource type
+     * Creates a {@link SyncPageEntry} using a specific identifier name.
+     * <p>
+     * The identifier is extracted from the self link matching the given identifier name
+     * and returned as the raw value (last segment of the link).
+     * </p>
      *
+     * @param identifierName The name of the self link identifier (e.g. "feidenavn", "brukernavn", "elevnummer").
+     * @param resource       The FINT resource.
+     * @param <T>            The resource type extending {@link FintLinks}.
+     * @return A {@link SyncPageEntry} instance with the identifier value extracted from the resource.
      * @see <a href="https://informasjonsmodell.felleskomponent.no/docs/elev_elev">FINT resource Elev</a>
      */
     public static <T extends FintLinks> SyncPageEntry ofIdentifierName(String identifierName, T resource) {
