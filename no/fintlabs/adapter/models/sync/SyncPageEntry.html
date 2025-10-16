@@ -189,8 +189,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getIdentifier()">getIdentifier</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
- The uniq indentifier for the resource.</div>
+<div class="block">The unique identifier for the resource.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -210,7 +209,7 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#of(java.lang.String,java.lang.Object)">of</a></span>&#8203;(java.lang.String&nbsp;identifier,
   java.lang.Object&nbsp;resource)</code></th>
 <td class="colLast">
-<div class="block">Helper method to create an SyncPageEntry.</div>
+<div class="block">Creates a new <a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync"><code>SyncPageEntry</code></a> using a provided identifier and resource.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -218,7 +217,7 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ofIdentifierName(java.lang.String,T)">ofIdentifierName</a></span>&#8203;(java.lang.String&nbsp;identifierName,
                 T&nbsp;resource)</code></th>
 <td class="colLast">
-<div class="block">Helper method to create an SyncPageEntry with identifierName as the identifier.</div>
+<div class="block">Creates a <a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync"><code>SyncPageEntry</code></a> using a specific identifier name.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -232,8 +231,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setIdentifier(java.lang.String)">setIdentifier</a></span>&#8203;(java.lang.String&nbsp;identifier)</code></th>
 <td class="colLast">
-<div class="block">
- The uniq indentifier for the resource.</div>
+<div class="block">The unique identifier for the resource.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -299,13 +297,13 @@ extends java.lang.Object</pre>
 <h4>of</h4>
 <pre class="methodSignature">public static&nbsp;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&nbsp;of&#8203;(java.lang.String&nbsp;identifier,
                                java.lang.Object&nbsp;resource)</pre>
-<div class="block">Helper method to create an SyncPageEntry.</div>
+<div class="block">Creates a new <a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync"><code>SyncPageEntry</code></a> using a provided identifier and resource.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>identifier</code> - <code>identifier</code></dd>
-<dd><code>resource</code> - <code>resource</code></dd>
+<dd><code>identifier</code> - The identifier value.</dd>
+<dd><code>resource</code> - The FINT resource object.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>A SyncPageEntry.</dd>
+<dd>A new <a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync"><code>SyncPageEntry</code></a> instance.</dd>
 </dl>
 </li>
 </ul>
@@ -339,22 +337,19 @@ extends java.lang.Object</pre>
 <h4>ofIdentifierName</h4>
 <pre class="methodSignature">public static&nbsp;&lt;T extends no.fint.model.resource.FintLinks&gt;&nbsp;<a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&nbsp;ofIdentifierName&#8203;(java.lang.String&nbsp;identifierName,
                                                                                           T&nbsp;resource)</pre>
-<div class="block">Helper method to create an SyncPageEntry with identifierName as the identifier.</div>
+<div class="block">Creates a <a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync"><code>SyncPageEntry</code></a> using a specific identifier name.
+ <p>
+ The identifier is extracted from the self link matching the given identifier name
+ and returned as the raw value (last segment of the link).
+ </p></div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>T</code> - The FINT resource type</dd>
+<dd><code>T</code> - The resource type extending <code>FintLinks</code>.</dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>identifierName</code> - Name of a self link in a FINT resource. This is any attribute
-                       of the type <code>Identifikator</code>.
-                       For the FINT resource <code>Elev</code> it could be:
-                       <ul>
-                       <li><code>elevnummer</code></li>
-                       <li><code>brukernavn</code></li>
-                       <li><code>feidenavn</code></li>
-                       </ul></dd>
-<dd><code>resource</code> - <code>resource</code></dd>
+<dd><code>identifierName</code> - The name of the self link identifier (e.g. "feidenavn", "brukernavn", "elevnummer").</dd>
+<dd><code>resource</code> - The FINT resource.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>A SyncPageEntry</dd>
+<dd>A <a href="SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync"><code>SyncPageEntry</code></a> instance with the identifier value extracted from the resource.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://informasjonsmodell.felleskomponent.no/docs/elev_elev">FINT resource Elev</a></dd>
 </dl>
@@ -367,11 +362,13 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getIdentifier</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getIdentifier()</pre>
-<div class="block"><p>
- The uniq indentifier for the resource. Typically created with <code><code>Link.with()</code></code>.
+<div class="block">The unique identifier for the resource.
+ <p>
+ This is now stored as a <strong>raw identifier value</strong> (e.g. <code>32a83959-2896-4882-94b2-9157cad009d2</code>),
+ rather than a full self link URL.
  </p>
  <p>
- E.g. <code>${utdanning.vurdering.fravar}/systemid/32a83959-2896-4882-94b2-9157cad009d2</code>
+ Typically obtained via <a href="../utils/LinkUtilities.html#getSelfLinkBy(java.lang.String,no.fint.model.resource.FintLinks)"><code>LinkUtilities.getSelfLinkBy(String, FintLinks)</code></a>.
  </p></div>
 </li>
 </ul>
@@ -392,11 +389,13 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>setIdentifier</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setIdentifier&#8203;(java.lang.String&nbsp;identifier)</pre>
-<div class="block"><p>
- The uniq indentifier for the resource. Typically created with <code><code>Link.with()</code></code>.
+<div class="block">The unique identifier for the resource.
+ <p>
+ This is now stored as a <strong>raw identifier value</strong> (e.g. <code>32a83959-2896-4882-94b2-9157cad009d2</code>),
+ rather than a full self link URL.
  </p>
  <p>
- E.g. <code>${utdanning.vurdering.fravar}/systemid/32a83959-2896-4882-94b2-9157cad009d2</code>
+ Typically obtained via <a href="../utils/LinkUtilities.html#getSelfLinkBy(java.lang.String,no.fint.model.resource.FintLinks)"><code>LinkUtilities.getSelfLinkBy(String, FintLinks)</code></a>.
  </p></div>
 </li>
 </ul>
