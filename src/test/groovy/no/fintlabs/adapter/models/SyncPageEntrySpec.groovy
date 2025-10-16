@@ -29,14 +29,14 @@ class SyncPageEntrySpec extends Specification {
         def entry = SyncPageEntry.ofSystemId(testResource)
 
         then:
-        entry.getIdentifier().endsWith("/systemid/12345")
+        entry.getIdentifier().equals("12345")
     }
 
-    def "Creating a SyncPageEntry from identifier name should have a identifier from the identifier name"() {
+    def "Creating a SyncPageEntry from identifier name should have raw identifier"() {
         when:
         def entry = SyncPageEntry.ofIdentifierName("testIdentifier", testResource)
 
         then:
-        entry.getIdentifier().endsWith("/testIdentifier/54321")
+        entry.getIdentifier().equals("54321")
     }
 }

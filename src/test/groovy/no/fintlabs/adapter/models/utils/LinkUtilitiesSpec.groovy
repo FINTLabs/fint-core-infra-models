@@ -14,12 +14,12 @@ class LinkUtilitiesSpec extends Specification {
         testResource.addSelf(Link.with(TestResource.class, "testIdentifier", "54321"))
     }
 
-    def "getSelfLinkBy should return the link for the identifier"() {
+    def "getSelfLinkBy should return the raw identifier"() {
         when:
         def test = LinkUtilities.getSelfLinkBy("testIdentifier", testResource)
 
         then:
-        test.endsWith("/54321")
+        test.equals("54321")
     }
 
     def "getSelfLinkBy should thrown and exception if the identifier don't exist"() {
@@ -30,12 +30,12 @@ class LinkUtilitiesSpec extends Specification {
         thrown(IllegalArgumentException)
     }
 
-    def "getSelfLinkBySystemId should return the self link for systemid"() {
+    def "getSelfLinkBySystemId should return the identifier for systemid"() {
 
         when:
         def systemid = LinkUtilities.getSelfLinkBySystemId(testResource)
 
         then:
-        systemid.endsWith("/12345")
+        systemid.equals("12345")
     }
 }
