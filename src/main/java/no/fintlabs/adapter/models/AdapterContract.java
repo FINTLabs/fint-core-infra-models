@@ -65,7 +65,7 @@ public class AdapterContract {
      */
     private long time;
     /**
-     * Name of the company that is developing the company
+     * Name of the company that is developing the adapter
      */
-    private String developerCompany;
+    private String developedByCompany;
 }
