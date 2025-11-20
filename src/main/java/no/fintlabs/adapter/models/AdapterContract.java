@@ -64,4 +64,8 @@ public class AdapterContract {
      * The registration time for the contract in Unix timestamp.
      */
     private long time;
+    /**
+     * Name of the company that is developing the company
+     */
+    private String developerCompany;
 }
