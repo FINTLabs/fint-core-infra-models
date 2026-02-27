@@ -7,5 +7,6 @@ public enum OperationType {
     CREATE,
     UPDATE,
     VALIDATE,
-    DELETE
+    DELETE,
+    UNKNOWN
 }
