@@ -1,8 +1,7 @@
 package no.fintlabs.adapter.models.sync;
 
 import lombok.Data;
-import no.fint.model.resource.FintLinks;
-import no.fint.model.resource.FintResource;
+import no.novari.fint.model.resource.FintLinks;
 import no.fintlabs.adapter.models.utils.LinkUtilities;
 
 /**

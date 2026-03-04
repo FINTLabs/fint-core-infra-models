@@ -1,6 +1,6 @@
 package no.fintlabs.adapter.models.utils
 
-import no.fint.model.resource.Link
+import no.novari.fint.model.resource.Link
 import no.fintlabs.adapter.models.TestResource
 import spock.lang.Specification
 
