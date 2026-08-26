@@ -1,9 +1,8 @@
 package no.fintlabs.adapter.models;
 
-import no.fint.model.FintIdentifikator;
-import no.fint.model.resource.FintLinks;
-import no.fint.model.resource.FintResource;
-import no.fint.model.resource.Link;
+import no.novari.fint.model.FintIdentifikator;
+import no.novari.fint.model.resource.FintResource;
+import no.novari.fint.model.resource.Link;
 
 import java.util.List;
 import java.util.Map;

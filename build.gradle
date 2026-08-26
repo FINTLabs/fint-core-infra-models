@@ -69,8 +69,9 @@ dependencies {''
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
     implementation 'org.jetbrains:annotations:23.0.0'
+    implementation 'no.novari:fint-model-core:1.0.0'
 
-    api 'no.fintlabs:fint-model-resource:0.5.0'
+    api 'no.novari:fint-model-resource:1.0.1'
 
     //compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
