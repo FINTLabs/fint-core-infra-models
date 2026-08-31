@@ -1,6 +1,8 @@
 package no.fintlabs.adapter.models.sync;
 
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,10 +20,14 @@ public class SyncPage {
     /**
      * Metadata describing the page.
      */
+    @NotNull
+    @Valid
     private SyncPageMetadata metadata;
     /**
      * Data in the page.
      */
+    @NotNull
+    @Valid
     private List<SyncPageEntry> resources;
     /**
      * SyncType for the Syncpage.
@@ -37,6 +43,7 @@ public class SyncPage {
      * </ul>
      *
      */
+    @NotNull
     private final SyncType syncType;
 
     public SyncPage(SyncType syncType) {

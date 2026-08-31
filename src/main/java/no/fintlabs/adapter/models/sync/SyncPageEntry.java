@@ -1,5 +1,6 @@
 package no.fintlabs.adapter.models.sync;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import no.novari.fint.model.resource.FintLinks;
 import no.fintlabs.adapter.models.utils.LinkUtilities;
@@ -19,6 +20,7 @@ public class SyncPageEntry {
      * Typically obtained via {@link LinkUtilities#getSelfLinkBy(String, FintLinks)}.
      * </p>
      */
+    @NotBlank
     private String identifier;
     /**
      * The FINT resource.

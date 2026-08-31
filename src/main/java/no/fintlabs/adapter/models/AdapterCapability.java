@@ -1,5 +1,9 @@
 package no.fintlabs.adapter.models;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 /**
@@ -14,24 +18,30 @@ public class AdapterCapability {
     /**
      * Name of the FINT domain. E.g. utdanning.
      */
+    @NotBlank
     private String domainName;
     /**
      * Name of the FINT package. E.g. vurdering.
      */
+    @NotBlank
     private String packageName;
     /**
      * Name of the FINT class/entity. E.g. fravar
      */
+    @NotBlank
     private String resourceName;
     /**
      * Number of days between each full sync
      */
+    @Min(1)
+    @Max(7)
     private int fullSyncIntervalInDays;
     /**
      * Delta sync strategy.
      *
      * @see DeltaSyncInterval
      */
+    @NotNull
     private DeltaSyncInterval deltaSyncInterval;
 
     /**

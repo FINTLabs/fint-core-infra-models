@@ -1,5 +1,7 @@
 package no.fintlabs.adapter.models.event;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,21 +18,25 @@ public class ResponseFintEvent implements FintEvent {
     /**
      * GUID for correlation ID. The same ID should follow the request both upstream and downstream.
      */
+    @NotBlank
     private String corrId;
 
     /**
      * OrgId for the current customer.
      */
+    @NotBlank
     private String orgId;
 
     /**
      * See {@link AdapterContract#getAdapterId()}
      */
+    @Deprecated
     private String adapterId;
 
     /**
      * When the event was handled.
      */
+    @Deprecated
     private long handledAt;
 
     /**
@@ -41,36 +47,43 @@ public class ResponseFintEvent implements FintEvent {
     /**
      * The type of operation to be performed (CREATE, UPDATE, VALIDATE)
      */
+    @NotNull
     private OperationType operationType;
 
     /**
      * Indicates whether the event has failed.
      */
+    @Deprecated
     private boolean failed;
 
     /**
      * A message that explains the reason for the failure of the event.
      */
+    @Deprecated
     private String errorMessage;
 
     /**
      * Indicates whether the event has been rejected.
      */
+    @Deprecated
     private boolean rejected;
 
     /**
      * A message that explains the reason for the rejection of the event.
      */
+    @Deprecated
     private String rejectReason;
 
     /**
      * Indicates whether the event had a conflict.
      */
+    @Deprecated
     private boolean conflicted;
 
     /**
      * A message that explains the reason for the conflict of the event.
      */
+    @Deprecated
     private String conflictReason;
 
 }

@@ -1,5 +1,6 @@
 package no.fintlabs.adapter.models;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 /**
@@ -28,6 +29,7 @@ public class AdapterHeartbeat {
      *  </ul>
      * </p>
      */
+    @NotBlank
     private String adapterId;
     /**
      * <p>
@@ -37,6 +39,7 @@ public class AdapterHeartbeat {
      * E.g. `vis@adapter.rogfk.no`
      * </p>
      */
+    @NotBlank
     private String username;
     /**
      * <p>
@@ -46,9 +49,11 @@ public class AdapterHeartbeat {
      * E.g. <code>rogfk.no</code>
      * </p>
      */
+    @NotBlank
     private String orgId;
     /**
      * The heartbeat time for the adapter in Unix timestamp.
      */
+    @Deprecated
     private long time;
 }
