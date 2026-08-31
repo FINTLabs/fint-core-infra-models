@@ -1,5 +1,10 @@
 package no.fintlabs.adapter.models;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.util.Set;
@@ -29,6 +34,7 @@ public class AdapterContract {
      *  </ul>
      * </p>
      */
+    @NotBlank
     private String adapterId;
     /**
      * <p>
@@ -38,6 +44,7 @@ public class AdapterContract {
      * E.g. <code>rogfk.no</code>
      * </p>
      */
+    @NotBlank
     private String orgId;
     /**
      * <p>
@@ -47,10 +54,13 @@ public class AdapterContract {
      * E.g. `vis@adapter.rogfk.no`
      * </p>
      */
+    @NotBlank
     private String username;
     /**
      * Interval the adapter should send heartbeats to FINT in minutes.
      */
+    @Min(1)
+    @Max(5)
     private int heartbeatIntervalInMinutes;
     /**
      * <p>
@@ -59,9 +69,12 @@ public class AdapterContract {
      *
      * @see AdapterCapability
      */
+    @NotNull
+    @Valid
     private Set<AdapterCapability> capabilities;
     /**
      * The registration time for the contract in Unix timestamp.
      */
+    @Deprecated
     private long time;
 }
