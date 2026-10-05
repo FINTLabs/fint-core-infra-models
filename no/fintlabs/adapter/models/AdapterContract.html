@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":42,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":42,"i12":10};
+var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":42,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":42,"i14":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -187,6 +187,18 @@ extends java.lang.Object</pre>
                int&nbsp;heartbeatIntervalInMinutes,
                java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
                long&nbsp;time)</code></th>
+<td class="colLast">
+<div class="block">Kept so code built against versions without <code>eventCapabilities</code> still works.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,int,java.util.Set,long,java.util.Set)">AdapterContract</a></span>&#8203;(java.lang.String&nbsp;adapterId,
+               java.lang.String&nbsp;orgId,
+               java.lang.String&nbsp;username,
+               int&nbsp;heartbeatIntervalInMinutes,
+               java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
+               long&nbsp;time,
+               java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -225,17 +237,24 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCapabilities()">getCapabilities</a></span>()</code></th>
 <td class="colLast">
 <div class="block">
- List of capablilities for the adapter.</div>
+ The resources the adapter delivers to FINT with full sync.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEventCapabilities()">getEventCapabilities</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The resources the adapter answers events for.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHeartbeatIntervalInMinutes()">getHeartbeatIntervalInMinutes</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Interval the adapter should send heartbeats to FINT in minutes.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOrgId()">getOrgId</a></span>()</code></th>
 <td class="colLast">
@@ -243,14 +262,14 @@ extends java.lang.Object</pre>
  OrgId for the customer this contract represent.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTime()">getTime</a></span>()</code></th>
 <td class="colLast">
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUsername()">getUsername</a></span>()</code></th>
 <td class="colLast">
@@ -258,7 +277,7 @@ extends java.lang.Object</pre>
  Username used for authentication to FINT.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAdapterId(java.lang.String)">setAdapterId</a></span>&#8203;(java.lang.String&nbsp;adapterId)</code></th>
 <td class="colLast">
@@ -266,22 +285,29 @@ extends java.lang.Object</pre>
  A <strong>persistent uniq id</strong> for the adapter.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCapabilities(java.util.Set)">setCapabilities</a></span>&#8203;(java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities)</code></th>
 <td class="colLast">
 <div class="block">
- List of capablilities for the adapter.</div>
+ The resources the adapter delivers to FINT with full sync.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEventCapabilities(java.util.Set)">setEventCapabilities</a></span>&#8203;(java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</code></th>
+<td class="colLast">
+<div class="block">The resources the adapter answers events for.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHeartbeatIntervalInMinutes(int)">setHeartbeatIntervalInMinutes</a></span>&#8203;(int&nbsp;heartbeatIntervalInMinutes)</code></th>
 <td class="colLast">
 <div class="block">Interval the adapter should send heartbeats to FINT in minutes.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOrgId(java.lang.String)">setOrgId</a></span>&#8203;(java.lang.String&nbsp;orgId)</code></th>
 <td class="colLast">
@@ -289,14 +315,14 @@ extends java.lang.Object</pre>
  OrgId for the customer this contract represent.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTime(long)">setTime</a></span>&#8203;(long&nbsp;time)</code></th>
 <td class="colLast">
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setUsername(java.lang.String)">setUsername</a></span>&#8203;(java.lang.String&nbsp;username)</code></th>
 <td class="colLast">
@@ -340,6 +366,22 @@ extends java.lang.Object</pre>
                        int&nbsp;heartbeatIntervalInMinutes,
                        java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
                        long&nbsp;time)</pre>
+<div class="block">Kept so code built against versions without <code>eventCapabilities</code> still works.</div>
+</li>
+</ul>
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,int,java.util.Set,long,java.util.Set)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AdapterContract</h4>
+<pre>public&nbsp;AdapterContract&#8203;(java.lang.String&nbsp;adapterId,
+                       java.lang.String&nbsp;orgId,
+                       java.lang.String&nbsp;username,
+                       int&nbsp;heartbeatIntervalInMinutes,
+                       java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
+                       long&nbsp;time,
+                       java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</pre>
 </li>
 </ul>
 <a id="&lt;init&gt;()">
@@ -441,7 +483,8 @@ extends java.lang.Object</pre>
 <h4>getCapabilities</h4>
 <pre class="methodSignature">public&nbsp;java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;getCapabilities()</pre>
 <div class="block"><p>
- List of capablilities for the adapter.
+ The resources the adapter delivers to FINT with full sync.
+ See <code>eventCapabilities</code> for the resources the adapter answers events for.
  </p></div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -459,6 +502,20 @@ extends java.lang.Object</pre>
 public&nbsp;long&nbsp;getTime()</pre>
 <div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">The registration time for the contract in Unix timestamp.</div>
+</li>
+</ul>
+<a id="getEventCapabilities()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEventCapabilities</h4>
+<pre class="methodSignature">public&nbsp;java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;getEventCapabilities()</pre>
+<div class="block">The resources the adapter answers events for. Empty when the adapter does not send it.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="EventCapability.html" title="class in no.fintlabs.adapter.models"><code>EventCapability</code></a></dd>
+</dl>
 </li>
 </ul>
 <a id="setAdapterId(java.lang.String)">
@@ -532,7 +589,8 @@ public&nbsp;long&nbsp;getTime()</pre>
 <h4>setCapabilities</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setCapabilities&#8203;(java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities)</pre>
 <div class="block"><p>
- List of capablilities for the adapter.
+ The resources the adapter delivers to FINT with full sync.
+ See <code>eventCapabilities</code> for the resources the adapter answers events for.
  </p></div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -543,13 +601,27 @@ public&nbsp;long&nbsp;getTime()</pre>
 <a id="setTime(long)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setTime</h4>
 <pre class="methodSignature">@Deprecated
 public&nbsp;void&nbsp;setTime&#8203;(long&nbsp;time)</pre>
 <div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">The registration time for the contract in Unix timestamp.</div>
+</li>
+</ul>
+<a id="setEventCapabilities(java.util.Set)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setEventCapabilities</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setEventCapabilities&#8203;(java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</pre>
+<div class="block">The resources the adapter answers events for. Empty when the adapter does not send it.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="EventCapability.html" title="class in no.fintlabs.adapter.models"><code>EventCapability</code></a></dd>
+</dl>
 </li>
 </ul>
 </li>

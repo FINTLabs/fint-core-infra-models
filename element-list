@@ -2,4 +2,5 @@ no.fintlabs.adapter.models
 no.fintlabs.adapter.models.event
 no.fintlabs.adapter.models.sync
 no.fintlabs.adapter.models.utils
+no.fintlabs.adapter.models.v2.event
 no.fintlabs.adapter.operation
