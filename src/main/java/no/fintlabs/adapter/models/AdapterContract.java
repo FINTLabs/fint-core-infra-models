@@ -7,6 +7,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -64,7 +65,8 @@ public class AdapterContract {
     private int heartbeatIntervalInMinutes;
     /**
      * <p>
-     * List of capablilities for the adapter.
+     * The resources the adapter delivers to FINT with full sync.
+     * See {@link #eventCapabilities} for the resources the adapter answers events for.
      * </p>
      *
      * @see AdapterCapability
@@ -77,4 +79,21 @@ public class AdapterContract {
      */
     @Deprecated
     private long time;
+    /**
+     * The resources the adapter answers events for. Empty when the adapter does not send it.
+     *
+     * @see EventCapability
+     */
+    @NotNull
+    @Valid
+    @Builder.Default
+    private Set<EventCapability> eventCapabilities = new HashSet<>();
+
+    /**
+     * Kept so code built against versions without {@link #eventCapabilities} still works.
+     */
+    public AdapterContract(String adapterId, String orgId, String username, int heartbeatIntervalInMinutes,
+                           Set<AdapterCapability> capabilities, long time) {
+        this(adapterId, orgId, username, heartbeatIntervalInMinutes, capabilities, time, new HashSet<>());
+    }
 }
