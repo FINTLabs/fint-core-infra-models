@@ -1,7 +1,6 @@
 package no.fintlabs.adapter.models.v2.event
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import no.fintlabs.adapter.models.AdapterCapability
 import spock.lang.Specification
 
 class EventModelsSpec extends Specification {
@@ -64,26 +63,5 @@ class EventModelsSpec extends Specification {
         then:
         response.status == EventStatus.SUCCEEDED
         response.resources*.identifier == ["1", "2"]
-    }
-
-    def "A capability without readEvents does not support read events"() {
-        when:
-        def capability = mapper.readValue('''{
-            "domainName": "utdanning",
-            "packageName": "elev",
-            "resourceName": "elev",
-            "fullSyncIntervalInDays": 1,
-            "deltaSyncInterval": "IMMEDIATE"
-        }''', AdapterCapability)
-
-        then:
-        !capability.readEvents
-        !AdapterCapability.builder().build().readEvents
-        !new AdapterCapability("utdanning", "elev", "elev", 1, AdapterCapability.DeltaSyncInterval.IMMEDIATE).readEvents
-    }
-
-    def "A capability can turn on read events"() {
-        expect:
-        mapper.readValue('{"readEvents": true}', AdapterCapability).readEvents
     }
 }

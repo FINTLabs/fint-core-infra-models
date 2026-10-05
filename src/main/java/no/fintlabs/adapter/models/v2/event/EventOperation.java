@@ -23,6 +23,8 @@ public enum EventOperation {
     /**
      * Read resources straight from the source system, either by a filter or by one id.
      * Read results are only returned on the event, they are never written to the FINT cache.
+     * The adapter only gets read events for resources where
+     * {@link no.fintlabs.adapter.models.EventCapability#getOperations()} contains READ.
      */
     READ
 }

@@ -45,21 +45,6 @@ public class AdapterCapability {
     private DeltaSyncInterval deltaSyncInterval;
 
     /**
-     * Whether the adapter can answer {@link no.fintlabs.adapter.models.v2.event.EventOperation#READ}
-     * events for this resource. Defaults to false, and FINT never sends read events to an adapter
-     * that has not turned this on.
-     */
-    private boolean readEvents;
-
-    /**
-     * Kept so code built against versions without {@link #readEvents} still works.
-     */
-    public AdapterCapability(String domainName, String packageName, String resourceName,
-                             int fullSyncIntervalInDays, DeltaSyncInterval deltaSyncInterval) {
-        this(domainName, packageName, resourceName, fullSyncIntervalInDays, deltaSyncInterval, false);
-    }
-
-    /**
      * Helper method to generate the entity uri.
      *
      * @return Returns the entity uri. E.g. /utdanning/elev/elev
