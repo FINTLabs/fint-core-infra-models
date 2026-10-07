@@ -171,10 +171,16 @@ extends java.lang.Enum&lt;<a href="OperationType.html" title="enum in no.fintlab
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#READ">READ</a></span></code></th>
+<td class="colLast">
+<div class="block">Read resources straight from the source system.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#UPDATE">UPDATE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#VALIDATE">VALIDATE</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -272,10 +278,21 @@ the order they are declared.</div>
 <a id="DELETE">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>DELETE</h4>
 <pre>public static final&nbsp;<a href="OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a> DELETE</pre>
+</li>
+</ul>
+<a id="READ">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>READ</h4>
+<pre>public static final&nbsp;<a href="OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a> READ</pre>
+<div class="block">Read resources straight from the source system. An adapter only gets these events for the resources
+ it lists with READ in <a href="../models/AdapterContract.html#getEventCapabilities()"><code>AdapterContract.getEventCapabilities()</code></a>.</div>
 </li>
 </ul>
 </li>

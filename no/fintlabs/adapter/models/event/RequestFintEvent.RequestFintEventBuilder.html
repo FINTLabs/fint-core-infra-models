@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":42,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
+var data = {"i0":10,"i1":10,"i2":42,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -185,49 +185,70 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#operationType(no.fintlabs.adapter.operation.OperationType)">operationType</a></span>&#8203;(<a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#filter(java.lang.String)">filter</a></span>&#8203;(java.lang.String&nbsp;filter)</code></th>
 <td class="colLast">
-<div class="block">The type of operation to be performed (CREATE, UPDATE, VALIDATE)</div>
+<div class="block">The OData filter the resources must match.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#id(no.fintlabs.adapter.models.event.EventIdentifikator)">id</a></span>&#8203;(<a href="EventIdentifikator.html" title="class in no.fintlabs.adapter.models.event">EventIdentifikator</a>&nbsp;id)</code></th>
+<td class="colLast">
+<div class="block">The one resource to read.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#maxResults(java.lang.Integer)">maxResults</a></span>&#8203;(java.lang.Integer&nbsp;maxResults)</code></th>
+<td class="colLast">
+<div class="block">The highest number of resources the answer to a <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> may hold.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#operationType(no.fintlabs.adapter.operation.OperationType)">operationType</a></span>&#8203;(<a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType)</code></th>
+<td class="colLast">
+<div class="block">The type of operation to be performed.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#orgId(java.lang.String)">orgId</a></span>&#8203;(java.lang.String&nbsp;orgId)</code></th>
 <td class="colLast">
 <div class="block">OrgId for the current customer.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#packageName(java.lang.String)">packageName</a></span>&#8203;(java.lang.String&nbsp;packageName)</code></th>
 <td class="colLast">
 <div class="block">Name of the FINT package.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resourceName(java.lang.String)">resourceName</a></span>&#8203;(java.lang.String&nbsp;resourceName)</code></th>
 <td class="colLast">
 <div class="block">Name of the FINT class/entity.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#timeToLive(long)">timeToLive</a></span>&#8203;(long&nbsp;timeToLive)</code></th>
 <td class="colLast">
 <div class="block">How long the request is valid in milliseconds</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#value(java.lang.String)">value</a></span>&#8203;(java.lang.String&nbsp;value)</code></th>
 <td class="colLast">
-<div class="block">The object to which the event applies</div>
+<div class="block">The object to which the event applies.</div>
 </td>
 </tr>
 </table>
@@ -331,7 +352,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>operationType</h4>
 <pre class="methodSignature">public&nbsp;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a>&nbsp;operationType&#8203;(<a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType)</pre>
-<div class="block">The type of operation to be performed (CREATE, UPDATE, VALIDATE)</div>
+<div class="block">The type of operation to be performed. See <a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation"><code>OperationType</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>
@@ -375,7 +396,52 @@ public&nbsp;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="class
 <li class="blockList">
 <h4>value</h4>
 <pre class="methodSignature">public&nbsp;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a>&nbsp;value&#8203;(java.lang.String&nbsp;value)</pre>
-<div class="block">The object to which the event applies</div>
+<div class="block">The object to which the event applies. Empty on <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>this</code>.</dd>
+</dl>
+</li>
+</ul>
+<a id="filter(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>filter</h4>
+<pre class="methodSignature">public&nbsp;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a>&nbsp;filter&#8203;(java.lang.String&nbsp;filter)</pre>
+<div class="block">The OData filter the resources must match. Only set on <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>, and never together
+ with <code>id</code>. E.g. <code>systemId/identifikatorverdi eq '12345'</code></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>this</code>.</dd>
+</dl>
+</li>
+</ul>
+<a id="id(no.fintlabs.adapter.models.event.EventIdentifikator)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>id</h4>
+<pre class="methodSignature">public&nbsp;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a>&nbsp;id&#8203;(<a href="EventIdentifikator.html" title="class in no.fintlabs.adapter.models.event">EventIdentifikator</a>&nbsp;id)</pre>
+<div class="block">The one resource to read. Only set on <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>, and never together with <code>filter</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>this</code>.</dd>
+</dl>
+</li>
+</ul>
+<a id="maxResults(java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxResults</h4>
+<pre class="methodSignature">public&nbsp;<a href="RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a>&nbsp;maxResults&#8203;(java.lang.Integer&nbsp;maxResults)</pre>
+<div class="block">The highest number of resources the answer to a <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> may hold. An adapter that
+ finds more answers with <a href="ResponseFintEvent.html#isRejected()"><code>ResponseFintEvent.isRejected()</code></a> and a reason, so the client is never
+ given a result where resources are missing.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>

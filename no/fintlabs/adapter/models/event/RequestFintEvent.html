@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":42,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":42,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
+var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":42,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":42,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -138,7 +138,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public class <span class="typeNameLabel">RequestFintEvent</span>
 extends java.lang.Object
 implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.models.event">FintEvent</a></pre>
-<div class="block">Represents a request to the adapter</div>
+<div class="block">Represents a request to the adapter
+ <p>
+ A <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> request asks the adapter to read resources straight from the source system.
+ It has either a <code>filter</code> or an <code>id</code>, never both, and no <code>value</code>. The adapter answers
+ with the resources in <a href="ResponseFintEvent.html#getValues()"><code>ResponseFintEvent.getValues()</code></a>.
+ </p></div>
 </li>
 </ul>
 </div>
@@ -195,6 +200,23 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
                 long&nbsp;created,
                 long&nbsp;timeToLive,
                 java.lang.String&nbsp;value)</code></th>
+<td class="colLast">
+<div class="block">Kept so code built against versions without <code>filter</code>, <code>id</code> and <code>maxResults</code> still works.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.operation.OperationType,long,long,java.lang.String,java.lang.String,no.fintlabs.adapter.models.event.EventIdentifikator,java.lang.Integer)">RequestFintEvent</a></span>&#8203;(java.lang.String&nbsp;corrId,
+                java.lang.String&nbsp;orgId,
+                java.lang.String&nbsp;domainName,
+                java.lang.String&nbsp;packageName,
+                java.lang.String&nbsp;resourceName,
+                <a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType,
+                long&nbsp;created,
+                long&nbsp;timeToLive,
+                java.lang.String&nbsp;value,
+                java.lang.String&nbsp;filter,
+                <a href="EventIdentifikator.html" title="class in no.fintlabs.adapter.models.event">EventIdentifikator</a>&nbsp;id,
+                java.lang.Integer&nbsp;maxResults)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -252,116 +274,158 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOperationType()">getOperationType</a></span>()</code></th>
+<td class="colFirst"><code>java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFilter()">getFilter</a></span>()</code></th>
 <td class="colLast">
-<div class="block">The type of operation to be performed (CREATE, UPDATE, VALIDATE)</div>
+<div class="block">The OData filter the resources must match.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="EventIdentifikator.html" title="class in no.fintlabs.adapter.models.event">EventIdentifikator</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId()">getId</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The one resource to read.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>java.lang.Integer</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxResults()">getMaxResults</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The highest number of resources the answer to a <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> may hold.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOperationType()">getOperationType</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The type of operation to be performed.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOrgId()">getOrgId</a></span>()</code></th>
 <td class="colLast">
 <div class="block">OrgId for the current customer.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPackageName()">getPackageName</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Name of the FINT package.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getResourceName()">getResourceName</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Name of the FINT class/entity.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTimeToLive()">getTimeToLive</a></span>()</code></th>
 <td class="colLast">
 <div class="block">How long the request is valid in milliseconds</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getValue()">getValue</a></span>()</code></th>
 <td class="colLast">
-<div class="block">The object to which the event applies</div>
+<div class="block">The object to which the event applies.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hashCode()">hashCode</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCorrId(java.lang.String)">setCorrId</a></span>&#8203;(java.lang.String&nbsp;corrId)</code></th>
 <td class="colLast">
 <div class="block">GUID for correlation ID.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCreated(long)">setCreated</a></span>&#8203;(long&nbsp;created)</code></th>
 <td class="colLast">
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDomainName(java.lang.String)">setDomainName</a></span>&#8203;(java.lang.String&nbsp;domainName)</code></th>
 <td class="colLast">
 <div class="block">Name of the FINT domain.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFilter(java.lang.String)">setFilter</a></span>&#8203;(java.lang.String&nbsp;filter)</code></th>
+<td class="colLast">
+<div class="block">The OData filter the resources must match.</div>
+</td>
+</tr>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setId(no.fintlabs.adapter.models.event.EventIdentifikator)">setId</a></span>&#8203;(<a href="EventIdentifikator.html" title="class in no.fintlabs.adapter.models.event">EventIdentifikator</a>&nbsp;id)</code></th>
+<td class="colLast">
+<div class="block">The one resource to read.</div>
+</td>
+</tr>
+<tr id="i21" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMaxResults(java.lang.Integer)">setMaxResults</a></span>&#8203;(java.lang.Integer&nbsp;maxResults)</code></th>
+<td class="colLast">
+<div class="block">The highest number of resources the answer to a <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> may hold.</div>
+</td>
+</tr>
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOperationType(no.fintlabs.adapter.operation.OperationType)">setOperationType</a></span>&#8203;(<a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType)</code></th>
 <td class="colLast">
-<div class="block">The type of operation to be performed (CREATE, UPDATE, VALIDATE)</div>
+<div class="block">The type of operation to be performed.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOrgId(java.lang.String)">setOrgId</a></span>&#8203;(java.lang.String&nbsp;orgId)</code></th>
 <td class="colLast">
 <div class="block">OrgId for the current customer.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPackageName(java.lang.String)">setPackageName</a></span>&#8203;(java.lang.String&nbsp;packageName)</code></th>
 <td class="colLast">
 <div class="block">Name of the FINT package.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setResourceName(java.lang.String)">setResourceName</a></span>&#8203;(java.lang.String&nbsp;resourceName)</code></th>
 <td class="colLast">
 <div class="block">Name of the FINT class/entity.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTimeToLive(long)">setTimeToLive</a></span>&#8203;(long&nbsp;timeToLive)</code></th>
 <td class="colLast">
 <div class="block">How long the request is valid in milliseconds</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setValue(java.lang.String)">setValue</a></span>&#8203;(java.lang.String&nbsp;value)</code></th>
 <td class="colLast">
-<div class="block">The object to which the event applies</div>
+<div class="block">The object to which the event applies.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -390,6 +454,24 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.operation.OperationType,long,long,java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RequestFintEvent</h4>
+<pre>public&nbsp;RequestFintEvent&#8203;(java.lang.String&nbsp;corrId,
+                        java.lang.String&nbsp;orgId,
+                        java.lang.String&nbsp;domainName,
+                        java.lang.String&nbsp;packageName,
+                        java.lang.String&nbsp;resourceName,
+                        <a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType,
+                        long&nbsp;created,
+                        long&nbsp;timeToLive,
+                        java.lang.String&nbsp;value)</pre>
+<div class="block">Kept so code built against versions without <code>filter</code>, <code>id</code> and <code>maxResults</code> still works.</div>
+</li>
+</ul>
 <a id="&lt;init&gt;()">
 <!--   -->
 </a>
@@ -399,7 +481,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <pre>public&nbsp;RequestFintEvent()</pre>
 </li>
 </ul>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.operation.OperationType,long,long,java.lang.String)">
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.operation.OperationType,long,long,java.lang.String,java.lang.String,no.fintlabs.adapter.models.event.EventIdentifikator,java.lang.Integer)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -413,7 +495,10 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
                         <a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType,
                         long&nbsp;created,
                         long&nbsp;timeToLive,
-                        java.lang.String&nbsp;value)</pre>
+                        java.lang.String&nbsp;value,
+                        java.lang.String&nbsp;filter,
+                        <a href="EventIdentifikator.html" title="class in no.fintlabs.adapter.models.event">EventIdentifikator</a>&nbsp;id,
+                        java.lang.Integer&nbsp;maxResults)</pre>
 </li>
 </ul>
 </li>
@@ -500,7 +585,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <li class="blockList">
 <h4>getOperationType</h4>
 <pre class="methodSignature">public&nbsp;<a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;getOperationType()</pre>
-<div class="block">The type of operation to be performed (CREATE, UPDATE, VALIDATE)</div>
+<div class="block">The type of operation to be performed. See <a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation"><code>OperationType</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="FintEvent.html#getOperationType()">getOperationType</a></code>&nbsp;in interface&nbsp;<code><a href="FintEvent.html" title="interface in no.fintlabs.adapter.models.event">FintEvent</a></code></dd>
@@ -536,7 +621,40 @@ public&nbsp;long&nbsp;getCreated()</pre>
 <li class="blockList">
 <h4>getValue</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getValue()</pre>
-<div class="block">The object to which the event applies</div>
+<div class="block">The object to which the event applies. Empty on <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>.</div>
+</li>
+</ul>
+<a id="getFilter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFilter</h4>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getFilter()</pre>
+<div class="block">The OData filter the resources must match. Only set on <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>, and never together
+ with <code>id</code>. E.g. <code>systemId/identifikatorverdi eq '12345'</code></div>
+</li>
+</ul>
+<a id="getId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getId</h4>
+<pre class="methodSignature">public&nbsp;<a href="EventIdentifikator.html" title="class in no.fintlabs.adapter.models.event">EventIdentifikator</a>&nbsp;getId()</pre>
+<div class="block">The one resource to read. Only set on <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>, and never together with <code>filter</code>.</div>
+</li>
+</ul>
+<a id="getMaxResults()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaxResults</h4>
+<pre class="methodSignature">public&nbsp;java.lang.Integer&nbsp;getMaxResults()</pre>
+<div class="block">The highest number of resources the answer to a <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> may hold. An adapter that
+ finds more answers with <a href="ResponseFintEvent.html#isRejected()"><code>ResponseFintEvent.isRejected()</code></a> and a reason, so the client is never
+ given a result where resources are missing.</div>
 </li>
 </ul>
 <a id="setCorrId(java.lang.String)">
@@ -596,7 +714,7 @@ public&nbsp;long&nbsp;getCreated()</pre>
 <li class="blockList">
 <h4>setOperationType</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setOperationType&#8203;(<a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&nbsp;operationType)</pre>
-<div class="block">The type of operation to be performed (CREATE, UPDATE, VALIDATE)</div>
+<div class="block">The type of operation to be performed. See <a href="../../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation"><code>OperationType</code></a>.</div>
 </li>
 </ul>
 <a id="setCreated(long)">
@@ -628,7 +746,40 @@ public&nbsp;void&nbsp;setCreated&#8203;(long&nbsp;created)</pre>
 <li class="blockList">
 <h4>setValue</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setValue&#8203;(java.lang.String&nbsp;value)</pre>
-<div class="block">The object to which the event applies</div>
+<div class="block">The object to which the event applies. Empty on <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>.</div>
+</li>
+</ul>
+<a id="setFilter(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFilter</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setFilter&#8203;(java.lang.String&nbsp;filter)</pre>
+<div class="block">The OData filter the resources must match. Only set on <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>, and never together
+ with <code>id</code>. E.g. <code>systemId/identifikatorverdi eq '12345'</code></div>
+</li>
+</ul>
+<a id="setId(no.fintlabs.adapter.models.event.EventIdentifikator)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setId</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setId&#8203;(<a href="EventIdentifikator.html" title="class in no.fintlabs.adapter.models.event">EventIdentifikator</a>&nbsp;id)</pre>
+<div class="block">The one resource to read. Only set on <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>, and never together with <code>filter</code>.</div>
+</li>
+</ul>
+<a id="setMaxResults(java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaxResults</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setMaxResults&#8203;(java.lang.Integer&nbsp;maxResults)</pre>
+<div class="block">The highest number of resources the answer to a <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> may hold. An adapter that
+ finds more answers with <a href="ResponseFintEvent.html#isRejected()"><code>ResponseFintEvent.isRejected()</code></a> and a reason, so the client is never
+ given a result where resources are missing.</div>
 </li>
 </ul>
 <a id="equals(java.lang.Object)">

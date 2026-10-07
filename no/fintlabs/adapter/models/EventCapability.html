@@ -136,23 +136,22 @@ extends java.lang.Object</pre>
 <div class="block">A resource the adapter answers events for, and which operations it answers.
  <p>
  This is separate from <a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models"><code>AdapterCapability</code></a>, which promises full syncs. A resource can be in
- either list or in both:
+ either list or in both.
+ </p>
+ <p>
+ FINT uses the list like this when the adapter asks for events:
  </p>
  <ul>
-     <li>Only in <a href="AdapterContract.html#getCapabilities()"><code>AdapterContract.getCapabilities()</code></a>: the resource is kept in the FINT cache through full sync.</li>
-     <li>Only in <a href="AdapterContract.html#getEventCapabilities()"><code>AdapterContract.getEventCapabilities()</code></a>: the resource has no full sync. Clients can read it
-     live through <a href="v2/event/EventOperation.html#READ"><code>EventOperation.READ</code></a> events, and can write to it if the adapter lists write operations.</li>
-     <li>In both: the resource is kept in the cache through full sync, and the adapter also answers events for it.</li>
+     <li>A resource in the list gets events for exactly the operations it lists. A resource listed with only
+     <a href="../operation/OperationType.html#READ"><code>OperationType.READ</code></a> gets no create or update events.</li>
+     <li>A resource that is not in the list gets events as before: every operation except
+     <a href="../operation/OperationType.html#READ"><code>OperationType.READ</code></a>, as long as the adapter has the role for the component.</li>
  </ul>
  <p>
  Read results are only returned on the event and never stored in the FINT cache. The result of a write
- (<a href="v2/event/EventOperation.html#CREATE"><code>EventOperation.CREATE</code></a>, <a href="v2/event/EventOperation.html#UPDATE"><code>EventOperation.UPDATE</code></a>) is stored in the cache, also for a resource
+ (<a href="../operation/OperationType.html#CREATE"><code>OperationType.CREATE</code></a>, <a href="../operation/OperationType.html#UPDATE"><code>OperationType.UPDATE</code></a>) is stored in the cache, also for a resource
  without full sync. A resource type that gets no completed full sync is removed from the cache after a
  while, so on a resource without full sync, written resources only stay in the cache for a limited time.
- </p>
- <p>
- Only the v2 event API checks these operations. The v1 event API sends events to any adapter that
- has the role for the component.
  </p></div>
 </li>
 </ul>
@@ -204,7 +203,7 @@ extends java.lang.Object</pre>
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.util.Set)">EventCapability</a></span>&#8203;(java.lang.String&nbsp;domainName,
                java.lang.String&nbsp;packageName,
                java.lang.String&nbsp;resourceName,
-               java.util.Set&lt;<a href="v2/event/EventOperation.html" title="enum in no.fintlabs.adapter.models.v2.event">EventOperation</a>&gt;&nbsp;operations)</code></th>
+               java.util.Set&lt;<a href="../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&gt;&nbsp;operations)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -255,7 +254,7 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>java.util.Set&lt;<a href="v2/event/EventOperation.html" title="enum in no.fintlabs.adapter.models.v2.event">EventOperation</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.Set&lt;<a href="../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOperations()">getOperations</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The operations the adapter answers for this resource.</div>
@@ -289,7 +288,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOperations(java.util.Set)">setOperations</a></span>&#8203;(java.util.Set&lt;<a href="v2/event/EventOperation.html" title="enum in no.fintlabs.adapter.models.v2.event">EventOperation</a>&gt;&nbsp;operations)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOperations(java.util.Set)">setOperations</a></span>&#8203;(java.util.Set&lt;<a href="../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&gt;&nbsp;operations)</code></th>
 <td class="colLast">
 <div class="block">The operations the adapter answers for this resource.</div>
 </td>
@@ -346,7 +345,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;EventCapability&#8203;(java.lang.String&nbsp;domainName,
                        java.lang.String&nbsp;packageName,
                        java.lang.String&nbsp;resourceName,
-                       java.util.Set&lt;<a href="v2/event/EventOperation.html" title="enum in no.fintlabs.adapter.models.v2.event">EventOperation</a>&gt;&nbsp;operations)</pre>
+                       java.util.Set&lt;<a href="../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&gt;&nbsp;operations)</pre>
 </li>
 </ul>
 <a id="&lt;init&gt;()">
@@ -427,7 +426,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getOperations</h4>
-<pre class="methodSignature">public&nbsp;java.util.Set&lt;<a href="v2/event/EventOperation.html" title="enum in no.fintlabs.adapter.models.v2.event">EventOperation</a>&gt;&nbsp;getOperations()</pre>
+<pre class="methodSignature">public&nbsp;java.util.Set&lt;<a href="../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&gt;&nbsp;getOperations()</pre>
 <div class="block">The operations the adapter answers for this resource. E.g. [READ] or [CREATE, VALIDATE].</div>
 </li>
 </ul>
@@ -467,7 +466,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setOperations</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setOperations&#8203;(java.util.Set&lt;<a href="v2/event/EventOperation.html" title="enum in no.fintlabs.adapter.models.v2.event">EventOperation</a>&gt;&nbsp;operations)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;setOperations&#8203;(java.util.Set&lt;<a href="../operation/OperationType.html" title="enum in no.fintlabs.adapter.operation">OperationType</a>&gt;&nbsp;operations)</pre>
 <div class="block">The operations the adapter answers for this resource. E.g. [READ] or [CREATE, VALIDATE].</div>
 </li>
 </ul>
