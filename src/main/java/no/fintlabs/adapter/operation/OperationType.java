@@ -7,5 +7,10 @@ public enum OperationType {
     CREATE,
     UPDATE,
     VALIDATE,
-    DELETE
+    DELETE,
+    /**
+     * Read resources straight from the source system. An adapter only gets these events for the resources
+     * it lists with READ in {@link no.fintlabs.adapter.models.AdapterContract#getEventCapabilities()}.
+     */
+    READ
 }

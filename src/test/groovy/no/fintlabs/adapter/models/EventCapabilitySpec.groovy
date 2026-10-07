@@ -1,7 +1,7 @@
 package no.fintlabs.adapter.models
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import no.fintlabs.adapter.models.v2.event.EventOperation
+import no.fintlabs.adapter.operation.OperationType
 import spock.lang.Specification
 
 class EventCapabilitySpec extends Specification {
@@ -37,14 +37,14 @@ class EventCapabilitySpec extends Specification {
 
         then:
         contract.eventCapabilities.collectEntries { [(it.entityUri): it.operations] } == [
-                "/utdanning/elev/elev"       : [EventOperation.READ] as Set,
-                "/utdanning/vurdering/fravar": [EventOperation.CREATE, EventOperation.VALIDATE] as Set,
+                "/utdanning/elev/elev"       : [OperationType.READ] as Set,
+                "/utdanning/vurdering/fravar": [OperationType.CREATE, OperationType.VALIDATE] as Set,
         ]
     }
 
     def "Two event capabilities with the same resource and operations are equal"() {
         expect:
-        new EventCapability("utdanning", "elev", "elev", [EventOperation.READ] as Set) ==
-                new EventCapability("utdanning", "elev", "elev", [EventOperation.READ] as Set)
+        new EventCapability("utdanning", "elev", "elev", [OperationType.READ] as Set) ==
+                new EventCapability("utdanning", "elev", "elev", [OperationType.READ] as Set)
     }
 }

@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import no.fintlabs.adapter.models.v2.event.EventOperation;
+import no.fintlabs.adapter.operation.OperationType;
 
 import java.util.Set;
 
@@ -17,23 +17,22 @@ import java.util.Set;
  * A resource the adapter answers events for, and which operations it answers.
  * <p>
  * This is separate from {@link AdapterCapability}, which promises full syncs. A resource can be in
- * either list or in both:
+ * either list or in both.
+ * </p>
+ * <p>
+ * FINT uses the list like this when the adapter asks for events:
  * </p>
  * <ul>
- *     <li>Only in {@link AdapterContract#getCapabilities()}: the resource is kept in the FINT cache through full sync.</li>
- *     <li>Only in {@link AdapterContract#getEventCapabilities()}: the resource has no full sync. Clients can read it
- *     live through {@link EventOperation#READ} events, and can write to it if the adapter lists write operations.</li>
- *     <li>In both: the resource is kept in the cache through full sync, and the adapter also answers events for it.</li>
+ *     <li>A resource in the list gets events for exactly the operations it lists. A resource listed with only
+ *     {@link OperationType#READ} gets no create or update events.</li>
+ *     <li>A resource that is not in the list gets events as before: every operation except
+ *     {@link OperationType#READ}, as long as the adapter has the role for the component.</li>
  * </ul>
  * <p>
  * Read results are only returned on the event and never stored in the FINT cache. The result of a write
- * ({@link EventOperation#CREATE}, {@link EventOperation#UPDATE}) is stored in the cache, also for a resource
+ * ({@link OperationType#CREATE}, {@link OperationType#UPDATE}) is stored in the cache, also for a resource
  * without full sync. A resource type that gets no completed full sync is removed from the cache after a
  * while, so on a resource without full sync, written resources only stay in the cache for a limited time.
- * </p>
- * <p>
- * Only the v2 event API checks these operations. The v1 event API sends events to any adapter that
- * has the role for the component.
  * </p>
  */
 @Getter
@@ -63,7 +62,7 @@ public class EventCapability {
      * The operations the adapter answers for this resource. E.g. [READ] or [CREATE, VALIDATE].
      */
     @NotEmpty
-    private Set<EventOperation> operations;
+    private Set<OperationType> operations;
 
     /**
      * Helper method to generate the entity uri.

@@ -59,7 +59,7 @@ public class EventBodyResponse implements Serializable {
     }
 
     private static String getMessage(ResponseFintEvent responseEvent) {
-        Function<String, String> setMessage = (message) -> ObjectUtils.isEmpty(message) ? message : "";
+        Function<String, String> setMessage = (message) -> ObjectUtils.isEmpty(message) ? "" : message;
 
         if (responseEvent.isFailed()) {
             return setMessage.apply(responseEvent.getErrorMessage());
