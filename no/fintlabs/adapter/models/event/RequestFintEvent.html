@@ -27,8 +27,8 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":42,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":42,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
+var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -230,7 +230,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colSecond" scope="col">Method</th>
@@ -262,7 +262,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCreated()">getCreated</a></span>()</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">When FINT created the request, as a Unix timestamp in milliseconds.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -344,7 +344,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCreated(long)">setCreated</a></span>&#8203;(long&nbsp;created)</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">When FINT created the request, as a Unix timestamp in milliseconds.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -582,10 +582,8 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <ul class="blockList">
 <li class="blockList">
 <h4>getCreated</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;long&nbsp;getCreated()</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">When the event was created.</div>
+<pre class="methodSignature">public&nbsp;long&nbsp;getCreated()</pre>
+<div class="block">When FINT created the request, as a Unix timestamp in milliseconds.</div>
 </li>
 </ul>
 <a id="getTimeToLive()">
@@ -695,10 +693,8 @@ public&nbsp;long&nbsp;getCreated()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setCreated</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;void&nbsp;setCreated&#8203;(long&nbsp;created)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">When the event was created.</div>
+<pre class="methodSignature">public&nbsp;void&nbsp;setCreated&#8203;(long&nbsp;created)</pre>
+<div class="block">When FINT created the request, as a Unix timestamp in milliseconds.</div>
 </li>
 </ul>
 <a id="setTimeToLive(long)">

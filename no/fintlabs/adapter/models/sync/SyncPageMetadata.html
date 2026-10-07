@@ -27,8 +27,8 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10,"i3":42,"i4":10,"i5":10,"i6":10,"i7":10,"i8":42,"i9":10,"i10":10,"i11":42,"i12":10,"i13":42,"i14":10,"i15":10,"i16":10,"i17":10,"i18":42,"i19":10,"i20":10,"i21":42,"i22":10};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
+var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -204,7 +204,7 @@ extends java.lang.Object</pre>
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colSecond" scope="col">Method</th>
@@ -229,7 +229,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAdapterId()">getAdapterId</a></span>()</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">The id of the adapter that sent the page, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -264,7 +264,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTime()">getTime</a></span>()</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">When FINT received the page, as a Unix timestamp in milliseconds.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -285,7 +285,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUriRef()">getUriRef</a></span>()</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">The path for the FINT resource in a sync.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -297,7 +297,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAdapterId(java.lang.String)">setAdapterId</a></span>&#8203;(java.lang.String&nbsp;adapterId)</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">The id of the adapter that sent the page, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -332,7 +332,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTime(long)">setTime</a></span>&#8203;(long&nbsp;time)</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">When FINT received the page, as a Unix timestamp in milliseconds.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
@@ -353,7 +353,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setUriRef(java.lang.String)">setUriRef</a></span>&#8203;(java.lang.String&nbsp;uriRef)</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">The path for the FINT resource in a sync.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
@@ -436,10 +436,9 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getAdapterId</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;java.lang.String&nbsp;getAdapterId()</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">See <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a></div>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getAdapterId()</pre>
+<div class="block">The id of the adapter that sent the page, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>. Set by FINT from
+ the adapter's contract when it receives the page. A value sent by the adapter is ignored.</div>
 </li>
 </ul>
 <a id="getCorrId()">
@@ -509,10 +508,9 @@ public&nbsp;java.lang.String&nbsp;getAdapterId()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getUriRef</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;java.lang.String&nbsp;getUriRef()</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">The path for the FINT resource in a sync. E.g. <code>/utdanning/elev/fravar</code>.</div>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getUriRef()</pre>
+<div class="block">The path for the FINT resource in a sync. E.g. <code>/utdanning/elev/fravar</code>. Set by FINT from the
+ path the page was sent to. A value sent by the adapter is ignored.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../AdapterCapability.html#getEntityUri()"><code>AdapterCapability.getEntityUri()</code></a></dd>
@@ -525,14 +523,9 @@ public&nbsp;java.lang.String&nbsp;getUriRef()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTime</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;long&nbsp;getTime()</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Unix timestamp for the current page in a sync. Each page should have a timestamp for when it was sent.</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>System.currentTimeMillis()</code></dd>
-</dl>
+<pre class="methodSignature">public&nbsp;long&nbsp;getTime()</pre>
+<div class="block">When FINT received the page, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
+ adapter is ignored.</div>
 </li>
 </ul>
 <a id="setAdapterId(java.lang.String)">
@@ -541,10 +534,9 @@ public&nbsp;long&nbsp;getTime()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setAdapterId</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;void&nbsp;setAdapterId&#8203;(java.lang.String&nbsp;adapterId)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">See <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a></div>
+<pre class="methodSignature">public&nbsp;void&nbsp;setAdapterId&#8203;(java.lang.String&nbsp;adapterId)</pre>
+<div class="block">The id of the adapter that sent the page, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>. Set by FINT from
+ the adapter's contract when it receives the page. A value sent by the adapter is ignored.</div>
 </li>
 </ul>
 <a id="setCorrId(java.lang.String)">
@@ -614,10 +606,9 @@ public&nbsp;void&nbsp;setAdapterId&#8203;(java.lang.String&nbsp;adapterId)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setUriRef</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;void&nbsp;setUriRef&#8203;(java.lang.String&nbsp;uriRef)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">The path for the FINT resource in a sync. E.g. <code>/utdanning/elev/fravar</code>.</div>
+<pre class="methodSignature">public&nbsp;void&nbsp;setUriRef&#8203;(java.lang.String&nbsp;uriRef)</pre>
+<div class="block">The path for the FINT resource in a sync. E.g. <code>/utdanning/elev/fravar</code>. Set by FINT from the
+ path the page was sent to. A value sent by the adapter is ignored.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../AdapterCapability.html#getEntityUri()"><code>AdapterCapability.getEntityUri()</code></a></dd>
@@ -630,14 +621,9 @@ public&nbsp;void&nbsp;setUriRef&#8203;(java.lang.String&nbsp;uriRef)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setTime</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;void&nbsp;setTime&#8203;(long&nbsp;time)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Unix timestamp for the current page in a sync. Each page should have a timestamp for when it was sent.</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>System.currentTimeMillis()</code></dd>
-</dl>
+<pre class="methodSignature">public&nbsp;void&nbsp;setTime&#8203;(long&nbsp;time)</pre>
+<div class="block">When FINT received the page, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
+ adapter is ignored.</div>
 </li>
 </ul>
 <a id="equals(java.lang.Object)">

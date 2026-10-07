@@ -27,8 +27,8 @@
     catch(err) {
     }
 //-->
-var data = {"i0":42,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":42,"i7":10,"i8":10,"i9":10,"i10":42};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -151,7 +151,7 @@ extends java.lang.Object</pre>
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colSecond" scope="col">Method</th>
@@ -161,7 +161,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code><a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata.SyncPageMetadataBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#adapterId(java.lang.String)">adapterId</a></span>&#8203;(java.lang.String&nbsp;adapterId)</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">The id of the adapter that sent the page, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -201,7 +201,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code><a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata.SyncPageMetadataBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#time(long)">time</a></span>&#8203;(long&nbsp;time)</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">When FINT received the page, as a Unix timestamp in milliseconds.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -227,7 +227,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code><a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata.SyncPageMetadataBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#uriRef(java.lang.String)">uriRef</a></span>&#8203;(java.lang.String&nbsp;uriRef)</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">The path for the FINT resource in a sync.</div>
 </td>
 </tr>
 </table>
@@ -260,10 +260,9 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>adapterId</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;<a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata.SyncPageMetadataBuilder</a>&nbsp;adapterId&#8203;(java.lang.String&nbsp;adapterId)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">See <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a></div>
+<pre class="methodSignature">public&nbsp;<a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata.SyncPageMetadataBuilder</a>&nbsp;adapterId&#8203;(java.lang.String&nbsp;adapterId)</pre>
+<div class="block">The id of the adapter that sent the page, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>. Set by FINT from
+ the adapter's contract when it receives the page. A value sent by the adapter is ignored.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>
@@ -361,10 +360,9 @@ public&nbsp;<a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>uriRef</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;<a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata.SyncPageMetadataBuilder</a>&nbsp;uriRef&#8203;(java.lang.String&nbsp;uriRef)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">The path for the FINT resource in a sync. E.g. <code>/utdanning/elev/fravar</code>.</div>
+<pre class="methodSignature">public&nbsp;<a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata.SyncPageMetadataBuilder</a>&nbsp;uriRef&#8203;(java.lang.String&nbsp;uriRef)</pre>
+<div class="block">The path for the FINT resource in a sync. E.g. <code>/utdanning/elev/fravar</code>. Set by FINT from the
+ path the page was sent to. A value sent by the adapter is ignored.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>
@@ -379,15 +377,12 @@ public&nbsp;<a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>time</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;<a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata.SyncPageMetadataBuilder</a>&nbsp;time&#8203;(long&nbsp;time)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Unix timestamp for the current page in a sync. Each page should have a timestamp for when it was sent.</div>
+<pre class="methodSignature">public&nbsp;<a href="SyncPageMetadata.SyncPageMetadataBuilder.html" title="class in no.fintlabs.adapter.models.sync">SyncPageMetadata.SyncPageMetadataBuilder</a>&nbsp;time&#8203;(long&nbsp;time)</pre>
+<div class="block">When FINT received the page, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
+ adapter is ignored.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>System.currentTimeMillis()</code></dd>
 </dl>
 </li>
 </ul>

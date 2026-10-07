@@ -27,8 +27,8 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10,"i3":42,"i4":10,"i5":10,"i6":10,"i7":42,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":42,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":42,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
+var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -238,7 +238,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colSecond" scope="col">Method</th>
@@ -263,7 +263,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAdapterId()">getAdapterId</a></span>()</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">The id of the adapter that answered, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -291,7 +291,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHandledAt()">getHandledAt</a></span>()</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">When FINT received the answer, as a Unix timestamp in milliseconds.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -360,7 +360,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAdapterId(java.lang.String)">setAdapterId</a></span>&#8203;(java.lang.String&nbsp;adapterId)</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">The id of the adapter that answered, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
@@ -403,7 +403,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHandledAt(long)">setHandledAt</a></span>&#8203;(long&nbsp;handledAt)</code></th>
 <td class="colLast">
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+<div class="block">When FINT received the answer, as a Unix timestamp in milliseconds.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
@@ -581,10 +581,9 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <ul class="blockList">
 <li class="blockList">
 <h4>getAdapterId</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;java.lang.String&nbsp;getAdapterId()</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">See <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a></div>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getAdapterId()</pre>
+<div class="block">The id of the adapter that answered, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>. Set by FINT from the
+ adapter's contract when it receives the answer. A value sent by the adapter is ignored.</div>
 </li>
 </ul>
 <a id="getHandledAt()">
@@ -593,10 +592,9 @@ public&nbsp;java.lang.String&nbsp;getAdapterId()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getHandledAt</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;long&nbsp;getHandledAt()</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">When the event was handled.</div>
+<pre class="methodSignature">public&nbsp;long&nbsp;getHandledAt()</pre>
+<div class="block">When FINT received the answer, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
+ adapter is ignored.</div>
 </li>
 </ul>
 <a id="getValue()">
@@ -724,10 +722,9 @@ public&nbsp;long&nbsp;getHandledAt()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setAdapterId</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;void&nbsp;setAdapterId&#8203;(java.lang.String&nbsp;adapterId)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">See <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a></div>
+<pre class="methodSignature">public&nbsp;void&nbsp;setAdapterId&#8203;(java.lang.String&nbsp;adapterId)</pre>
+<div class="block">The id of the adapter that answered, see <a href="../AdapterContract.html#getAdapterId()"><code>AdapterContract.getAdapterId()</code></a>. Set by FINT from the
+ adapter's contract when it receives the answer. A value sent by the adapter is ignored.</div>
 </li>
 </ul>
 <a id="setHandledAt(long)">
@@ -736,10 +733,9 @@ public&nbsp;void&nbsp;setAdapterId&#8203;(java.lang.String&nbsp;adapterId)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setHandledAt</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;void&nbsp;setHandledAt&#8203;(long&nbsp;handledAt)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">When the event was handled.</div>
+<pre class="methodSignature">public&nbsp;void&nbsp;setHandledAt&#8203;(long&nbsp;handledAt)</pre>
+<div class="block">When FINT received the answer, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
+ adapter is ignored.</div>
 </li>
 </ul>
 <a id="setValue(no.fintlabs.adapter.models.sync.SyncPageEntry)">
