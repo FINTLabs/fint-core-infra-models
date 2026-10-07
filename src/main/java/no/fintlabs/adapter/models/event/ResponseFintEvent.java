@@ -43,15 +43,15 @@ public class ResponseFintEvent implements FintEvent {
     private String orgId;
 
     /**
-     * See {@link AdapterContract#getAdapterId()}
+     * The id of the adapter that answered, see {@link AdapterContract#getAdapterId()}. Set by FINT from the
+     * adapter's contract when it receives the answer. A value sent by the adapter is ignored.
      */
-    @Deprecated
     private String adapterId;
 
     /**
-     * When the event was handled.
+     * When FINT received the answer, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
+     * adapter is ignored.
      */
-    @Deprecated
     private long handledAt;
 
     /**

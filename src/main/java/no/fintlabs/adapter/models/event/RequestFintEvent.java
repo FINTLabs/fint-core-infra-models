@@ -59,9 +59,8 @@ public class RequestFintEvent implements FintEvent {
     private OperationType operationType;
 
     /**
-     * When the event was created.
+     * When FINT created the request, as a Unix timestamp in milliseconds.
      */
-    @Deprecated
     private long created;
 
     /**

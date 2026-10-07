@@ -52,8 +52,8 @@ public class AdapterHeartbeat {
     @NotBlank
     private String orgId;
     /**
-     * The heartbeat time for the adapter in Unix timestamp.
+     * When FINT received the heartbeat, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
+     * adapter is ignored.
      */
-    @Deprecated
     private long time;
 }

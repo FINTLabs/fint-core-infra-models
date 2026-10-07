@@ -76,8 +76,10 @@ public class AdapterContract {
     private Set<AdapterCapability> capabilities;
     /**
      * The registration time for the contract in Unix timestamp.
+     *
+     * @deprecated FINT does not read it. Stop setting it, it goes away in the next major version.
      */
-    @Deprecated
+    @Deprecated(since = "3.1.0", forRemoval = true)
     private long time;
     /**
      * The resources the adapter answers events for. Empty when the adapter does not send it.

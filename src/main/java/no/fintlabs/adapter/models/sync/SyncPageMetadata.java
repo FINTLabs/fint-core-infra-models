@@ -19,9 +19,9 @@ import java.util.UUID;
 @Builder
 public class SyncPageMetadata {
     /**
-     * See {@link AdapterContract#getAdapterId()}
+     * The id of the adapter that sent the page, see {@link AdapterContract#getAdapterId()}. Set by FINT from
+     * the adapter's contract when it receives the page. A value sent by the adapter is ignored.
      */
-    @Deprecated
     private String adapterId;
     /**
      * An uniq id for a sync. It is used to correlate all pages in a sync. It should be a {@link UUID#randomUUID() UUID} in
@@ -51,18 +51,16 @@ public class SyncPageMetadata {
      */
     private long totalPages;
     /**
-     * The path for the FINT resource in a sync. E.g. <code>/utdanning/elev/fravar</code>.
+     * The path for the FINT resource in a sync. E.g. <code>/utdanning/elev/fravar</code>. Set by FINT from the
+     * path the page was sent to. A value sent by the adapter is ignored.
      *
      * @see AdapterCapability#getEntityUri()
      */
-    @Deprecated
     private String uriRef;
     /**
-     * Unix timestamp for the current page in a sync. Each page should have a timestamp for when it was sent.
-     *
-     * @see System#currentTimeMillis()
+     * When FINT received the page, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
+     * adapter is ignored.
      */
-    @Deprecated
     private long time;
 
 }
