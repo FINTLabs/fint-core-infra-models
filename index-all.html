@@ -500,10 +500,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">The value of the identifier.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/RequestFintEvent.html#getMaxResults()">getMaxResults()</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/RequestFintEvent.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent</a></dt>
-<dd>
-<div class="block">The highest number of resources the answer to a <a href="no/fintlabs/adapter/operation/OperationType.html#READ"><code>OperationType.READ</code></a> may hold.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/EventBodyResponse.html#getMessage()">getMessage()</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/EventBodyResponse.html" title="class in no.fintlabs.adapter.models.event">EventBodyResponse</a></dt>
 <dd>
 <div class="block">This message should be set if something goes wrong.</div>
@@ -726,8 +722,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#isRejected()">isRejected()</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate, or a
- <a href="no/fintlabs/adapter/operation/OperationType.html#READ"><code>OperationType.READ</code></a> that finds more than <a href="no/fintlabs/adapter/models/event/RequestFintEvent.html#getMaxResults()"><code>RequestFintEvent.getMaxResults()</code></a> resources.</div>
+<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
 </dd>
 </dl>
 <a id="I:L">
@@ -751,10 +746,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">M</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/RequestFintEvent.RequestFintEventBuilder.html#maxResults(java.lang.Integer)">maxResults(Integer)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent.RequestFintEventBuilder</a></dt>
-<dd>
-<div class="block">The highest number of resources the answer to a <a href="no/fintlabs/adapter/operation/OperationType.html#READ"><code>OperationType.READ</code></a> may hold.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/EventBodyResponse.EventBodyResponseBuilder.html#message(java.lang.String)">message(String)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/EventBodyResponse.EventBodyResponseBuilder.html" title="class in no.fintlabs.adapter.models.event">EventBodyResponse.EventBodyResponseBuilder</a></dt>
 <dd>
 <div class="block">This message should be set if something goes wrong.</div>
@@ -883,8 +874,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.ResponseFintEventBuilder.html#rejected(boolean)">rejected(boolean)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a></dt>
 <dd>
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate, or a
- <a href="no/fintlabs/adapter/operation/OperationType.html#READ"><code>OperationType.READ</code></a> that finds more than <a href="no/fintlabs/adapter/models/event/RequestFintEvent.html#getMaxResults()"><code>RequestFintEvent.getMaxResults()</code></a> resources.</div>
+<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseStatus.html#REJECTED">REJECTED</a></span> - no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseStatus.html" title="enum in no.fintlabs.adapter.models.event">ResponseStatus</a></dt>
 <dd>
@@ -902,9 +892,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/RequestFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.operation.OperationType,long,long,java.lang.String)">RequestFintEvent(String, String, String, String, String, OperationType, long, long, String)</a></span> - Constructor for class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/RequestFintEvent.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent</a></dt>
 <dd>
-<div class="block">Kept so code built against versions without <code>RequestFintEvent.filter</code>, <code>RequestFintEvent.id</code> and <code>RequestFintEvent.maxResults</code> still works.</div>
+<div class="block">Kept so code built against versions without <code>RequestFintEvent.filter</code> and <code>RequestFintEvent.id</code> still works.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/RequestFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.operation.OperationType,long,long,java.lang.String,java.lang.String,no.fintlabs.adapter.models.event.EventIdentifikator,java.lang.Integer)">RequestFintEvent(String, String, String, String, String, OperationType, long, long, String, String, EventIdentifikator, Integer)</a></span> - Constructor for class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/RequestFintEvent.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/RequestFintEvent.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,no.fintlabs.adapter.operation.OperationType,long,long,java.lang.String,java.lang.String,no.fintlabs.adapter.models.event.EventIdentifikator)">RequestFintEvent(String, String, String, String, String, OperationType, long, long, String, String, EventIdentifikator)</a></span> - Constructor for class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/RequestFintEvent.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="no/fintlabs/adapter/models/event/RequestFintEvent.RequestFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event"><span class="typeNameLink">RequestFintEvent.RequestFintEventBuilder</span></a> - Class in <a href="no/fintlabs/adapter/models/event/package-summary.html">no.fintlabs.adapter.models.event</a></dt>
 <dd>&nbsp;</dd>
@@ -1060,10 +1050,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">The value of the identifier.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/RequestFintEvent.html#setMaxResults(java.lang.Integer)">setMaxResults(Integer)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/RequestFintEvent.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent</a></dt>
-<dd>
-<div class="block">The highest number of resources the answer to a <a href="no/fintlabs/adapter/operation/OperationType.html#READ"><code>OperationType.READ</code></a> may hold.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/EventBodyResponse.html#setMessage(java.lang.String)">setMessage(String)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/EventBodyResponse.html" title="class in no.fintlabs.adapter.models.event">EventBodyResponse</a></dt>
 <dd>
 <div class="block">This message should be set if something goes wrong.</div>
@@ -1132,8 +1118,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setRejected(boolean)">setRejected(boolean)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate, or a
- <a href="no/fintlabs/adapter/operation/OperationType.html#READ"><code>OperationType.READ</code></a> that finds more than <a href="no/fintlabs/adapter/models/event/RequestFintEvent.html#getMaxResults()"><code>RequestFintEvent.getMaxResults()</code></a> resources.</div>
+<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setRejectReason(java.lang.String)">setRejectReason(String)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
 <dd>

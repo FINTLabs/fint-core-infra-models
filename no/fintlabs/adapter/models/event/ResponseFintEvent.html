@@ -353,8 +353,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRejected()">isRejected</a></span>()</code></th>
 <td class="colLast">
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate, or a
- <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> that finds more than <a href="RequestFintEvent.html#getMaxResults()"><code>RequestFintEvent.getMaxResults()</code></a> resources.</div>
+<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -425,8 +424,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRejected(boolean)">setRejected</a></span>&#8203;(boolean&nbsp;rejected)</code></th>
 <td class="colLast">
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate, or a
- <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> that finds more than <a href="RequestFintEvent.html#getMaxResults()"><code>RequestFintEvent.getMaxResults()</code></a> resources.</div>
+<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
@@ -620,7 +618,8 @@ public&nbsp;long&nbsp;getHandledAt()</pre>
 <h4>getValues</h4>
 <pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="../sync/SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&gt;&nbsp;getValues()</pre>
 <div class="block">The resources a <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> found, in the same form as on sync. An empty list means
- that nothing was found. A read by id holds at most one resource.</div>
+ that nothing was found. A read by id holds at most one resource. FINT stores the whole answer on one
+ event, so an answer larger than 8 MB is refused and the read is closed as rejected.</div>
 </li>
 </ul>
 <a id="getOperationType()">
@@ -665,8 +664,7 @@ public&nbsp;long&nbsp;getHandledAt()</pre>
 <li class="blockList">
 <h4>isRejected</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isRejected()</pre>
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate, or a
- <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> that finds more than <a href="RequestFintEvent.html#getMaxResults()"><code>RequestFintEvent.getMaxResults()</code></a> resources.</div>
+<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
 </li>
 </ul>
 <a id="getRejectReason()">
@@ -763,7 +761,8 @@ public&nbsp;void&nbsp;setHandledAt&#8203;(long&nbsp;handledAt)</pre>
 <h4>setValues</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setValues&#8203;(java.util.List&lt;<a href="../sync/SyncPageEntry.html" title="class in no.fintlabs.adapter.models.sync">SyncPageEntry</a>&gt;&nbsp;values)</pre>
 <div class="block">The resources a <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> found, in the same form as on sync. An empty list means
- that nothing was found. A read by id holds at most one resource.</div>
+ that nothing was found. A read by id holds at most one resource. FINT stores the whole answer on one
+ event, so an answer larger than 8 MB is refused and the read is closed as rejected.</div>
 </li>
 </ul>
 <a id="setOperationType(no.fintlabs.adapter.operation.OperationType)">
@@ -804,8 +803,7 @@ public&nbsp;void&nbsp;setHandledAt&#8203;(long&nbsp;handledAt)</pre>
 <li class="blockList">
 <h4>setRejected</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setRejected&#8203;(boolean&nbsp;rejected)</pre>
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate, or a
- <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a> that finds more than <a href="RequestFintEvent.html#getMaxResults()"><code>RequestFintEvent.getMaxResults()</code></a> resources.</div>
+<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
 </li>
 </ul>
 <a id="setRejectReason(java.lang.String)">
