@@ -62,7 +62,8 @@ public class ResponseFintEvent implements FintEvent {
 
     /**
      * The resources a {@link OperationType#READ} found, in the same form as on sync. An empty list means
-     * that nothing was found. A read by id holds at most one resource.
+     * that nothing was found. A read by id holds at most one resource. FINT stores the whole answer on one
+     * event, so an answer larger than 8 MB is refused and the read is closed as rejected.
      */
     @NotNull
     @Valid
@@ -87,8 +88,7 @@ public class ResponseFintEvent implements FintEvent {
     private String errorMessage;
 
     /**
-     * True when the adapter cannot do what the event asks, for example a filter it cannot translate, or a
-     * {@link OperationType#READ} that finds more than {@link RequestFintEvent#getMaxResults()} resources.
+     * True when the adapter cannot do what the event asks, for example a filter it cannot translate.
      */
     private boolean rejected;
 

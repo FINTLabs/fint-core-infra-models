@@ -34,16 +34,6 @@ class EventValidationSpec extends Specification {
         invalidFields(request) == ["id.idValue"]
     }
 
-    def "A read request is not valid when max results is below one"() {
-        given:
-        def request = readRequest()
-        request.filter = "systemId/identifikatorverdi eq '12345'"
-        request.maxResults = 0
-
-        expect:
-        invalidFields(request) == ["maxResults"]
-    }
-
     def "A read answer is not valid when a resource has no identifier"() {
         given:
         def response = ResponseFintEvent.builder()

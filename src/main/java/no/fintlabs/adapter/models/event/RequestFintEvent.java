@@ -1,7 +1,6 @@
 package no.fintlabs.adapter.models.event;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -88,20 +87,12 @@ public class RequestFintEvent implements FintEvent {
     private EventIdentifikator id;
 
     /**
-     * The highest number of resources the answer to a {@link OperationType#READ} may hold. An adapter that
-     * finds more answers with {@link ResponseFintEvent#isRejected()} and a reason, so the client is never
-     * given a result where resources are missing.
-     */
-    @Min(1)
-    private Integer maxResults;
-
-    /**
-     * Kept so code built against versions without {@link #filter}, {@link #id} and {@link #maxResults} still works.
+     * Kept so code built against versions without {@link #filter} and {@link #id} still works.
      */
     public RequestFintEvent(String corrId, String orgId, String domainName, String packageName, String resourceName,
                             OperationType operationType, long created, long timeToLive, String value) {
         this(corrId, orgId, domainName, packageName, resourceName, operationType, created, timeToLive, value,
-                null, null, null);
+                null, null);
     }
 
 }
