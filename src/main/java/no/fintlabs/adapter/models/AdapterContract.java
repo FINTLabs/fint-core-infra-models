@@ -62,7 +62,7 @@ public class AdapterContract {
      */
     @Min(1)
     @Max(5)
-    private int heartbeatIntervalInMinutes;
+    private Integer heartbeatIntervalInMinutes;
     /**
      * <p>
      * The resources the adapter delivers to FINT with full sync.
@@ -94,7 +94,7 @@ public class AdapterContract {
     /**
      * Kept so code built against versions without {@link #eventCapabilities} still works.
      */
-    public AdapterContract(String adapterId, String orgId, String username, int heartbeatIntervalInMinutes,
+    public AdapterContract(String adapterId, String orgId, String username, Integer heartbeatIntervalInMinutes,
                            Set<AdapterCapability> capabilities, long time) {
         this(adapterId, orgId, username, heartbeatIntervalInMinutes, capabilities, time, new HashSet<>());
     }
