@@ -58,6 +58,36 @@ class AdapterContractSpec extends Specification {
         6        | false
     }
 
+    def "A contract reads time from JSON"() {
+        expect:
+        new ObjectMapper().readValue(json, AdapterContract).time == expected
+
+        where:
+        json            | expected
+        '{}'            | null
+        '{"time":null}' | null
+        '{"time":5}'    | 5L
+    }
+
+    def "A contract reads missing or null event capabilities from JSON as an empty set"() {
+        expect:
+        new ObjectMapper().readValue(json, AdapterContract).eventCapabilities == [] as Set
+
+        where:
+        json << ['{}', '{"eventCapabilities":null}']
+    }
+
+    def "Setting event capabilities to null leaves an empty set"() {
+        given:
+        def contract = new AdapterContract()
+
+        when:
+        contract.setEventCapabilities(null)
+
+        then:
+        contract.eventCapabilities == [] as Set
+    }
+
     def "Get entity uri should return domain, package and class in the format /domain/package/class"() {
 
         given:
