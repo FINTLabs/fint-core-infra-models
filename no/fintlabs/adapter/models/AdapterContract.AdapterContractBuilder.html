@@ -202,7 +202,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="AdapterContract.AdapterContractBuilder.html" title="class in no.fintlabs.adapter.models">AdapterContract.AdapterContractBuilder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#time(long)">time</a></span>&#8203;(long&nbsp;time)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#time(java.lang.Long)">time</a></span>&#8203;(java.lang.Long&nbsp;time)</code></th>
 <td class="colLast">
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
 <div class="deprecationComment">FINT does not read it.</div>
@@ -344,14 +344,14 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a id="time(long)">
+<a id="time(java.lang.Long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>time</h4>
 <pre class="methodSignature">@Deprecated
-public&nbsp;<a href="AdapterContract.AdapterContractBuilder.html" title="class in no.fintlabs.adapter.models">AdapterContract.AdapterContractBuilder</a>&nbsp;time&#8203;(long&nbsp;time)</pre>
+public&nbsp;<a href="AdapterContract.AdapterContractBuilder.html" title="class in no.fintlabs.adapter.models">AdapterContract.AdapterContractBuilder</a>&nbsp;time&#8203;(java.lang.Long&nbsp;time)</pre>
 <div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span>
 <div class="deprecationComment">FINT does not read it. Stop setting it, it goes away in the next major version.</div>
 </div>
@@ -369,7 +369,7 @@ public&nbsp;<a href="AdapterContract.AdapterContractBuilder.html" title="class i
 <li class="blockList">
 <h4>eventCapabilities</h4>
 <pre class="methodSignature">public&nbsp;<a href="AdapterContract.AdapterContractBuilder.html" title="class in no.fintlabs.adapter.models">AdapterContract.AdapterContractBuilder</a>&nbsp;eventCapabilities&#8203;(java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</pre>
-<div class="block">The resources the adapter answers events for. Empty when the adapter does not send it.</div>
+<div class="block">The resources the adapter answers events for. Empty when the adapter does not send it, or sends <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>

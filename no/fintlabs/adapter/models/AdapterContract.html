@@ -181,23 +181,23 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.util.Set,long)">AdapterContract</a></span>&#8203;(java.lang.String&nbsp;adapterId,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.util.Set,java.lang.Long)">AdapterContract</a></span>&#8203;(java.lang.String&nbsp;adapterId,
                java.lang.String&nbsp;orgId,
                java.lang.String&nbsp;username,
                java.lang.Integer&nbsp;heartbeatIntervalInMinutes,
                java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
-               long&nbsp;time)</code></th>
+               java.lang.Long&nbsp;time)</code></th>
 <td class="colLast">
 <div class="block">Kept so code built against versions without <code>eventCapabilities</code> still works.</div>
 </td>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.util.Set,long,java.util.Set)">AdapterContract</a></span>&#8203;(java.lang.String&nbsp;adapterId,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.util.Set,java.lang.Long,java.util.Set)">AdapterContract</a></span>&#8203;(java.lang.String&nbsp;adapterId,
                java.lang.String&nbsp;orgId,
                java.lang.String&nbsp;username,
                java.lang.Integer&nbsp;heartbeatIntervalInMinutes,
                java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
-               long&nbsp;time,
+               java.lang.Long&nbsp;time,
                java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -263,7 +263,7 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>long</code></td>
+<td class="colFirst"><code>java.lang.Long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTime()">getTime</a></span>()</code></th>
 <td class="colLast">
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -299,7 +299,8 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEventCapabilities(java.util.Set)">setEventCapabilities</a></span>&#8203;(java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</code></th>
 <td class="colLast">
-<div class="block">The resources the adapter answers events for.</div>
+<div class="block">Reads <code>null</code> as an empty set, so <code>"eventCapabilities": null</code> in JSON means the same as leaving the
+ field out.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -319,7 +320,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTime(long)">setTime</a></span>&#8203;(long&nbsp;time)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTime(java.lang.Long)">setTime</a></span>&#8203;(java.lang.Long&nbsp;time)</code></th>
 <td class="colLast">
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
 <div class="deprecationComment">FINT does not read it.</div>
@@ -358,7 +359,7 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.util.Set,long)">
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.util.Set,java.lang.Long)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -369,11 +370,11 @@ extends java.lang.Object</pre>
                        java.lang.String&nbsp;username,
                        java.lang.Integer&nbsp;heartbeatIntervalInMinutes,
                        java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
-                       long&nbsp;time)</pre>
+                       java.lang.Long&nbsp;time)</pre>
 <div class="block">Kept so code built against versions without <code>eventCapabilities</code> still works.</div>
 </li>
 </ul>
-<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.util.Set,long,java.util.Set)">
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.util.Set,java.lang.Long,java.util.Set)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -384,7 +385,7 @@ extends java.lang.Object</pre>
                        java.lang.String&nbsp;username,
                        java.lang.Integer&nbsp;heartbeatIntervalInMinutes,
                        java.util.Set&lt;<a href="AdapterCapability.html" title="class in no.fintlabs.adapter.models">AdapterCapability</a>&gt;&nbsp;capabilities,
-                       long&nbsp;time,
+                       java.lang.Long&nbsp;time,
                        java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</pre>
 </li>
 </ul>
@@ -407,6 +408,21 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a id="setEventCapabilities(java.util.Set)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setEventCapabilities</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setEventCapabilities&#8203;(java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</pre>
+<div class="block">Reads <code>null</code> as an empty set, so <code>"eventCapabilities": null</code> in JSON means the same as leaving the
+ field out.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>eventCapabilities</code> - the resources the adapter answers events for, or <code>null</code> for none</dd>
+</dl>
+</li>
+</ul>
 <a id="builder()">
 <!--   -->
 </a>
@@ -503,7 +519,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getTime</h4>
 <pre class="methodSignature">@Deprecated
-public&nbsp;long&nbsp;getTime()</pre>
+public&nbsp;java.lang.Long&nbsp;getTime()</pre>
 <div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span>
 <div class="deprecationComment">FINT does not read it. Stop setting it, it goes away in the next major version.</div>
 </div>
@@ -517,7 +533,7 @@ public&nbsp;long&nbsp;getTime()</pre>
 <li class="blockList">
 <h4>getEventCapabilities</h4>
 <pre class="methodSignature">public&nbsp;java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;getEventCapabilities()</pre>
-<div class="block">The resources the adapter answers events for. Empty when the adapter does not send it.</div>
+<div class="block">The resources the adapter answers events for. Empty when the adapter does not send it, or sends <code>null</code>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="EventCapability.html" title="class in no.fintlabs.adapter.models"><code>EventCapability</code></a></dd>
@@ -604,32 +620,18 @@ public&nbsp;long&nbsp;getTime()</pre>
 </dl>
 </li>
 </ul>
-<a id="setTime(long)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setTime</h4>
-<pre class="methodSignature">@Deprecated
-public&nbsp;void&nbsp;setTime&#8203;(long&nbsp;time)</pre>
-<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span>
-<div class="deprecationComment">FINT does not read it. Stop setting it, it goes away in the next major version.</div>
-</div>
-<div class="block">The registration time for the contract in Unix timestamp.</div>
-</li>
-</ul>
-<a id="setEventCapabilities(java.util.Set)">
+<a id="setTime(java.lang.Long)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>setEventCapabilities</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setEventCapabilities&#8203;(java.util.Set&lt;<a href="EventCapability.html" title="class in no.fintlabs.adapter.models">EventCapability</a>&gt;&nbsp;eventCapabilities)</pre>
-<div class="block">The resources the adapter answers events for. Empty when the adapter does not send it.</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="EventCapability.html" title="class in no.fintlabs.adapter.models"><code>EventCapability</code></a></dd>
-</dl>
+<h4>setTime</h4>
+<pre class="methodSignature">@Deprecated
+public&nbsp;void&nbsp;setTime&#8203;(java.lang.Long&nbsp;time)</pre>
+<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span>
+<div class="deprecationComment">FINT does not read it. Stop setting it, it goes away in the next major version.</div>
+</div>
+<div class="block">The registration time for the contract in Unix timestamp.</div>
 </li>
 </ul>
 </li>
