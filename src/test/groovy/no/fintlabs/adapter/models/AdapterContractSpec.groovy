@@ -1,8 +1,62 @@
 package no.fintlabs.adapter.models
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import jakarta.validation.Validation
+import org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator
 import spock.lang.Specification
 
 class AdapterContractSpec extends Specification {
+
+    def "A contract allows a null heartbeat interval through its construction APIs"() {
+        expect:
+        new AdapterContract().heartbeatIntervalInMinutes == null
+        AdapterContract.builder().build().heartbeatIntervalInMinutes == null
+        AdapterContract.builder().heartbeatIntervalInMinutes(null).build().heartbeatIntervalInMinutes == null
+        new AdapterContract("id", "org", "user", null, [] as Set, 0L).heartbeatIntervalInMinutes == null
+        new AdapterContract("id", "org", "user", null, [] as Set, 0L, [] as Set).heartbeatIntervalInMinutes == null
+
+        when:
+        def contract = AdapterContract.builder().heartbeatIntervalInMinutes(2).build()
+        contract.setHeartbeatIntervalInMinutes(null)
+
+        then:
+        contract.heartbeatIntervalInMinutes == null
+    }
+
+    def "A contract reads heartbeat intervals from JSON"() {
+        expect:
+        new ObjectMapper().readValue(json, AdapterContract).heartbeatIntervalInMinutes == expected
+
+        where:
+        json                                  | expected
+        '{}'                                  | null
+        '{"heartbeatIntervalInMinutes":null}'   | null
+        '{"heartbeatIntervalInMinutes":2}'      | 2
+    }
+
+    def "Heartbeat interval validation allows null and values from one to five"() {
+        given:
+        def factory = Validation.byDefaultProvider()
+                .configure()
+                .messageInterpolator(new ParameterMessageInterpolator())
+                .buildValidatorFactory()
+        def contract = new AdapterContract("id", "org", "user", interval, [] as Set, 0L)
+
+        expect:
+        factory.validator.validate(contract).isEmpty() == valid
+
+        cleanup:
+        factory.close()
+
+        where:
+        interval | valid
+        null     | true
+        1        | true
+        2        | true
+        5        | true
+        0        | false
+        6        | false
+    }
 
     def "Get entity uri should return domain, package and class in the format /domain/package/class"() {
 
