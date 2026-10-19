@@ -80,9 +80,9 @@ public class AdapterContract {
      * @deprecated FINT does not read it. Stop setting it, it goes away in the next major version.
      */
     @Deprecated(since = "3.1.0", forRemoval = true)
-    private long time;
+    private Long time;
     /**
-     * The resources the adapter answers events for. Empty when the adapter does not send it.
+     * The resources the adapter answers events for. Empty when the adapter does not send it, or sends {@code null}.
      *
      * @see EventCapability
      */
@@ -95,7 +95,17 @@ public class AdapterContract {
      * Kept so code built against versions without {@link #eventCapabilities} still works.
      */
     public AdapterContract(String adapterId, String orgId, String username, Integer heartbeatIntervalInMinutes,
-                           Set<AdapterCapability> capabilities, long time) {
+                           Set<AdapterCapability> capabilities, Long time) {
         this(adapterId, orgId, username, heartbeatIntervalInMinutes, capabilities, time, new HashSet<>());
+    }
+
+    /**
+     * Reads {@code null} as an empty set, so {@code "eventCapabilities": null} in JSON means the same as leaving the
+     * field out.
+     *
+     * @param eventCapabilities the resources the adapter answers events for, or {@code null} for none
+     */
+    public void setEventCapabilities(Set<EventCapability> eventCapabilities) {
+        this.eventCapabilities = eventCapabilities == null ? new HashSet<>() : eventCapabilities;
     }
 }
