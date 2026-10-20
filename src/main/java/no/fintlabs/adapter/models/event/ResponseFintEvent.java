@@ -50,7 +50,7 @@ public class ResponseFintEvent implements FintEvent {
 
     /**
      * When FINT received the answer, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
-     * adapter is ignored.
+     * adapter is ignored, and {@code null} means the same as leaving the field out.
      */
     private long handledAt;
 
@@ -78,7 +78,7 @@ public class ResponseFintEvent implements FintEvent {
 
     /**
      * True when the adapter could not handle the event because something broke, for example that the
-     * source system is down.
+     * source system is down. {@code null} means the same as leaving the field out.
      */
     private boolean failed;
 
@@ -89,6 +89,7 @@ public class ResponseFintEvent implements FintEvent {
 
     /**
      * True when the adapter cannot do what the event asks, for example a filter it cannot translate.
+     * {@code null} means the same as leaving the field out.
      */
     private boolean rejected;
 
@@ -99,7 +100,7 @@ public class ResponseFintEvent implements FintEvent {
 
     /**
      * True when a write conflicts with what the source system already holds. Not used on
-     * {@link OperationType#READ}.
+     * {@link OperationType#READ}. {@code null} means the same as leaving the field out.
      */
     private boolean conflicted;
 
@@ -116,6 +117,36 @@ public class ResponseFintEvent implements FintEvent {
                              String rejectReason, boolean conflicted, String conflictReason) {
         this(corrId, orgId, adapterId, handledAt, value, new ArrayList<>(), operationType, failed, errorMessage,
                 rejected, rejectReason, conflicted, conflictReason);
+    }
+
+    /**
+     * Reads {@code null} as 0, so {@code "handledAt": null} in JSON means the same as leaving the field out, on
+     * Jackson 2 and 3 alike.
+     */
+    public void setHandledAt(Long handledAt) {
+        this.handledAt = handledAt == null ? 0 : handledAt;
+    }
+
+    /**
+     * Reads {@code null} as false, so {@code "failed": null} in JSON means the same as leaving the field out, on
+     * Jackson 2 and 3 alike.
+     */
+    public void setFailed(Boolean failed) {
+        this.failed = Boolean.TRUE.equals(failed);
+    }
+
+    /**
+     * Reads {@code null} as false, see {@link #setFailed(Boolean)}.
+     */
+    public void setRejected(Boolean rejected) {
+        this.rejected = Boolean.TRUE.equals(rejected);
+    }
+
+    /**
+     * Reads {@code null} as false, see {@link #setFailed(Boolean)}.
+     */
+    public void setConflicted(Boolean conflicted) {
+        this.conflicted = Boolean.TRUE.equals(conflicted);
     }
 
 }
