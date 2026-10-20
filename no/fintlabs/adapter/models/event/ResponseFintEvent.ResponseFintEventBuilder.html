@@ -334,7 +334,7 @@ extends java.lang.Object</pre>
 <h4>handledAt</h4>
 <pre class="methodSignature">public&nbsp;<a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a>&nbsp;handledAt&#8203;(long&nbsp;handledAt)</pre>
 <div class="block">When FINT received the answer, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
- adapter is ignored.</div>
+ adapter is ignored, and <code>null</code> means the same as leaving the field out.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>
@@ -394,7 +394,7 @@ extends java.lang.Object</pre>
 <h4>failed</h4>
 <pre class="methodSignature">public&nbsp;<a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a>&nbsp;failed&#8203;(boolean&nbsp;failed)</pre>
 <div class="block">True when the adapter could not handle the event because something broke, for example that the
- source system is down.</div>
+ source system is down. <code>null</code> means the same as leaving the field out.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>
@@ -422,7 +422,8 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>rejected</h4>
 <pre class="methodSignature">public&nbsp;<a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a>&nbsp;rejected&#8203;(boolean&nbsp;rejected)</pre>
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
+<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.
+ <code>null</code> means the same as leaving the field out.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>
@@ -451,7 +452,7 @@ extends java.lang.Object</pre>
 <h4>conflicted</h4>
 <pre class="methodSignature">public&nbsp;<a href="ResponseFintEvent.ResponseFintEventBuilder.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent.ResponseFintEventBuilder</a>&nbsp;conflicted&#8203;(boolean&nbsp;conflicted)</pre>
 <div class="block">True when a write conflicts with what the source system already holds. Not used on
- <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>.</div>
+ <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>. <code>null</code> means the same as leaving the field out.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>this</code>.</dd>

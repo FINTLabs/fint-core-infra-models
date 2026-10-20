@@ -365,9 +365,9 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setConflicted(boolean)">setConflicted</a></span>&#8203;(boolean&nbsp;conflicted)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setConflicted(java.lang.Boolean)">setConflicted</a></span>&#8203;(java.lang.Boolean&nbsp;conflicted)</code></th>
 <td class="colLast">
-<div class="block">True when a write conflicts with what the source system already holds.</div>
+<div class="block">Reads <code>null</code> as false, see <a href="#setFailed(java.lang.Boolean)"><code>setFailed(Boolean)</code></a>.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
@@ -393,17 +393,18 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFailed(boolean)">setFailed</a></span>&#8203;(boolean&nbsp;failed)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFailed(java.lang.Boolean)">setFailed</a></span>&#8203;(java.lang.Boolean&nbsp;failed)</code></th>
 <td class="colLast">
-<div class="block">True when the adapter could not handle the event because something broke, for example that the
- source system is down.</div>
+<div class="block">Reads <code>null</code> as false, so <code>"failed": null</code> in JSON means the same as leaving the field out, on
+ Jackson 2 and 3 alike.</div>
 </td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHandledAt(long)">setHandledAt</a></span>&#8203;(long&nbsp;handledAt)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHandledAt(java.lang.Long)">setHandledAt</a></span>&#8203;(java.lang.Long&nbsp;handledAt)</code></th>
 <td class="colLast">
-<div class="block">When FINT received the answer, as a Unix timestamp in milliseconds.</div>
+<div class="block">Reads <code>null</code> as 0, so <code>"handledAt": null</code> in JSON means the same as leaving the field out, on
+ Jackson 2 and 3 alike.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
@@ -422,9 +423,9 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRejected(boolean)">setRejected</a></span>&#8203;(boolean&nbsp;rejected)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRejected(java.lang.Boolean)">setRejected</a></span>&#8203;(java.lang.Boolean&nbsp;rejected)</code></th>
 <td class="colLast">
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
+<div class="block">Reads <code>null</code> as false, see <a href="#setFailed(java.lang.Boolean)"><code>setFailed(Boolean)</code></a>.</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
@@ -538,6 +539,48 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a id="setHandledAt(java.lang.Long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setHandledAt</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setHandledAt&#8203;(java.lang.Long&nbsp;handledAt)</pre>
+<div class="block">Reads <code>null</code> as 0, so <code>"handledAt": null</code> in JSON means the same as leaving the field out, on
+ Jackson 2 and 3 alike.</div>
+</li>
+</ul>
+<a id="setFailed(java.lang.Boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFailed</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setFailed&#8203;(java.lang.Boolean&nbsp;failed)</pre>
+<div class="block">Reads <code>null</code> as false, so <code>"failed": null</code> in JSON means the same as leaving the field out, on
+ Jackson 2 and 3 alike.</div>
+</li>
+</ul>
+<a id="setRejected(java.lang.Boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRejected</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setRejected&#8203;(java.lang.Boolean&nbsp;rejected)</pre>
+<div class="block">Reads <code>null</code> as false, see <a href="#setFailed(java.lang.Boolean)"><code>setFailed(Boolean)</code></a>.</div>
+</li>
+</ul>
+<a id="setConflicted(java.lang.Boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setConflicted</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setConflicted&#8203;(java.lang.Boolean&nbsp;conflicted)</pre>
+<div class="block">Reads <code>null</code> as false, see <a href="#setFailed(java.lang.Boolean)"><code>setFailed(Boolean)</code></a>.</div>
+</li>
+</ul>
 <a id="builder()">
 <!--   -->
 </a>
@@ -594,7 +637,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <h4>getHandledAt</h4>
 <pre class="methodSignature">public&nbsp;long&nbsp;getHandledAt()</pre>
 <div class="block">When FINT received the answer, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
- adapter is ignored.</div>
+ adapter is ignored, and <code>null</code> means the same as leaving the field out.</div>
 </li>
 </ul>
 <a id="getValue()">
@@ -642,7 +685,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <h4>isFailed</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isFailed()</pre>
 <div class="block">True when the adapter could not handle the event because something broke, for example that the
- source system is down.</div>
+ source system is down. <code>null</code> means the same as leaving the field out.</div>
 </li>
 </ul>
 <a id="getErrorMessage()">
@@ -662,7 +705,8 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <li class="blockList">
 <h4>isRejected</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isRejected()</pre>
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
+<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.
+ <code>null</code> means the same as leaving the field out.</div>
 </li>
 </ul>
 <a id="getRejectReason()">
@@ -683,7 +727,7 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <h4>isConflicted</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isConflicted()</pre>
 <div class="block">True when a write conflicts with what the source system already holds. Not used on
- <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>.</div>
+ <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>. <code>null</code> means the same as leaving the field out.</div>
 </li>
 </ul>
 <a id="getConflictReason()">
@@ -727,17 +771,6 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
  adapter's contract when it receives the answer. A value sent by the adapter is ignored.</div>
 </li>
 </ul>
-<a id="setHandledAt(long)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setHandledAt</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setHandledAt&#8203;(long&nbsp;handledAt)</pre>
-<div class="block">When FINT received the answer, as a Unix timestamp in milliseconds. Set by FINT. A value sent by the
- adapter is ignored.</div>
-</li>
-</ul>
 <a id="setValue(no.fintlabs.adapter.models.sync.SyncPageEntry)">
 <!--   -->
 </a>
@@ -771,17 +804,6 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <div class="block">The operation of the request this event answers.</div>
 </li>
 </ul>
-<a id="setFailed(boolean)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setFailed</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setFailed&#8203;(boolean&nbsp;failed)</pre>
-<div class="block">True when the adapter could not handle the event because something broke, for example that the
- source system is down.</div>
-</li>
-</ul>
 <a id="setErrorMessage(java.lang.String)">
 <!--   -->
 </a>
@@ -792,16 +814,6 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <div class="block">A message that explains the reason for the failure of the event.</div>
 </li>
 </ul>
-<a id="setRejected(boolean)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setRejected</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setRejected&#8203;(boolean&nbsp;rejected)</pre>
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
-</li>
-</ul>
 <a id="setRejectReason(java.lang.String)">
 <!--   -->
 </a>
@@ -810,17 +822,6 @@ implements <a href="FintEvent.html" title="interface in no.fintlabs.adapter.mode
 <h4>setRejectReason</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setRejectReason&#8203;(java.lang.String&nbsp;rejectReason)</pre>
 <div class="block">A message that explains the reason for the rejection of the event.</div>
-</li>
-</ul>
-<a id="setConflicted(boolean)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setConflicted</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setConflicted&#8203;(boolean&nbsp;conflicted)</pre>
-<div class="block">True when a write conflicts with what the source system already holds. Not used on
- <a href="../../operation/OperationType.html#READ"><code>OperationType.READ</code></a>.</div>
 </li>
 </ul>
 <a id="setConflictReason(java.lang.String)">

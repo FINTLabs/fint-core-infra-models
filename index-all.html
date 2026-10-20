@@ -967,9 +967,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">
  The resources the adapter delivers to FINT with full sync.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setConflicted(boolean)">setConflicted(boolean)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setConflicted(java.lang.Boolean)">setConflicted(Boolean)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">True when a write conflicts with what the source system already holds.</div>
+<div class="block">Reads <code>null</code> as false, see <a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setFailed(java.lang.Boolean)"><code>ResponseFintEvent.setFailed(Boolean)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setConflictReason(java.lang.String)">setConflictReason(String)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
 <dd>
@@ -1016,10 +1016,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Reads <code>null</code> as an empty set, so <code>"eventCapabilities": null</code> in JSON means the same as leaving the
  field out.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setFailed(boolean)">setFailed(boolean)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setFailed(java.lang.Boolean)">setFailed(Boolean)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">True when the adapter could not handle the event because something broke, for example that the
- source system is down.</div>
+<div class="block">Reads <code>null</code> as false, so <code>"failed": null</code> in JSON means the same as leaving the field out, on
+ Jackson 2 and 3 alike.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/RequestFintEvent.html#setFilter(java.lang.String)">setFilter(String)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/RequestFintEvent.html" title="class in no.fintlabs.adapter.models.event">RequestFintEvent</a></dt>
 <dd>
@@ -1029,9 +1029,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Number of days between each full sync</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setHandledAt(long)">setHandledAt(long)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setHandledAt(java.lang.Long)">setHandledAt(Long)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">When FINT received the answer, as a Unix timestamp in milliseconds.</div>
+<div class="block">Reads <code>null</code> as 0, so <code>"handledAt": null</code> in JSON means the same as leaving the field out, on
+ Jackson 2 and 3 alike.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/AdapterContract.html#setHeartbeatIntervalInMinutes(java.lang.Integer)">setHeartbeatIntervalInMinutes(Integer)</a></span> - Method in class no.fintlabs.adapter.models.<a href="no/fintlabs/adapter/models/AdapterContract.html" title="class in no.fintlabs.adapter.models">AdapterContract</a></dt>
 <dd>
@@ -1119,9 +1120,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Shows the problems the system has found when processing this event's request.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setRejected(boolean)">setRejected(boolean)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
+<dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setRejected(java.lang.Boolean)">setRejected(Boolean)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
 <dd>
-<div class="block">True when the adapter cannot do what the event asks, for example a filter it cannot translate.</div>
+<div class="block">Reads <code>null</code> as false, see <a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setFailed(java.lang.Boolean)"><code>ResponseFintEvent.setFailed(Boolean)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html#setRejectReason(java.lang.String)">setRejectReason(String)</a></span> - Method in class no.fintlabs.adapter.models.event.<a href="no/fintlabs/adapter/models/event/ResponseFintEvent.html" title="class in no.fintlabs.adapter.models.event">ResponseFintEvent</a></dt>
 <dd>
